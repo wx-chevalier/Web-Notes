@@ -29,7 +29,7 @@ sagaMiddleware.run(mySaga);
 
 副作用，顾名思义，在主要作用（action 触发 reducer）之外，用来处理其他业务逻辑。redux-saga 提供了几种产生副作用的方式, 主要用到了有两种 takeEvery 和 takeLates。
 
-- takeEvery 类似于 redux-thunk 的作用，会在接到相应的 action 之后不断产生新的副作用。 比如，做一个计数器按钮，用户需要不断的点击按钮，对后台数据更新，这里可以使用 takeEvery 来触发。
+- takeEvery 类似于 redux-thunk 的作用，会在接到相应的 action 之后不断产生新的副作用。比如，做一个计数器按钮，用户需要不断的点击按钮，对后台数据更新，这里可以使用 takeEvery 来触发。
 
 - takeLatest 在相同的 action 被触发多次的时候，之前的副作用如果没有执行完，会被取消掉，只有最后一次 action 触发的副作用可以执行完。比如，我们需要一个刷新按钮， 让用户可以手动的从后台刷新数据， 当用户不停单机刷新的时候， 应该最新一次的请求数据被刷新在页面上，这里可以使用 takeLatest。
 
@@ -53,7 +53,7 @@ function* watchFetchData() {
 }
 ```
 
-注意，takeEvery 第一个参数可以是数组或者方法。 也可以有第三个参数用来传递变量给方法。takeEvery 会允许同时创建多个 fetchData 实例，这也就意味着可能某个时刻，某个 fetchData 在被执行的时候，它还有多个 fetchData 的动作尚未完成。如果我们只希望展示最新的数据请求的结果，则应该使用 taskLatest:
+注意，takeEvery 第一个参数可以是数组或者方法。也可以有第三个参数用来传递变量给方法。takeEvery 会允许同时创建多个 fetchData 实例，这也就意味着可能某个时刻，某个 fetchData 在被执行的时候，它还有多个 fetchData 的动作尚未完成。如果我们只希望展示最新的数据请求的结果，则应该使用 taskLatest:
 
 ```js
 import { takeLatest } from "redux-saga/effects";
