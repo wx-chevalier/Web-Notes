@@ -1,0 +1,20 @@
+[![返回目录](https://i.postimg.cc/50XLzC7C/image.png)](https://github.com/wx-chevalier/Web-Series)
+
+# 组件数据流
+
+组件的主要职责是将原始数据转化为 HTML 中的富文本格式，而 Props 与 State 协作完成这件事，换言之，Props 与 State 的并集即是全部的原始数据。Props 与 State 之间也是有很多交集的，譬如：
+
+- Props 与 State 都是 JS 对象。
+- Props 与 State 的值的改变都会触发界面的重新渲染。
+- Props 与 State 都是确定性的，即在确定的 Props 或者 State 的值的情况下都会得出相同的界面。
+
+不过 Props 顾名思义，更多的是作为 Component 的配置项存在。Props 往往是由父元素指定并且传递给自己的子元素，不过自身往往不会去改变 Props 的值。另一方面，State 在组件被挂载时才会被赋予一个默认值，而常常在与用户的交互中发生更改。往往一个组件独立地维护它的整个状态机，可以认为 State 是一个私有属性。他们的对比如下：
+
+| 描述                         | Props  | State  |
+| ---------------------------- | ------ | ------ |
+| 是否可以从父元素获取初始值   | Yes    | Yes    |
+| 是否可以被父元素改变         | Yes    | No     |
+| 是否可以设置默认值           | Yes    | Yes    |
+| 是否可以在组件内改变         | No     | Yes    |
+| 是否可以设置为子元素的初始值 | Yes    | Yes    |
+| 是否可以在子元素中改变       | Yes    | No     |
