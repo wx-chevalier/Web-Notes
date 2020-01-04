@@ -2,7 +2,7 @@
 
 [中文版本](./README.md) | [English Version](./README-en.md)
 
-# 现代 Web 全栈开发与工程架构
+# Web 全栈开发与工程架构
 
 `Copyright © 2019 王下邀月熊`
 
