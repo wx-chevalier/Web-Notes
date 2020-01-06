@@ -1,6 +1,6 @@
 # Query Builder
 
-QueryBuilder 是 TypeORM 最强大的功能之一 ，它允许你使用优雅便捷的语法构建 SQL 查询，执行并获得自动转换的实体。QueryBuilder 的简单示例:
+QueryBuilder 是 TypeORM 最强大的功能之一，它允许你使用优雅便捷的语法构建 SQL 查询，执行并获得自动转换的实体。QueryBuilder 的简单示例:
 
 ```ts
 const firstUser = await connection
@@ -35,7 +35,7 @@ User {
 
 ## 创建 QueryBuilder
 
-有几种方法可以创建`Query Builder`：
+有几种方法可以创建 `Query Builder`：
 
 - 使用 connection:
 
@@ -87,7 +87,7 @@ const user = await getConnection()
   .getOne();
 ```
 
-- `InsertQueryBuilder` - 用于构建和执行`INSERT`查询。 例如：
+- `InsertQueryBuilder` - 用于构建和执行 `INSERT` 查询。 例如：
 
 ```typescript
 import { getConnection } from "typeorm";
@@ -103,7 +103,7 @@ await getConnection()
   .execute();
 ```
 
-- `UpdateQueryBuilder` - 用于构建和执行`UPDATE`查询。 例如：
+- `UpdateQueryBuilder` - 用于构建和执行 `UPDATE` 查询。 例如：
 
 ```typescript
 import { getConnection } from "typeorm";
@@ -171,7 +171,7 @@ await getConnection()
 
 ## 更新
 
-你可以使用`QueryBuilder`创建`UPDATE`查询。 例如：
+你可以使用 `QueryBuilder` 创建 `UPDATE` 查询。 例如：
 
 ```typescript
 import { getConnection } from "typeorm";
@@ -184,8 +184,27 @@ await getConnection()
   .execute();
 ```
 
-就性能而言，这是更新数据库中的实体的最有效方法。
+就性能而言，这是更新数据库中的实体的最有效方法。在某些情况下需要执行函数 SQL 查询时：
 
-# 数据查询
+```
+typescript import {getConnection} from "typeorm"; await getConnection() .createQueryBuilder() .update(User) .set({ firstName: "Timber", lastName: "Saw", age: () => "'age' + 1" }) .where("id = :id", { id: 1 }) .execute();
+```
 
-# 与 Relations 结合
+此语法不会对值进行转义，你需要自己处理转义。
+
+## 删除
+
+你可以使用 `QueryBuilder` 创建 `DELETE` 查询。 例如：
+
+```typescript
+import { getConnection } from "typeorm";
+
+await getConnection()
+  .createQueryBuilder()
+  .delete()
+  .from(User)
+  .where("id = :id", { id: 1 })
+  .execute();
+```
+
+就性能而言，这是删除数据库中的实体的最有效方法。
