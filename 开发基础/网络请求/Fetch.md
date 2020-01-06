@@ -18,13 +18,13 @@ JavaScript 通过 XMLHttpRequest(XHR)来执行异步请求，这个方式已经�
 
 ```js
 // Simple response handling
-fetch('/some/url')
+fetch("/some/url")
   .then(function(response) {})
   .catch(function(err) {
     // Error :(
   });
 // Chaining for more "advanced" handling
-fetch('/some/url')
+fetch("/some/url")
   .then(function(response) {
     return; //...
   })
@@ -52,12 +52,12 @@ Request 对象代表了一次 fetch 请求中的请求体部分，你可以自�
 
 ```js
 // 构建独立的请求对象
-const request = new Request('/users.json', {
-  method: 'POST',
-  mode: 'cors',
-  redirect: 'follow',
+const request = new Request("/users.json", {
+  method: "POST",
+  mode: "cors",
+  redirect: "follow",
   headers: new Headers({
-    'Content-Type': 'text/plain'
+    "Content-Type": "text/plain"
   })
 });
 
@@ -67,12 +67,12 @@ fetch(request).then(function() {
 });
 
 // 直接作为参数传入到 fetch 函数中
-fetch('/users.json', {
-  method: 'POST',
-  mode: 'cors',
-  redirect: 'follow',
+fetch("/users.json", {
+  method: "POST",
+  mode: "cors",
+  redirect: "follow",
   headers: new Headers({
-    'Content-Type': 'text/plain'
+    "Content-Type": "text/plain"
   })
 }).then(function() {
   /* handle response */
@@ -82,15 +82,15 @@ fetch('/users.json', {
 在 POST 请求中，如果我们需要传递参数，则应该将参数值进行序列化处理为字符串然后传递：
 
 ```js
-fetch('/users', {
-  method: 'post',
+fetch("/users", {
+  method: "post",
   headers: {
-    Accept: 'application/json',
-    'Content-Type': 'application/json'
+    Accept: "application/json",
+    "Content-Type": "application/json"
   },
   body: JSON.stringify({
-    name: 'Hubot',
-    login: 'hubot'
+    name: "Hubot",
+    login: "hubot"
   })
 });
 ```
@@ -128,30 +128,30 @@ const packagedRequestURL = `${Model.BASE_URL}${path}?requestData=${requestDataSt
 const headers = new Headers();
 
 // Add a few headers
-headers.append('Content-Type', 'text/plain');
-headers.append('X-My-Custom-Header', 'CustomValue');
+headers.append("Content-Type", "text/plain");
+headers.append("X-My-Custom-Header", "CustomValue");
 
 // Check, get, and set header values
-headers.has('Content-Type'); // true
-headers.get('Content-Type'); // "text/plain"
-headers.set('Content-Type', 'application/json');
+headers.has("Content-Type"); // true
+headers.get("Content-Type"); // "text/plain"
+headers.set("Content-Type", "application/json");
 
 // Delete a header
-headers.delete('X-My-Custom-Header');
+headers.delete("X-My-Custom-Header");
 
 // Add initial values
 const headers = new Headers({
-  'Content-Type': 'text/plain',
-  'X-My-Custom-Header': 'CustomValue'
+  "Content-Type": "text/plain",
+  "X-My-Custom-Header": "CustomValue"
 });
 ```
 
 常见的请求方法有: `append`, `has`, `get`, `set`以及 `delete`
 
 ```js
-const request = new Request('/some-url', {
+const request = new Request("/some-url", {
   headers: new Headers({
-    'Content-Type': 'text/plain'
+    "Content-Type": "text/plain"
   })
 });
 
@@ -165,16 +165,16 @@ fetch(request).then(function() {
 如果需要设置 fetch 自动地发送本地的 Cookie，需要将 credentials 设置为`same-origin`:
 
 ```js
-fetch('/users', {
-  credentials: 'same-origin'
+fetch("/users", {
+  credentials: "same-origin"
 });
 ```
 
 该选项会以类似于 XMLHttpRequest 的方式来处理 Cookie，否则，可能因为没有发送 Cookie 而导致基于 Session 的认证出错。对于跨域情况下的 Cookie 发送，可以将 `credentials` 的值设置为`include` 来在 CORS 情况下发送请求。
 
 ```js
-fetch('https://example.com:1234/users', {
-  credentials: 'include'
+fetch("https://example.com:1234/users", {
+  credentials: "include"
 });
 ```
 
@@ -195,28 +195,28 @@ fetch('https://example.com:1234/users', {
 ```js
 // Create your own response for service worker testing
 // new Response(BODY, OPTIONS)
-const response = new Response('.....', {
+const response = new Response(".....", {
   ok: false,
   status: 404,
-  url: '/'
+  url: "/"
 });
 
 // The fetch's `then` gets a Response instance back
-fetch('/').then(function(responseObj) {
-  console.log('status: ', responseObj.status);
+fetch("/").then(function(responseObj) {
+  console.log("status: ", responseObj.status);
 });
 ```
 
 `Response` 还提供以下方法：
 
-- `clone（）` - 创建一个 Response 对象的克隆。
-- `error（）` - 返回与网络错误关联的新 Response 对象。
-- `redirect（）` - 使用不同的 URL 创建一个新的响应。
-- `arrayBuffer（）` - 返回一个用 ArrayBuffer 解析的 promise。
-- `blob（）` - 返回一个用 Blob 解析的 promise。
-- `formData（）` - 返回一个用 FormData 对象解析的 promise。
-- `json（）` - 返回一个用 JSON 对象解析的 promise。
-- `text（）` - 返回一个用 USVString（text）解析的 promise。
+- `clone()` - 创建一个 Response 对象的克隆。
+- `error()` - 返回与网络错误关联的新 Response 对象。
+- `redirect()` - 使用不同的 URL 创建一个新的响应。
+- `arrayBuffer()` - 返回一个用 ArrayBuffer 解析的 promise。
+- `blob()` - 返回一个用 Blob 解析的 promise。
+- `formData()` - 返回一个用 FormData 对象解析的 promise。
+- `json()` - 返回一个用 JSON 对象解析的 promise。
+- `text()` - 返回一个用 USVString（text）解析的 promise。
 
 ## Handling HTTP error statuses | 处理 HTTP 错误状态
 
@@ -235,21 +235,21 @@ function parseJSON(response) {
   return response.json();
 }
 
-fetch('/users')
+fetch("/users")
   .then(checkStatus)
   .then(parseJSON)
   .then(function(data) {
-    console.log('request succeeded with JSON response', data);
+    console.log("request succeeded with JSON response", data);
   })
   .catch(function(error) {
-    console.log('request failed', error);
+    console.log("request failed", error);
   });
 ```
 
 ## Handling JSON | 处理 JSON 响应
 
 ```js
-fetch('https://davidwalsh.name/demo/arsenal.json')
+fetch("https://davidwalsh.name/demo/arsenal.json")
   .then(function(response) {
     // Convert to JSON
     return response.json();
@@ -263,7 +263,7 @@ fetch('https://davidwalsh.name/demo/arsenal.json')
 ## Handling Basic Text/HTML Response | 处理文本响应
 
 ```js
-fetch('/next/page')
+fetch("/next/page")
   .then(function(response) {
     return response.text();
   })
@@ -278,12 +278,12 @@ fetch('/next/page')
 如果你希望通过 fetch 方法来载入一些类似于图片等资源：
 
 ```js
-fetch('flowers.jpg')
+fetch("flowers.jpg")
   .then(function(response) {
     return response.blob();
   })
   .then(function(imageBlob) {
-    document.querySelector('img').src = URL.createObjectURL(imageBlob);
+    document.querySelector("img").src = URL.createObjectURL(imageBlob);
   });
 ```
 
@@ -343,11 +343,11 @@ getWithQueryParamsByProxy({BASE_URL=Model.BASE_URL, path="/", queryParams={}, co
 const input = document.querySelector('input[type="file"]');
 
 const data = new FormData();
-data.append('file', input.files[0]);
-data.append('user', 'hubot');
+data.append("file", input.files[0]);
+data.append("user", "hubot");
 
-fetch('/avatars', {
-  method: 'post',
+fetch("/avatars", {
+  method: "post",
   body: data
 });
 ```
@@ -357,16 +357,16 @@ fetch('/avatars', {
 可以直接在 fetch 中抓取文件，然后创建伪 a 元素，进行下载操作：
 
 ```js
-fetch('http://somehost/check-permission', options).then(res => {
+fetch("http://somehost/check-permission", options).then(res => {
   if (res.code === 0) {
-    const a = document.createElement('a');
+    const a = document.createElement("a");
     const url = res.data.url;
-    const filename = 'myfile.zip';
+    const filename = "myfile.zip";
     a.href = url;
     a.download = filename;
     a.click();
   } else {
-    alert('You have no permission to download the file!');
+    alert("You have no permission to download the file!");
   }
 });
 ```
@@ -374,12 +374,12 @@ fetch('http://somehost/check-permission', options).then(res => {
 我们也可以对文件的内容进行自定义处理：
 
 ```js
-fetch('/big-data.csv')
+fetch("/big-data.csv")
   .then(function(response) {
     const reader = response.body.getReader();
-    const partialCell = '';
+    const partialCell = "";
     const returnNextCell = false;
-    const returnCellAfter = 'Jake';
+    const returnCellAfter = "Jake";
     const decoder = new TextDecoder();
 
     return search(reader);
@@ -413,7 +413,7 @@ function search(reader) {
       cell = cell.trim();
 
       if (returnNextCell) {
-        reader.cancel('No more reading needed.');
+        reader.cancel("No more reading needed.");
         return cell;
       }
       if (cell === returnCellAfter) {
@@ -422,7 +422,7 @@ function search(reader) {
     }
 
     if (result.done) {
-      throw Error('Could not find value after ' + returnCellAfter);
+      throw Error("Could not find value after " + returnCellAfter);
     }
 
     return search();
