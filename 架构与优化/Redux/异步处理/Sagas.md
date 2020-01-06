@@ -4,6 +4,8 @@
 
 ![redux-sagas 示意图](https://s2.ax1x.com/2019/11/02/KOSwZt.png)
 
+![Redux Sagas 示意图](https://s2.ax1x.com/2020/01/06/lyYvUU.png)
+
 # 基础使用
 
 在定义生成 store 的地方，引入并加入 redux-sage 中间件。
@@ -88,3 +90,5 @@ export default function* rootSaga() {
 - [Redux Saga 实践](http://yanqiw.github.io/react/2017/03/05/redux-saga.html)
 
 - [advanced-redux-action-types](https://medium.com/@zackargyle/advanced-redux-action-types-d5a71ed44e16#.hngz4r406)
+
+- https://itnext.io/scalable-redux-architecture-for-react-projects-with-redux-saga-and-typescript-f6afe1dece9b
