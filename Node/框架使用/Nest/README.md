@@ -4,6 +4,8 @@
 
 [Nest.js](https://docs.nestjs.com/) 基于 TypeScript 构建，其和 TypeScript 无缝衔接，同时允许开发者使用现代 JavaScript 进行开发。Nest.js 融合了面向对象编程 OOP、函数式编程 FP、函数响应式编程 FRP 的优秀思想,为开发者提供了完善的功能特性与使用体验；其底层使用了 Express，也方便了开发者集成 Express 生态圈相关的第三方插件。Next.js 的主要特性包括：依赖注入、WebSockets、模块化、响应式微服务、异常处理层、用于校验的 Pipe、用于角色化权限控制的 Guards、Interceptors、单元测试与集成测试等。
 
+> 注：本系列是对于官网文档和示例，以及笔者自身实践过程中的代码总结。
+
 # 快速开始
 
 本部分主要介绍 Nest.js 项目的基本搭建与请求处理相关内容，建议是直接下载官方的 TypeScript 模板作为项目初始化模板：
