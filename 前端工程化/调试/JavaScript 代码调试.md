@@ -31,7 +31,7 @@ VS Code 是微软开源的现代化、跨平台、轻量级的代码编辑器，
 
 ```js
 function sayHello() {
-  console.log('Hello World');
+  console.log("Hello World");
 }
 
 sayHello();
@@ -40,11 +40,11 @@ sayHello();
 ![Node.js 应用单步调试.png]()
 
 ```js
-const Koa = require('koa');
+const Koa = require("koa");
 const app = new Koa();
 
 app.use(ctx => {
-  ctx.body = 'Hello, World!';
+  ctx.body = "Hello, World!";
 });
 
 app.listen(3000);
@@ -249,9 +249,9 @@ __proto__: Object;
 
 ```js
 var animals = [
-  { animal: 'Horse', name: 'Henry', age: 43 },
-  { animal: 'Dog', name: 'Fred', age: 13 },
-  { animal: 'Cat', name: 'Frodo', age: 18 }
+  { animal: "Horse", name: "Henry", age: 43 },
+  { animal: "Dog", name: "Fred", age: 13 },
+  { animal: "Cat", name: "Frodo", age: 18 }
 ];
 
 console.table(animals);
@@ -303,8 +303,8 @@ var func4 = function() {
 };
 
 var Car = function() {
-  this.brand = 'volvo';
-  this.color = 'red';
+  this.brand = "volvo";
+  this.color = "red";
 
   this.funcX = function() {
     this.funcY();
@@ -315,7 +315,7 @@ var Car = function() {
   };
 
   this.funcZ = function() {
-    console.trace('trace car');
+    console.trace("trace car");
   };
 };
 
@@ -475,27 +475,34 @@ var info = {
 ![](http://www.ido321.com/wp-content/uploads/2014/09/43.jpg)
 console.assert()用来判断一个表达式或变量是否为真。如果结果为否，则在控制台输出一条相应信息，并且抛出一个异常。
 
-```
+```js
 var result = 1;
-console.assert( result );
+console.assert(result);
 var year = 2014;
-console.assert(year == 2018 );
+console.assert(year == 2018);
 ```
 
 ![](http://www.ido321.com/wp-content/uploads/2014/09/52.jpg)
+
 console.trace()用来追踪函数的调用轨迹。
 
-```
+```html
 <script type="text/javascript">
-   /*函数是如何被调用的，在其中加入console.trace()方法就可以了*/
-   function add(a,b){
-     console.trace();
-     return a+b;
-   }
-   var x = add3(1,1);
-   function add3(a,b){return add2(a,b);}
-   function add2(a,b){return add1(a,b);}
-   function add1(a,b){return add(a,b);}
+  /*函数是如何被调用的，在其中加入console.trace()方法就可以了*/
+  function add(a, b) {
+    console.trace();
+    return a + b;
+  }
+  var x = add3(1, 1);
+  function add3(a, b) {
+    return add2(a, b);
+  }
+  function add2(a, b) {
+    return add1(a, b);
+  }
+  function add1(a, b) {
+    return add(a, b);
+  }
 </script>
 ```
 
