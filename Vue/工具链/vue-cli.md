@@ -76,7 +76,33 @@ $ npm run build
     <title>vueapp01</title>
   </head>
   <body>
-    <div id="app"></div>
+    <style>
+    .sidebar {
+      margin-top: 48px;
+    }
+
+    #nav {
+      position: fixed;
+      z-index: 9;
+      padding: 0 8px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 300px;
+      top: 0;
+      height: 60px;
+    }
+  </style>
+  <div id="nav">
+    <h3><a href="http://ng-tech.icu/">Books</a></h3>
+    <span style="margin:0 8px;display:inline-block">|</span>
+    <h3><a href="https://github.com/FE-Kits">FE-Kits</a></h3>
+    <span style="margin:0 8px;display:inline-block">|</span>
+    <h3><a href="https://github.com/BE-Kits">BE-Kits</a></h3>
+    <span style="margin:0 8px;display:inline-block">|</span>
+    <h3><a href="https://github.com/AI-Kits">AI-Kits</a></h3>
+  </div>
+  <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
 </html>
