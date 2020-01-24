@@ -1,4 +1,4 @@
-## Workbox
+# Workbox
 
 Workbox 极大地简化了 PWA 的构建过程，可以把 Workbox 理解为 Google 官方的 PWA 框架，它解决的就是用底层 API 写 PWA 太过复杂的问题，接管了监听 SW 的 install、active、 fetch 事件做相应逻辑处理等。
 
@@ -45,3 +45,30 @@ workbox.routing.registerRoute(
 - CSS 和 JS，情况比较复杂，因为一般站点的 CSS，JS 都在 CDN 上，SW 并没有办法判断从 CDN 上请求下来的资源是否正确（HTTP 200），如果缓存了失败的结果，问题就大了。这种我建议使用 Stale-While-Revalidate 策略，既保证了页面速度，即便失败，用户刷新一下就更新了。如果你的 CSS，JS 与站点在同一个域下，并且文件名中带了 Hash 版本号，那可以直接使用 Cache First 策略。
 
 - 图片建议使用 Cache First，并设置一定的失效事件，请求一次就不会再变动了。
+
+# CLI
+
+Workbox 为我们提供了 CLI 工具以便于生成配置文件：
+
+```sh
+$ yarn global add workbox-cli
+
+# 生成配置文件
+$ workbox wizard
+```
+
+![wizard](https://s2.ax1x.com/2020/01/24/1Zcskq.md.png)
+
+```js
+module.exports = {
+  globDirectory: "./",
+  globPatterns: ["**/*.{html,json,js}"],
+  swDest: "./src/sw.js"
+};
+```
+
+基于配置文件可以快速生成 SW 文件：
+
+```sh
+$ workbox generateSW path/to/config.js
+```
