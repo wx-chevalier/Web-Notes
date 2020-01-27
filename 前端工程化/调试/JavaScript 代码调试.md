@@ -276,7 +276,7 @@ console.important('This is an important message');
 
 ![](https://raygun.com/blog/wp-content/uploads/2015/06/Screen-Shot-2015-06-02-at-3.40.29-pm.png)
 
-在`console.log()`中你可以使用`%s`来代表一个字符串 , `%i` 来代表数字， 以及 `%c` 来代表自定义的样式。
+在`console.log()`中你可以使用`%s`来代表一个字符串 , `%i` 来代表数字，以及 `%c` 来代表自定义的样式。
 
 ## 调用追踪
 

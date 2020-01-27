@@ -23,7 +23,7 @@ JS 运行环境准备好以后把加载视图用 RCTRootContentView 替换加载
 
 RCTRootContentView reactTag 在默认情况下为 1. 在 Xcode view Hierarchy debugger 下可以看到，最顶层为 RCTRootView, 里面嵌套的是 RCTRootContentView, 从 RCTRootContentView 开始，每个 View 都有一个 reactTag.
 
-RCTRootView 继承自 UIView, RCTRootView 主要负责初始化 JS Environment 和 React 代码，然后管理整个运行环境的生命周期。RCTRootContentView 继承自 RCTView, RCTView 继承自 UIView, RCTView 封装了 React Component Node 更新和渲染的逻辑， RCTRootContentView 会管理所有 react ui components. RCTRootContentView 同时负责处理所有 touch 事件.
+RCTRootView 继承自 UIView, RCTRootView 主要负责初始化 JS Environment 和 React 代码，然后管理整个运行环境的生命周期。RCTRootContentView 继承自 RCTView, RCTView 继承自 UIView, RCTView 封装了 React Component Node 更新和渲染的逻辑，RCTRootContentView 会管理所有 react ui components. RCTRootContentView 同时负责处理所有 touch 事件.
 
 # RCTBridge
 

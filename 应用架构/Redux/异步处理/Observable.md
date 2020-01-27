@@ -131,7 +131,7 @@ export function changeSort(sort: string): ThunkResult {
 
 # FRP 模式与组件自治
 
-在 FRP 模式下，遵循 passive 模式，state 应当被观察和响应，而不是主动获取。因此，redux-observable 从 1.0 开始，不再推荐使用 store.getState() 进行状态获取，Epic 有了新的函数签名， 第二个参数为 `state$`：
+在 FRP 模式下，遵循 passive 模式，state 应当被观察和响应，而不是主动获取。因此，redux-observable 从 1.0 开始，不再推荐使用 store.getState() 进行状态获取，Epic 有了新的函数签名，第二个参数为 `state$`：
 
 ```ts
 function (action$: Observable<Action>, state$: StateObservable<State>): Observable<Action>
@@ -300,7 +300,7 @@ export function changePagination(pagination: IPagination): IAction {
 }
 ```
 
-在 FRP 模式下，passive 模型让我们观测了 state，声明了轮询的诱因，让轮询收归到了数据表格组件中， 解除了轮询和数据表格与分页，搜索，排序等组件的耦合。实现了数据表格的组件自治。
+在 FRP 模式下，passive 模型让我们观测了 state，声明了轮询的诱因，让轮询收归到了数据表格组件中，解除了轮询和数据表格与分页，搜索，排序等组件的耦合。实现了数据表格的组件自治。
 
 ![自治的组件](https://s2.ax1x.com/2019/11/03/KXbVvq.png)
 

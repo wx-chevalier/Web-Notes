@@ -175,9 +175,9 @@ transform: rotate | scale | skew | translate |matrix;
 
   偏移同样包括水平偏移和垂直偏移。`translate(x,y)`
 
-  水平方向和垂直方向同时移动(也就是 X 轴和 Y 轴同时移动)； `translateX(x)`
+  水平方向和垂直方向同时移动(也就是 X 轴和 Y 轴同时移动)；`translateX(x)`
 
-  仅水平方向移动(X 轴移动)； `translateY(Y)`
+  仅水平方向移动(X 轴移动)；`translateY(Y)`
 
   仅垂直方向移动(Y 轴移动)。
 
@@ -309,7 +309,7 @@ cubic-bezier(n,n,n,n)：在 cubic-bezier 函数中自己的值。可能的值是
 
 语法: animation-delay: time;
 
-Time 值：可选。定义动画开始前等待的时间，以秒或毫秒计。默认值是 0 。允许负值， -2s 使动画马上开始，但跳过 2 秒进入动画。
+Time 值：可选。定义动画开始前等待的时间，以秒或毫秒计。默认值是 0 。允许负值，-2s 使动画马上开始，但跳过 2 秒进入动画。
 
 {
 

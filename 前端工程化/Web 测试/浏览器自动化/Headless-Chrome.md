@@ -2,7 +2,7 @@
 
 # Headless Chrome 实战：动态渲染、页面抓取与端到端测试
 
-笔者往往是使用 PhantomJS 或者 Selenium 执行动态页面渲染，而在 Chrome 59 之后 Chrome 提供了 Headless 模式，其允许在命令行中使用 Chromium 以及 Blink 渲染引擎提供的完整的现代 Web 平台特性。需要注意的是，Headless Chrome 仍然存在一定的局限，相较于 Nightmare 或 Phantom 这样的工具， Chrome 的远程接口仍然无法提供较好的开发者体验。我们在下文介绍的代码示例中也会发现，目前我们仍需要大量的模板代码进行控制。
+笔者往往是使用 PhantomJS 或者 Selenium 执行动态页面渲染，而在 Chrome 59 之后 Chrome 提供了 Headless 模式，其允许在命令行中使用 Chromium 以及 Blink 渲染引擎提供的完整的现代 Web 平台特性。需要注意的是，Headless Chrome 仍然存在一定的局限，相较于 Nightmare 或 Phantom 这样的工具，Chrome 的远程接口仍然无法提供较好的开发者体验。我们在下文介绍的代码示例中也会发现，目前我们仍需要大量的模板代码进行控制。
 
 # 环境配置
 

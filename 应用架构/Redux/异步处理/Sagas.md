@@ -1,6 +1,6 @@
 # Sagas
 
-我们可以理解为 Sage 是一个可以用来处理复杂的异步逻辑的模块，并且由 redux 的 action 触发。副作用就是在 action 触发 reduser 之后执行的一些动作， 这些动作包括但不限于，连接网络，io 读写，触发其他 action。并且，因为 Sage 的副作用是通过 redux 的 action 触发的，每一个 action，sage 都会像 reduser 一样接收到。并且通过触发不同的 action, 我们可以控制这些副作用的状态，例如，启动，停止，取消。
+我们可以理解为 Sage 是一个可以用来处理复杂的异步逻辑的模块，并且由 redux 的 action 触发。副作用就是在 action 触发 reduser 之后执行的一些动作，这些动作包括但不限于，连接网络，io 读写，触发其他 action。并且，因为 Sage 的副作用是通过 redux 的 action 触发的，每一个 action，sage 都会像 reduser 一样接收到。并且通过触发不同的 action, 我们可以控制这些副作用的状态，例如，启动，停止，取消。
 
 ![redux-sagas 示意图](https://s2.ax1x.com/2019/11/02/KOSwZt.png)
 
@@ -33,7 +33,7 @@ sagaMiddleware.run(mySaga);
 
 - takeEvery 类似于 redux-thunk 的作用，会在接到相应的 action 之后不断产生新的副作用。比如，做一个计数器按钮，用户需要不断的点击按钮，对后台数据更新，这里可以使用 takeEvery 来触发。
 
-- takeLatest 在相同的 action 被触发多次的时候，之前的副作用如果没有执行完，会被取消掉，只有最后一次 action 触发的副作用可以执行完。比如，我们需要一个刷新按钮， 让用户可以手动的从后台刷新数据， 当用户不停单机刷新的时候， 应该最新一次的请求数据被刷新在页面上，这里可以使用 takeLatest。
+- takeLatest 在相同的 action 被触发多次的时候，之前的副作用如果没有执行完，会被取消掉，只有最后一次 action 触发的副作用可以执行完。比如，我们需要一个刷新按钮，让用户可以手动的从后台刷新数据，当用户不停单机刷新的时候，应该最新一次的请求数据被刷新在页面上，这里可以使用 takeLatest。
 
 在下面的事例中，当我们点击 Fetch 按钮时，其会触发某个 `FETCH_REQUESTED` 动作，然后 Sagas 中的监听函数会自动去监听该动作并且触发数据加载：
 
