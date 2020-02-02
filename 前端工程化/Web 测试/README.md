@@ -1,4 +1,4 @@
-[![返回目录](https://i.postimg.cc/JzFTMvjF/image.png)](https://github.com/wx-chevalier/Awesome-CheatSheets)
+
 
 # Web Test CheatSheet | Web 自动化测试概述
 
