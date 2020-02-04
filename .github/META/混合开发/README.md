@@ -1,4 +1,4 @@
-[![](https://i.postimg.cc/DfL8fsVd/image.png)](https://github.com/wx-chevalier/Frontend-Series)
+
 
 # 混合开发/跨端开发实践
 
