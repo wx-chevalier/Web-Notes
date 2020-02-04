@@ -1,5 +1,3 @@
-[![返回目录](https://i.postimg.cc/KvQbty96/image.png)](https://ngte-pl.gitbook.io/i/javascript)
-
 WebAssembly 的概念、意义以及未来带来的性能提升相信已是耳熟能详，笔者在[前端每周清单系列](https://parg.co/bh1)中也是经常会推荐 WebAssembly 相关文章。不过笔者也只是了解其概念而未真正付诸实践，本文即是笔者在将我司某个简单项目中的计算模块重构为 WebAssembly 过程中的总结。在简单的实践中笔者个人感觉，WebAssembly 的抽象程度会比 JavaScript 高不少，未来对于大型项目的迁移，对于纯前端工程师而言可能存在的坑也是不少，仿佛又回到了被指针统治的年代。本文笔者使用的案例已经集成到了 React 脚手架 [create-react-boilerplate](https://github.com/wx-chevalier/create-react-boilerplate) 中 ，可以方便大家快速本地实践。
 
 # 编译环境搭建
@@ -96,8 +94,8 @@ emcc counter.c -O1 -s WASM=1 -s SIDE_MODULE=1 -o counter.wasm
 
 ```js
 // 判断是否支持 WebAssembly
-if (!('WebAssembly' in window)) {
-  alert('当前浏览器不支持 WebAssembly！');
+if (!("WebAssembly" in window)) {
+  alert("当前浏览器不支持 WebAssembly！");
 } // Loads a WebAssembly dynamic library, returns a promise. // imports is an optional imports object
 function loadWebAssembly(filename, imports) {
   // Fetch the file and compile it
@@ -117,7 +115,7 @@ function loadWebAssembly(filename, imports) {
       if (!imports.env.table) {
         imports.env.table = new WebAssembly.Table({
           initial: 0,
-          element: 'anyfunc'
+          element: "anyfunc"
         });
       } // Create the instance.
       return new WebAssembly.Instance(module, imports);
@@ -140,12 +138,12 @@ function loadWebAssembly(filename, imports) {
 而在笔者的[脚手架](https://github.com/wx-chevalier/create-react-boilerplate)中，使用了 wasm-loader 进行加载，这样可以将 wasm 直接打包在 Bundle 中，然后通过 `import` 导入：
 
 ```js
-import React, { PureComponent } from 'react';
+import React, { PureComponent } from "react";
 
-import CounterWASM from './counter.wasm';
-import Button from 'antd/es/button/button';
+import CounterWASM from "./counter.wasm";
+import Button from "antd/es/button/button";
 
-import './Counter.scss';
+import "./Counter.scss";
 
 /**
  * Description 简单计数器示例
@@ -161,7 +159,7 @@ export default class Counter extends PureComponent {
         memoryBase: 0,
         tableBase: 0,
         memory: new window.WebAssembly.Memory({ initial: 256 }),
-        table: new window.WebAssembly.Table({ initial: 0, element: 'anyfunc' })
+        table: new window.WebAssembly.Table({ initial: 0, element: "anyfunc" })
       }
     });
     this.setState({
@@ -173,7 +171,7 @@ export default class Counter extends PureComponent {
    */
 
   render() {
-    const isWASMSupport = 'WebAssembly' in window;
+    const isWASMSupport = "WebAssembly" in window;
 
     if (!isWASMSupport) {
       return <div>  浏览器不支持 WASM </div>;
@@ -300,7 +298,7 @@ this.module = new EngineWASM({
     memoryBase: 0,
     tableBase: 0,
     memory: new window.WebAssembly.Memory({ initial: 1024 }),
-    table: new window.WebAssembly.Table({ initial: 0, element: 'anyfunc' }),
+    table: new window.WebAssembly.Table({ initial: 0, element: "anyfunc" }),
     _malloc: size => {
       let buffer = new ArrayBuffer(size);
       return new Uint8Array(buffer);

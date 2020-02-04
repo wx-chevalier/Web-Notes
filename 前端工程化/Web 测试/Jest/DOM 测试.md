@@ -4,15 +4,15 @@
 
 ```js
 // displayUser.js
-'use strict';
+"use strict";
 
-const $ = require('jquery');
-const fetchCurrentUser = require('./fetchCurrentUser.js');
+const $ = require("jquery");
+const fetchCurrentUser = require("./fetchCurrentUser.js");
 
-$('#button').click(() => {
+$("#button").click(() => {
   fetchCurrentUser(user => {
-    const loggedText = 'Logged ' + (user.loggedIn ? 'In' : 'Out');
-    $('#username').text(user.fullName + ' - ' + loggedText);
+    const loggedText = "Logged " + (user.loggedIn ? "In" : "Out");
+    $("#username").text(user.fullName + " - " + loggedText);
   });
 });
 ```
@@ -21,40 +21,40 @@ $('#button').click(() => {
 
 ```js
 // __tests__/displayUser-test.js
-'use strict';
+"use strict";
 
-jest.mock('../fetchCurrentUser');
+jest.mock("../fetchCurrentUser");
 
-test('displays a user after a click', () => {
+test("displays a user after a click", () => {
   // Set up our document body
   document.body.innerHTML =
-    '<div>' +
+    "<div>" +
     '  <span id="username" />' +
     '  <button id="button" />' +
-    '</div>';
+    "</div>";
 
   // This module has a side-effect
-  require('../displayUser');
+  require("../displayUser");
 
-  const $ = require('jquery');
-  const fetchCurrentUser = require('../fetchCurrentUser');
+  const $ = require("jquery");
+  const fetchCurrentUser = require("../fetchCurrentUser");
 
   // Tell the fetchCurrentUser mock function to automatically invoke
   // its callback with some data
   fetchCurrentUser.mockImplementation(cb => {
     cb({
-      fullName: 'Johnny Cash',
+      fullName: "Johnny Cash",
       loggedIn: true
     });
   });
 
   // Use jquery to emulate a click on our button
-  $('#button').click();
+  $("#button").click();
 
   // Assert that the fetchCurrentUser function was called, and that the
   // #username span's inner text was updated as we'd expect it to.
   expect(fetchCurrentUser).toBeCalled();
-  expect($('#username').text()).toEqual('Johnny Cash - Logged In');
+  expect($("#username").text()).toEqual("Johnny Cash - Logged In");
 });
 ```
 
@@ -66,7 +66,7 @@ test('displays a user after a click', () => {
 
 ```js
 // Text.js
-import React from 'react';
+import React from "react";
 
 export default ({ className, children }) => {
   return <span className={className}>{children}</span>;
@@ -77,12 +77,12 @@ export default ({ className, children }) => {
 
 ```js
 // Text.test.js
-import React from 'react';
-import renderer from 'react-test-renderer';
+import React from "react";
+import renderer from "react-test-renderer";
 
-import Text from './Text';
+import Text from "./Text";
 
-it('render correctly', () => {
+it("render correctly", () => {
   const tree = renderer
     .create(<Text className="success">Snapshot testing</Text>)
     .toJSON();
@@ -109,10 +109,10 @@ exports[`render correctly 1`] = `
 对于 `React` 的 `scroll` 事件而言，必须要绑定在某个元素里才能进行模拟，不巧，对于安卓手机来说，大部份 `scroll` 事件都是绑定在 `window` 对象下的。这就非常尴尬了，需要借助到 `jsdom` 的功能。通过 `jest-environment-jsdom`，它能够将 `jsdom` 注入到 `node` 运行环境中，因此你可以在测试文件中直接使用 `window`对象进行模拟。例如下面代码，模拟滚动到最底部：
 
 ```js
-test('scroll to bottom', done => {
+test("scroll to bottom", done => {
   const wrapper = mount(<Wrapper />);
 
-  window.addEventListener('scroll', function(e) {
+  window.addEventListener("scroll", function(e) {
     setTimeout(() => {
       try {
         // expect 逻辑
@@ -127,7 +127,7 @@ test('scroll to bottom', done => {
   let scrollTop = 768;
   window.document.body.scrollTop = scrollTop; // 指明当前 scrollTop到了哪个位置
   window.dispatchEvent(
-    new window.Event('scroll', {
+    new window.Event("scroll", {
       scrollTop: scrollTop
     })
   );

@@ -1,5 +1,3 @@
-[![返回目录](https://i.postimg.cc/50XLzC7C/image.png)](https://github.com/wx-chevalier/Web-Series/)
-
 # Gulp
 
 Gulp 是一个构建系统，开发者可以使用它在网站开发过程中自动执行常见任务。Gulp 是基于 Node.js 构建的，因此 Gulp 源文件和你用来定义任务的 Gulp 文件都被写进了 JavaScript(或者 CoffeeScript)里。前端开发工程师还可以用自己熟悉的语言来编写任务去 lint JavaScript 和 CSS、解析模板以及在文件变动时编译 LESS 文件(当然这些只是一小部分例子)。

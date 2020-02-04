@@ -1,5 +1,3 @@
-[![返回目录](https://i.postimg.cc/50XLzC7C/image.png)](https://github.com/wx-chevalier/Web-Series/)
-
 # Web 构建与打包工具
 
 ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2017/6/1/IMG_0438.PNG)
@@ -29,9 +27,9 @@
 ```js
 // index.js
 var total = 0;
-total += require('./module_0');
-total += require('./module_1');
-total += require('./module_2');
+total += require("./module_0");
+total += require("./module_1");
+total += require("./module_2");
 // etc.
 console.log(total);
 // module_0.js

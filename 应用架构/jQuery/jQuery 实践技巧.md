@@ -1,5 +1,3 @@
-[![返回目录](https://i.postimg.cc/50XLzC7C/image.png)](https://github.com/wx-chevalier/Web-Series)
-
 ### 回到顶部的按钮
 
 通过使用 jQuery 中的`animate` 与 `scrollTop` 方法可以创建一个非常简易的带有平滑滚动的回到顶部的按钮：

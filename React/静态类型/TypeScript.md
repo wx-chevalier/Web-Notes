@@ -7,12 +7,12 @@
 React 的 TypeScript 类型声明可以参考 [types/react](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react)，[antd](https://github.com/ant-design/ant-design) 也是非常不错的使用 TypeScript 开发的大型 React 项目。
 
 ```ts
-import * as React from 'react';
-import formatPrice from '../utils/formatPrice';
+import * as React from "react";
+import formatPrice from "../utils/formatPrice";
 
 export interface IPriceProps {
   num: number;
-  symbol: '$' | '€' | '£';
+  symbol: "$" | "€" | "£";
 }
 
 const Price: React.SFC<IPriceProps> = ({ num, symbol }: IPriceProps) => (
@@ -29,7 +29,7 @@ export function positionStyle<T>(
   return (props: any) => {
     const { top, left, ...rest } = props;
     return (
-      <div style={{ position: 'absolute', top, left }}>
+      <div style={{ position: "absolute", top, left }}>
         <Component {...rest} />
       </div>
     );

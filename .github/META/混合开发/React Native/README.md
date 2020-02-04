@@ -1,5 +1,3 @@
-[![返回目录](https://i.postimg.cc/50XLzC7C/image.png)](https://github.com/wx-chevalier/Web-Series)
-
 # React Native
 
 目前我们常用的移动端应用开发方式主要为原生方式、混合开发这两种，其中原生开发运行效率高,流畅,用户体验好,可以做各种复杂的动画效果。不过我们需要去掌握不同开发平台上特定的开发语言与内建的组件框架，譬如在 Android 开发中开发者需要掌握 Java，而 iOS 开发中开发者需要掌握 Objective-C 或者 Swift；并且由于平台之间的独立性，代码无法在其他平台上运行,无法做到跨平台。而传统混合开发方式则以 Cordova 与 Ionic 为代表，定义好原生功能与 Web 界面之间的协议,拦截特定的 URL Schema 进行原生功能的调用，应用则调用 Web 提供的 JavaScript 方法，将数据回传给 Web 界面。这种方式可以满足一套代码到处运行的目标，不过受限于 UIWebView 等容器本身的限制，其性能体验与原生应用不可同日而语。实际上无论哪一种开发方式都致力于解决如下几个问题：找到一种能达到或者接近原生体验的开发方式、找到一种一套代码能在各个平台上运行,达到代码复用的目的、能够以热更新或者类似的方式进行快速问题修复。
@@ -130,40 +128,40 @@ render: function() {
 另一些比较常用的语法转换，一个是模块导入时候的结构器，即我们常常见到模块导入：
 
 ```js
-var React = require('react-native');
+var React = require("react-native");
 var { AppRegistry, StyleSheet, Text, TextInput, View } = React;
 ```
 
 上文中的用法即是所谓的解构赋值，一个简单的例子如下：
 
 ```js
-var fruits = { banana: 'A banana', orange: 'An orange', apple: 'An apple' };
+var fruits = { banana: "A banana", orange: "An orange", apple: "An apple" };
 var { banana, orange, apple } = fruits;
 ```
 
 那么我们在某个组件中进行导出的时候，就可以用如下语法：
 
 ```js
-module.exports.displayName = 'Name';
+module.exports.displayName = "Name";
 module.exports.Component = Component;
 ```
 
 而导入时，即是：
 
 ```js
-var { Component } = require('component.js');
+var { Component } = require("component.js");
 ```
 
 另一个常用的 ES6 的语法即是所谓的 Arrow Function，这有点类似于 Lambda 表达式：
 
 ```js
-AppRegistry.registerComponent('HelloWorld', () => HelloWorld);
+AppRegistry.registerComponent("HelloWorld", () => HelloWorld);
 ```
 
 会被转化为：
 
 ```js
-AppRegistry.registerComponent('HelloWorld', function() {
+AppRegistry.registerComponent("HelloWorld", function() {
   return HelloWorld;
 });
 ```
@@ -262,10 +260,10 @@ npm install jest-cli --save-dev
 直接使用*npm test*命令直接运行 jest 命令，下面可以创建 tests 文件夹，Jest 会递归搜索 tests 目录中的文件，这些测试文件中的代码如下：
 
 ```js
-'use strict';
+"use strict";
 
-describe('a silly test', function() {
-  it('expects true to be true', function() {
+describe("a silly test", function() {
+  it("expects true to be true", function() {
     expect(true).toBe(true);
   });
 });

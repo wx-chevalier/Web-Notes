@@ -1,10 +1,8 @@
-[![返回目录](https://i.postimg.cc/50XLzC7C/image.png)](https://github.com/wx-chevalier/Web-Series)
-
 # 使用 MobX 存储应用状态
 
 ```js
-import { observer } from 'mobx-react';
-import { now } from 'mobx-utils';
+import { observer } from "mobx-react";
+import { now } from "mobx-utils";
 
 const NEW_YEAR = new Date(2018, 0, 1);
 const SECOND = 1000;

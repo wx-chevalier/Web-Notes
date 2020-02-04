@@ -28,7 +28,7 @@ const observer = new PerformanceObserver(logger);
 
 ```js
 // subscribe to User-Timing events
-const config = { entryTypes: ['mark', 'measure'] };
+const config = { entryTypes: ["mark", "measure"] };
 observer.observe(config);
 ```
 
@@ -38,27 +38,27 @@ observer.observe(config);
 
 ```js
 function getDataFromServer() {
-  performance.mark('startWork');
+  performance.mark("startWork");
   // see [USER-TIMING]
   doWork(); // Some developer code
-  performance.mark('endWork');
-  performance.measure('start to end', 'startWork', 'endWork');
-  const measure = performance.getEntriesByName('start to end')[0];
+  performance.mark("endWork");
+  performance.measure("start to end", "startWork", "endWork");
+  const measure = performance.getEntriesByName("start to end")[0];
 }
 
 function logger(list, observer) {
   const entries = list.getEntries();
   entries.forEach(entry => {
     console.log(
-      'Name: ' +
+      "Name: " +
         entry.name +
-        ', Type: ' +
+        ", Type: " +
         entry.entryType +
-        ', Start: ' +
+        ", Start: " +
         entry.startTime +
-        ', Duration: ' +
+        ", Duration: " +
         entry.duration +
-        '\n'
+        "\n"
     );
   });
 }

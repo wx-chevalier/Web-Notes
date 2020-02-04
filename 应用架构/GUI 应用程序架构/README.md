@@ -45,18 +45,18 @@ var Header = component(function(data) {
 });
 
 // Render the component to our DOM
-render(Header({ text: 'Hello' }), document.body);
+render(Header({ text: "Hello" }), document.body);
 
 // Some time later, we change it, by calling the
 // component once more.
 setTimeout(function() {
-  render(Header({ text: 'Changed' }), document.body);
+  render(Header({ text: "Changed" }), document.body);
 }, 1000);
 ```
 
 ```js
-var hello = Header({ text: 'Hello' });
-var bye = Header({ text: 'Good Bye' });
+var hello = Header({ text: "Hello" });
+var bye = Header({ text: "Good Bye" });
 ```
 
 ## 状态管理
@@ -118,10 +118,10 @@ Foo.addOnNetworkRequestListener(() => {
 形象地来描述命令式编程与声明式编程的区别，就好像 C#/JavaScript 与类似于 XML 或者 HTML 这样的标记语言之间的区别。命令式编程关注于`how to do what you want to do`，即事必躬亲，需要安排好每个要做的细节。而声明式编程关注于`what you want to do without worrying about how`，即只需要声明要做的事情而不用将具体的过程再耦合进来。对于开发者而言，声明式编程将很多底层的实现细节向开发者隐藏，而使得开发者可以专注于具体的业务逻辑，同时也保证了代码的解耦与单一职责。譬如在 Web 开发中，如果你要基于 jQuery 将数据填充到页面上，那么大概按照命令式编程的模式你需要这么做：
 
 ```js
-var options = $('#options');
+var options = $("#options");
 $.each(result, function() {
   options.append(
-    $('<option />')
+    $("<option />")
       .val(this.id)
       .text(this.name)
   );

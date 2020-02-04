@@ -17,7 +17,7 @@ To know the relationships between class names, just by looking at them
 In JavaScript, we prefer writing variables in camel case:
 
 ```js
-var redBox = document.getElementById('...');
+var redBox = document.getElementById("...");
 ```
 
 However, camelCase isn't well-suited to CSS, it is consistent with the CSS property names.
@@ -50,7 +50,7 @@ So, we should use standard CSS naming convention rather than camelCase:
 In JavaScript, we prefer writing variables in camel case:
 
 ```js
-var redBox = document.getElementById('...');
+var redBox = document.getElementById("...");
 ```
 
 However, camelCase isn't well-suited to CSS, it is consistent with the CSS property names.

@@ -15,9 +15,9 @@ export default (items, callback) => {
 };
 
 // test.js
-import forEach from './forEach';
+import forEach from "./forEach";
 
-it('test forEach function', () => {
+it("test forEach function", () => {
   const mockCallback = jest.fn(x => 42 + x);
   forEach([0, 1], mockCallback);
 
@@ -58,10 +58,10 @@ Jest 可以 Mock 定时器以使我们在测试代码中控制“时间”。调
 
 ```js
 // timerGame.js
-'use strict';
+"use strict";
 
 function timerGame(callback) {
-  console.log('Ready....go!');
+  console.log("Ready....go!");
   setTimeout(() => {
     console.log("Time's up -- stop!");
     callback && callback();
@@ -71,12 +71,12 @@ function timerGame(callback) {
 module.exports = timerGame;
 
 // __tests__/timerGame-test.js
-('use strict');
+("use strict");
 
 jest.useFakeTimers();
 
-test('waits 1 second before ending the game', () => {
-  const timerGame = require('../timerGame');
+test("waits 1 second before ending the game", () => {
+  const timerGame = require("../timerGame");
   timerGame();
 
   expect(setTimeout).toHaveBeenCalledTimes(1);
@@ -87,8 +87,8 @@ test('waits 1 second before ending the game', () => {
 ## 运行所有的计时器
 
 ```js
-test('calls the callback after 1 second', () => {
-  const timerGame = require('../timerGame');
+test("calls the callback after 1 second", () => {
+  const timerGame = require("../timerGame");
   const callback = jest.fn();
 
   timerGame(callback);
@@ -111,10 +111,10 @@ test('calls the callback after 1 second', () => {
 
 ```js
 // infiniteTimerGame.js
-'use strict';
+"use strict";
 
 function infiniteTimerGame(callback) {
-  console.log('Ready....go!');
+  console.log("Ready....go!");
 
   setTimeout(() => {
     console.log("Time's up! 10 seconds before the next game starts...");
@@ -129,13 +129,13 @@ function infiniteTimerGame(callback) {
 
 module.exports = infiniteTimerGame;
 // __tests__/infiniteTimerGame-test.js
-('use strict');
+("use strict");
 
 jest.useFakeTimers();
 
-describe('infiniteTimerGame', () => {
-  test('schedules a 10-second timer after 1 second', () => {
-    const infiniteTimerGame = require('../infiniteTimerGame');
+describe("infiniteTimerGame", () => {
+  test("schedules a 10-second timer after 1 second", () => {
+    const infiniteTimerGame = require("../infiniteTimerGame");
     const callback = jest.fn();
 
     infiniteTimerGame(callback);
@@ -202,22 +202,22 @@ export default class SoundPlayerConsumer {
 ## Automatic mock
 
 ```js
-import SoundPlayer from './sound-player';
-import SoundPlayerConsumer from './sound-player-consumer';
+import SoundPlayer from "./sound-player";
+import SoundPlayerConsumer from "./sound-player-consumer";
 
-jest.mock('./sound-player'); // SoundPlayer is now a mock constructor
+jest.mock("./sound-player"); // SoundPlayer is now a mock constructor
 
 beforeEach(() => {
   // Clear all instances and calls to constructor and all methods:
   SoundPlayer.mockClear();
 });
 
-it('We can check if the consumer called the class constructor', () => {
+it("We can check if the consumer called the class constructor", () => {
   const soundPlayerConsumer = new SoundPlayerConsumer();
   expect(SoundPlayer).toHaveBeenCalledTimes(1);
 });
 
-it('We can check if the consumer called a method on the class instance', () => {
+it("We can check if the consumer called a method on the class instance", () => {
   // Show that mockClear() is working:
   expect(SoundPlayer).not.toHaveBeenCalled();
 
@@ -225,7 +225,7 @@ it('We can check if the consumer called a method on the class instance', () => {
   // Constructor should have been called again:
   expect(SoundPlayer).toHaveBeenCalledTimes(1);
 
-  const coolSoundFileName = 'song.mp3';
+  const coolSoundFileName = "song.mp3";
   soundPlayerConsumer.playSomethingCool();
 
   // mock.instances is available with automatic mocks:

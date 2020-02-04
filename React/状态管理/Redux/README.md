@@ -1,5 +1,3 @@
-[![返回目录](https://i.postimg.cc/50XLzC7C/image.png)](https://github.com/wx-chevalier/Web-Series)
-
 # 在 React 中使用 Redux
 
 在 [Redux 系列文章](https://ngte-web.gitbook.io/?q=redux)中我们详细介绍了 Redux 的设计与使用，React Redux 是官方提供的 Redux 与 React 的绑定库，用于将 Redux 中的 State 与 Action Creators 映射到 React 组件的 Props。本组件的设计思想可以查看[Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.6bnhmpqtg)，即将展示组件与容器组件分离，将展示组件尽可能地作为 Stateless 对待。在应用中，只有最顶层组件是对 Redux 可知(例如路由处理)这是很好的。所有它们的子组件都应该是“笨拙”的，并且是通过 props 获取数据。
@@ -56,7 +54,10 @@ function mapDispatchToProps(dispatch) {
 // 或者如果你想省略 `mapDispatchToProps`，你可以通过传递一个 `dispatch` 作为一个 props：
 // export default connect(mapStateToProps)(Counter);
 
-let App = connect(mapStateToProps, mapDispatchToProps)(Counter);
+let App = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Counter);
 const targetEl = document.getElementById("root");
 const store = configureStore({ counter: 0 }); //初始化Store
 
@@ -83,7 +84,12 @@ ReactDOM.render(
 # connect：连接 React 组件与 Redux store。
 
 ```js
-connect([mapStateToProps], [mapDispatchToProps], [mergeProps], [options]);
+connect(
+  [mapStateToProps],
+  [mapDispatchToProps],
+  [mergeProps],
+  [options]
+);
 ```
 
 连接操作不会改变原来的组件类，反而返回一个新的已与 Redux store 连接的组件类。

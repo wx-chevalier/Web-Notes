@@ -15,8 +15,8 @@
 
 ```ts
 const options = {
-  root: document.querySelector('.scrollContainer'),
-  rootMargin: '0px',
+  root: document.querySelector(".scrollContainer"),
+  rootMargin: "0px",
   threshold: [0.3, 0.5, 0.8, 1]
 };
 
@@ -54,19 +54,19 @@ function handler(entries, observer) {
 
 ```js
 window.addEventListener(
-  'load',
+  "load",
   function(event) {
-    const mainBox = document.querySelector('.mainBox');
+    const mainBox = document.querySelector(".mainBox");
     /* Creating observer */
     const options = {
       root: mainBox,
-      rootMargin: '0px',
+      rootMargin: "0px",
       threshold: [0.3, 0.5, 0.8, 1]
     };
     const observer = new IntersectionObserver(handler, options);
 
     /* Defining target object */
-    const target = document.querySelector('.targetBox');
+    const target = document.querySelector(".targetBox");
     observer.observe(target);
   },
   false
@@ -74,16 +74,16 @@ window.addEventListener(
 
 /* Defining callback handler */
 function handler(entries, observer) {
-  console.log('Observer handler called: ');
+  console.log("Observer handler called: ");
   entries.forEach(entry => {
     const intersectionRatio = entry.intersectionRatio.toFixed(2);
-    entry.target.innerText = 'Interserction ratio: ' + intersectionRatio;
+    entry.target.innerText = "Interserction ratio: " + intersectionRatio;
     if (intersectionRatio > 0.8) {
-      entry.target.style.background = 'green';
+      entry.target.style.background = "green";
     } else if (intersectionRatio > 0.5) {
-      entry.target.style.background = 'blue';
+      entry.target.style.background = "blue";
     } else if (intersectionRatio > 0.2) {
-      entry.target.style.background = 'red';
+      entry.target.style.background = "red";
     }
   });
 }

@@ -1,5 +1,3 @@
-[![返回目录](https://i.postimg.cc/50XLzC7C/image.png)](https://parg.co/UGZ)
-
 # Progressive Web Apps
 
 Progressive web apps are a new breed of web apps. They combine the benefits of a native app with the low friction nature of the web. Progressive web apps start off as simple websites, but as the user interacts with them, they progressively gain new powers. They transform from a website into something much more like a traditional native app.
@@ -26,10 +24,10 @@ if (‘serviceWorker’ in navigator) {
 然后在 sw.js 文件中缓存资源：
 
 ```js
-self.addEventListener('install', e => {
+self.addEventListener("install", e => {
   let timeStamp = Date.now();
   e.waitUntil(
-    caches.open('airhorner').then(cache => {
+    caches.open("airhorner").then(cache => {
       return cache
         .addAll([
           `/`,
@@ -45,11 +43,11 @@ self.addEventListener('install', e => {
   );
 });
 
-self.addEventListener('activate', event => {
+self.addEventListener("activate", event => {
   event.waitUntil(self.clients.claim());
 });
 
-self.addEventListener('fetch', event => {
+self.addEventListener("fetch", event => {
   event.respondWith(
     caches.match(event.request, { ignoreSearch: true }).then(response => {
       // 默认不会保护 Cookie，可以使用 fetch(url, {credentials: 'include'}) 来发送 Cookie

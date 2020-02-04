@@ -13,7 +13,7 @@ vue-loader 是针对 Vue 中单文件组件（Single-File Component, SFCs）的 
   export default {
     data() {
       return {
-        msg: 'Hello world!'
+        msg: "Hello world!"
       };
     }
   };

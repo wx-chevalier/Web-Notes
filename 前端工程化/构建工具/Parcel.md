@@ -22,7 +22,7 @@ Parcel 可以使用任何类型的文件作为入口，但是最好还是使用 
 ```
 
 ```js
-console.log('hello world');
+console.log("hello world");
 ```
 
 Parcel 内置了一个当你改变文件时能够自动重新构建应用的开发服务器，而且为了实现快速开发，该开发服务器支持热模块替换。只需要在入口文件指出：
@@ -38,7 +38,7 @@ $ parcel index.html
 CSS 资源可以被 JavaScript 或者 HTML 文件导入，其他 LESS 等类型的样式文件也可以被直接引入。
 
 ```js
-import './index.css';
+import "./index.css";
 
 <link rel="stylesheet" type="text/css" href="index.css" />;
 ```
@@ -47,11 +47,11 @@ CSS 资源不但可以通过@import 语法包含其他依赖，也可以通过 u
 
 ```css
 /* 导入其他 CSS 文件 */
-@import './other.css';
+@import "./other.css";
 
 .test {
   /* 引入一个图片文件 */
-  background: url('./images/background.png');
+  background: url("./images/background.png");
 }
 ```
 
@@ -94,7 +94,7 @@ Parcel 为了在生产环境构建压缩 css，向 postcss 中添加了 cssnano�
 ```js
 module.exports = {
   preset: [
-    'default',
+    "default",
     {
       calc: false,
       discardComments: {
@@ -120,7 +120,7 @@ module.exports = {
 
 <script>
   export default {
-    name: 'app'
+    name: "app"
   };
 </script>
 
@@ -140,11 +140,11 @@ module.exports = {
 然后编写入口文件：
 
 ```js
-import Vue from 'vue';
-import App from './app.vue';
+import Vue from "vue";
+import App from "./app.vue";
 
 new Vue({
-  el: '#app',
+  el: "#app",
   render: h => h(App)
 });
 ```
@@ -158,32 +158,32 @@ new Vue({
   </head>
   <body>
     <style>
-    .sidebar {
-      margin-top: 48px;
-    }
+      .sidebar {
+        margin-top: 48px;
+      }
 
-    #nav {
-      position: fixed;
-      z-index: 9;
-      padding: 0 8px;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      width: 300px;
-      top: 0;
-      height: 60px;
-    }
-  </style>
-  <div id="nav">
-    <h3><a href="http://ng-tech.icu/books">Books</a></h3>
-    <span style="margin:0 8px;display:inline-block">|</span>
-    <h3><a href="https://github.com/FE-Kits">FE-Kits</a></h3>
-    <span style="margin:0 8px;display:inline-block">|</span>
-    <h3><a href="https://github.com/BE-Kits">BE-Kits</a></h3>
-    <span style="margin:0 8px;display:inline-block">|</span>
-    <h3><a href="https://github.com/AI-Kits">AI-Kits</a></h3>
-  </div>
-  <div id="app"></div>
+      #nav {
+        position: fixed;
+        z-index: 9;
+        padding: 0 8px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 300px;
+        top: 0;
+        height: 60px;
+      }
+    </style>
+    <div id="nav">
+      <h3><a href="http://ng-tech.icu/books">Books</a></h3>
+      <span style="margin:0 8px;display:inline-block">|</span>
+      <h3><a href="https://github.com/FE-Kits">FE-Kits</a></h3>
+      <span style="margin:0 8px;display:inline-block">|</span>
+      <h3><a href="https://github.com/BE-Kits">BE-Kits</a></h3>
+      <span style="margin:0 8px;display:inline-block">|</span>
+      <h3><a href="https://github.com/AI-Kits">AI-Kits</a></h3>
+    </div>
+    <div id="app"></div>
     <script src="src/main.js"></script>
   </body>
 </html>
@@ -204,7 +204,7 @@ $ parcel build path/to/index.html --public-url . --no-source-maps --no-cache --d
 首先编写 React 组件：
 
 ```tsx
-import * as React from 'react';
+import * as React from "react";
 
 export default class App extends React.Component<any, any> {
   render() {
@@ -220,12 +220,12 @@ export default class App extends React.Component<any, any> {
 然后编写入口文件：
 
 ```ts
-import * as React from 'react';
-import { render } from 'react-dom';
+import * as React from "react";
+import { render } from "react-dom";
 
-import App from './components/App';
+import App from "./components/App";
 
-render(<App />, document.getElementById('root'));
+render(<App />, document.getElementById("root"));
 ```
 
 以及 HTML 入口文件：
@@ -266,7 +266,7 @@ export function render() {
   // 渲染页面
 }
 
-import('./pages/about').then(function(page) {
+import("./pages/about").then(function(page) {
   // 渲染页面
   page.render();
 });
@@ -275,7 +275,7 @@ import('./pages/about').then(function(page) {
 因为 import() 返回一个 Promise，所以你也可以使用 async/await 语法。不过，在浏览器广泛支持它之前，你可能需要配置 Babel 来转换语法。
 
 ```js
-const page = await import('./pages/about');
+const page = await import("./pages/about");
 // 渲染页面
 page.render();
 ```
@@ -286,8 +286,8 @@ page.render();
 // 设置页面名称到动态引入的映射中。
 // 在使用前，这些页面都不会被加载。
 const pages = {
-  about: import('./pages/about'),
-  blog: import('./pages/blog')
+  about: import("./pages/about"),
+  blog: import("./pages/blog")
 };
 
 async function renderPage(page) {
@@ -304,8 +304,8 @@ yarn add babel-polyfill
 ```
 
 ```js
-import 'babel-polyfill';
-import './app';
+import "babel-polyfill";
+import "./app";
 ```
 
 ## 多页面应用
@@ -396,29 +396,29 @@ body {
 
 ```js
 // base.js
-import '../css/base.less';
+import "../css/base.less";
 
 export const baseFunc = text => {
   alert(`baseFunc --- by ${text}`);
 };
 
 // page1.js
-import '../css/page1.less';
-import { baseFunc } from './base';
+import "../css/page1.less";
+import { baseFunc } from "./base";
 
-baseFunc('page1');
+baseFunc("page1");
 
 // page2.js
-import '../css/page2.less';
-import { baseFunc } from './base';
+import "../css/page2.less";
+import { baseFunc } from "./base";
 
-baseFunc('page2');
+baseFunc("page2");
 
 // page3.js
-import '../css/page3.less';
-import { baseFunc } from './base';
+import "../css/page3.less";
+import { baseFunc } from "./base";
 
-baseFunc('page3');
+baseFunc("page3");
 ```
 
 最后开发与打包，注意这里使用 `*` 号匹配 html 路径：
@@ -436,20 +436,20 @@ $ parcel build path/to/pages/*.html --public-url ./ --no-source-maps --no-cache 
 写一个 Asset 实现类 myAsset.js
 
 ```js
-const path = require('path');
-const json5 = require('json5');
-const { minify } = require('terser');
-const { Asset } = require('parcel-bundler');
+const path = require("path");
+const json5 = require("json5");
+const { minify } = require("terser");
+const { Asset } = require("parcel-bundler");
 
 class MyAsset extends Asset {
   constructor(name, options) {
     super(name, options);
-    this.type = 'js'; // set the main output type.
+    this.type = "js"; // set the main output type.
   }
 
   async parse(code) {
     // parse code to an AST
-    return path.extname(this.name) === '.json5' ? json5.parse(code) : null;
+    return path.extname(this.name) === ".json5" ? json5.parse(code) : null;
   }
 
   // async pretransform() { // 转换前
@@ -482,11 +482,11 @@ class MyAsset extends Asset {
 
     return [
       {
-        type: 'json2',
+        type: "json2",
         value: this.contents
       },
       {
-        type: 'js',
+        type: "js",
         value: code
       }
     ];
@@ -504,7 +504,7 @@ module.exports = MyAsset;
 然后再写一个 Packager 实现类 myPackager.js：
 
 ```js
-const { Packager } = require('parcel-bundler');
+const { Packager } = require("parcel-bundler");
 
 class MyPackager extends Packager {
   async start() {
@@ -533,59 +533,59 @@ module.exports = MyPackager;
 
 ```js
 module.exports = function(bundler) {
-  bundler.addAssetType('.josn2', require.resolve('./MyAsset'));
-  bundler.addPackager('json2', require.resolve('./MyPackager'));
+  bundler.addAssetType(".josn2", require.resolve("./MyAsset"));
+  bundler.addPackager("json2", require.resolve("./MyPackager"));
 };
 ```
 
 只需要将 `parcel-plugin-` 前缀的包，加入到 package.json 中，pacel 在初始化的时候就会自动加载这些插件。或者通过 Parcel 类使用：
 
 ```js
-const path = require('path');
-const Bundler = require('parcel-bundler');
+const path = require("path");
+const Bundler = require("parcel-bundler");
 const bundler = new Bundler(file, options);
 
 // 获取node命令行的参数
 const args = process.argv.splice(2);
 
 // Entrypoint file location
-const file = path.join(__dirname, './src/index.html');
+const file = path.join(__dirname, "./src/index.html");
 // Bundler options
 const options = {
-  outDir: './demo_custom/dist', // The out directory to put the build files in, defaults to dist
+  outDir: "./demo_custom/dist", // The out directory to put the build files in, defaults to dist
   //   outFile: './demo_custom/dist/index.html', // The name of the outputFile
   //   publicUrl: './demo_custom/dist', // The url to server on, defaults to dist
   watch: true, // whether to watch the files and rebuild them on change, defaults to process.env.NODE_ENV !== 'production'
   cache: false, // Enabled or disables caching, defaults to true
-  cacheDir: '.cache', // The directory cache gets put in, defaults to .cache
+  cacheDir: ".cache", // The directory cache gets put in, defaults to .cache
   minify: true, // Minify files, enabled if process.env.NODE_ENV === 'production'
-  target: 'browser', // browser/node/electron, defaults to browser
+  target: "browser", // browser/node/electron, defaults to browser
   https: false, // Serve files over https or http, defaults to false
   logLevel: 3, // 3 = log everything, 2 = log warnings & errors, 1 = log errors
   hmrPort: 0, // The port the HMR socket runs on, defaults to a random free port (0 in node.js resolves to a random free port)
-  sourceMaps: args[0] !== 'build', // Enable or disable sourcemaps, defaults to enabled (not supported in minified builds yet)
-  hmrHostname: '', // A hostname for hot module reload, default to ''
-  detailedReport: args[0] === 'build', // Prints a detailed report of the bundles, assets, filesizes and times, defaults to false, reports are only printed if watch is disabled
+  sourceMaps: args[0] !== "build", // Enable or disable sourcemaps, defaults to enabled (not supported in minified builds yet)
+  hmrHostname: "", // A hostname for hot module reload, default to ''
+  detailedReport: args[0] === "build", // Prints a detailed report of the bundles, assets, filesizes and times, defaults to false, reports are only printed if watch is disabled
   open: true,
   port: 1234,
-  production: args[0] === 'build'
+  production: args[0] === "build"
 };
 
 const runBundle = async () => {
   // Initializes a bundler using the entrypoint location and options provided
   const bundler = new Bundler(file, options);
-  bundler.addAssetType('.json2', require.resolve('./myAsset')); // 引入刚刚写好的资源识别类 【识别xx.json2类型文件】
-  bundler.addPackager('json2', require.resolve('./myPackager')); // 引入刚刚写好的打包类【打包 xx.json2 类型文件】
-  if (cli === 'serve' && options.open) {
+  bundler.addAssetType(".json2", require.resolve("./myAsset")); // 引入刚刚写好的资源识别类 【识别xx.json2类型文件】
+  bundler.addPackager("json2", require.resolve("./myPackager")); // 引入刚刚写好的打包类【打包 xx.json2 类型文件】
+  if (cli === "serve" && options.open) {
     const server = await bundler.serve(options.port);
     if (server) {
-      await require('parcel-bundler/src/utils/openInBrowser')(
+      await require("parcel-bundler/src/utils/openInBrowser")(
         `http://localhost:${options.port}`,
         true
       );
     }
   } else {
-    childProcess.exec(`rm -rf ${path.join(__dirname, './dist')}`);
+    childProcess.exec(`rm -rf ${path.join(__dirname, "./dist")}`);
     bundler.bundle();
   }
 };

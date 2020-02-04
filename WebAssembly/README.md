@@ -1,6 +1,4 @@
-[![返回目录](https://i.postimg.cc/KvQbty96/image.png)](https://ngte-pl.gitbook.io/i/javascript) 
-
-# WebAssembly 
+# WebAssembly
 
 # 链接
 

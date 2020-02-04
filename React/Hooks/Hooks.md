@@ -93,7 +93,7 @@ function Button({ onClick, color, children }) {
   return (
     <button
       onClick={onClick}
-      className={'Button-' + color + ' Button-text-' + textColor}
+      className={"Button-" + color + " Button-text-" + textColor}
     >
       {children}
     </button>

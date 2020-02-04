@@ -1,5 +1,3 @@
-[![返回目录](https://i.postimg.cc/50XLzC7C/image.png)](https://github.com/wx-chevalier/Web-Series)
-
 > 本文翻译自[A-Study-Plan-To-Cure-JavaScript-Fatigue](https://medium.com/@sachagreif/a-study-plan-to-cure-javascript-fatigue-8ad3a54f2eb1#.gfap70pkh)。笔者看到里面的几张配图着实漂亮，顺手翻译了一波。本文从属于笔者的[Web Frontend Introduction And Best Practices: 前端入门与最佳实践](https://github.com/wx-chevalier/Web-Develop-Introduction-And-Best-Practices/tree/master/Frontend)。
 
 最近我也读了 Jose Aguinaga 的博文[2016 年里做前端是怎样一种体验](https://segmentfault.com/a/1190000007083024)。这篇博客引发了广泛的关注与讨论，无论是在 Hacker News 还是 Reddit 还是 Medium 上，都有很多人参与到了它的讨论中。我也是很早之前就感觉到了目前 JavaScript 生态圈中的群雄逐鹿，并且我还特地对目前[JavaScript 库流行现状](http://stateofjs.com/)进行了调查，希望能够在异彩纷呈的各式各样的库中寻找到真正的为大众所接受的。不过今天我希望能够更进一步，不仅仅再抱怨现状，而是从我个人的角度来给出一个逐步深入学习 JavaScript 生态圈的方案。(如果你尚对 HTML/CSS/JavaScript 并不了解，那么可以阅读[前端攻略：从路人甲到英雄无敌](https://github.com/wx-chevalier/Web-Develop-Introduction-And-Best-Practices/blob/master/Frontend/Introduction/Frontend-From-Zero-To-Hero.md))。而在文本中我们会涉及以下几个方面 :

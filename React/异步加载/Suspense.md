@@ -1,12 +1,10 @@
-[![返回目录](https://i.postimg.cc/50XLzC7C/image.png)](https://github.com/wx-chevalier/Web-Series)
-
 # Suspense
 
 React Suspense is all about handling transitions between views that have asynchronous data requirements
 
 ```js
-import { createCache } from 'react-cache';
-import { createResource } from 'react-cache';
+import { createCache } from "react-cache";
+import { createResource } from "react-cache";
 
 export let cache = createCache();
 
@@ -18,8 +16,8 @@ export let InvoiceResource = createResource(id => {
 ```
 
 ```js
-import cache from './cache';
-import InvoiceResource from './InvoiceResource';
+import cache from "./cache";
+import InvoiceResource from "./InvoiceResource";
 
 let Invoice = ({ invoiceId }) => {
   let invoice = InvoiceResource.read(cache, invoiceId);
@@ -40,11 +38,11 @@ React renders the page to the DOM
 
 ```js
 // the store and reducer
-import { createStore } from 'redux';
-import { connect } from 'react-redux';
+import { createStore } from "redux";
+import { connect } from "react-redux";
 
 let reducer = (state, action) => {
-  if (action.type === 'LOADED_INVOICE') {
+  if (action.type === "LOADED_INVOICE") {
     return {
       ...state,
       invoice: action.data
@@ -60,7 +58,7 @@ let store = createStore(reducer);
 function fetchInvoice(dispatch, id) {
   fetch(`/invoices/${id}`).then(response => {
     dispatch({
-      type: 'LOADED_INVOICE',
+      type: "LOADED_INVOICE",
       data: response.json()
     });
   });
@@ -93,11 +91,11 @@ export default connect(state => {
 ```
 
 ```js
-import React, { Suspense, Fragment, memo } from 'react';
-import { unstable_createResource } from 'react-cache';
+import React, { Suspense, Fragment, memo } from "react";
+import { unstable_createResource } from "react-cache";
 
 const Fetcher = unstable_createResource(() =>
-  fetch('https://jsonplaceholder.typicode.com/todos').then(r => r.json())
+  fetch("https://jsonplaceholder.typicode.com/todos").then(r => r.json())
 );
 
 const List = () => {
@@ -105,7 +103,7 @@ const List = () => {
   return (
     <ul>
       {data.map(item => (
-        <li style={{ listStyle: 'none' }} key={item.id}>
+        <li style={{ listStyle: "none" }} key={item.id}>
           {item.title}
         </li>
       ))}
@@ -115,7 +113,7 @@ const List = () => {
 
 const App = () => (
   <Fragment>
-    <h2 style={{ textAlign: 'center' }}>{`React: ${React.version} Demo`}</h2>
+    <h2 style={{ textAlign: "center" }}>{`React: ${React.version} Demo`}</h2>
     <Suspense fallback={<div>Loading...</div>}>
       <List />
     </Suspense>

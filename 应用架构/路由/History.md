@@ -1,5 +1,3 @@
-[![返回目录](https://i.postimg.cc/50XLzC7C/image.png)](https://parg.co/UGZ)
-
 # HTML5 History
 
 传统的不使用 Ajax 的站点，每一个翻页是一个跳转，然后你可以在浏览器地址栏里看到诸如 `?page=2` 这样的参数。每一页就这样通过地址栏的 URL 做了标记，每一次请求，浏览器都会根据参数返回正确的页码。所以，传统的跳转翻页，刷新也不会丢失状态。
@@ -15,14 +13,14 @@ export const supportsHistory = () => {
   const ua = window.navigator.userAgent;
 
   if (
-    (ua.indexOf('Android 2.') !== -1 || ua.indexOf('Android 4.0') !== -1) &&
-    ua.indexOf('Mobile Safari') !== -1 &&
-    ua.indexOf('Chrome') === -1 &&
-    ua.indexOf('Windows Phone') === -1
+    (ua.indexOf("Android 2.") !== -1 || ua.indexOf("Android 4.0") !== -1) &&
+    ua.indexOf("Mobile Safari") !== -1 &&
+    ua.indexOf("Chrome") === -1 &&
+    ua.indexOf("Windows Phone") === -1
   )
     return false;
 
-  return window.history && 'pushState' in window.history;
+  return window.history && "pushState" in window.history;
 };
 ```
 
@@ -57,14 +55,14 @@ push 的对立就是 pop，可以猜到这个事件是在浏览器取出历史�
 首先，在服务器端添加对 URL 状态参数的支持，例如 `?page=3` 将会输出对应页码的内容(后端模板)。也可以是服务器端把对应页码的数据给 JavaScript，由 JavaScript 向页面写入内容(前端模板)。接下来，使用 `history.pushState()`，在任一次翻页的同时，也设置正确的带参数的 URL，代码可能是这样：
 
 ```js
-newURL = '?page=' + pageNow;
-history.pushState(null, '', newURL);
+newURL = "?page=" + pageNow;
+history.pushState(null, "", newURL);
 ```
 
 到此，就解决了 F5 刷新状态还原的事了。在浏览器中点击后退，例如从 `?page=3` 退到 `?page=2`，会发现没有变化。按道理说，这时候也应该对应变化。这就要用到 `popstate` 事件了。为 `window` 添加 `popstate` 事件，加入这种导航变化时的处理：
 
 ```js
-$(window).on('popstate', function(event) {
+$(window).on("popstate", function(event) {
   // 取得之前通过pushState保存的state object，尽管本示例并不打算使用它。
   // jQuery对event做了一层包装，需要通过originalEvent取得原生event。
   var state = event.originalEvent.state, // 本示例直接取URL参数来处理

@@ -46,9 +46,9 @@ observer.observe(parent, config);
 function handler(mutationRecords, observer) {
   mutationRecords.forEach(mutationRecord => {
     switch (mutationRecord.type) {
-      case 'childList':
+      case "childList":
         break;
-      case 'attributes':
+      case "attributes":
         break;
       default:
     }
@@ -66,50 +66,48 @@ const config = {
 const observer = new MutationObserver(handler);
 
 /* Observe target */
-const parent = document.querySelector('.parent');
+const parent = document.querySelector(".parent");
 observer.observe(parent, config);
 
 /* Callback function when mutation happens */
 function handler(mutationRecords, observer) {
-  console.log('Handle mutation');
+  console.log("Handle mutation");
   mutationRecords.forEach(mutationRecord => {
-    const info = document.querySelector('.infoBoard');
+    const info = document.querySelector(".infoBoard");
     switch (mutationRecord.type) {
-      case 'childList':
+      case "childList":
         info.innerText =
-          'Mutation Observer handler: Child node added or removed';
+          "Mutation Observer handler: Child node added or removed";
 
         break;
-      case 'attributes':
-        info.innerText = `Mutation Observer handler: Parent attribute modified: ${
-          mutationRecord.attributeName
-        } : ${mutationRecord.target.children.length}`;
+      case "attributes":
+        info.innerText = `Mutation Observer handler: Parent attribute modified: ${mutationRecord.attributeName} : ${mutationRecord.target.children.length}`;
         break;
       default:
-        info.innerText = '';
+        info.innerText = "";
     }
   });
 }
 
 /* Add child nodes when clicked on add child node button */
-document.querySelector('.addBtn').addEventListener('click', () => {
-  console.log('Add child');
-  const child = document.createElement('div');
-  child.className = 'child';
-  child.innerText = 'Child ';
+document.querySelector(".addBtn").addEventListener("click", () => {
+  console.log("Add child");
+  const child = document.createElement("div");
+  child.className = "child";
+  child.innerText = "Child ";
   parent.appendChild(child);
 });
 
 /* Remove child nodes when clicked on remove child node button */
-document.querySelector('.removeBtn').addEventListener('click', () => {
-  console.log('Remove child');
+document.querySelector(".removeBtn").addEventListener("click", () => {
+  console.log("Remove child");
   const child = parent.firstChild;
   parent.removeChild(child);
 });
 
 /* Change attribute value when clicked on change attribute button */
-document.querySelector('.changeAttrBtn').addEventListener('click', () => {
-  console.log('Change attribute value');
-  parent.setAttribute('data-count', parent.childNodes.length);
+document.querySelector(".changeAttrBtn").addEventListener("click", () => {
+  console.log("Change attribute value");
+  parent.setAttribute("data-count", parent.childNodes.length);
 });
 ```

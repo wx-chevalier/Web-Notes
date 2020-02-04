@@ -1,5 +1,3 @@
-[![返回目录](https://i.postimg.cc/50XLzC7C/image.png)](https://github.com/wx-chevalier/Web-Series)
-
 # GPU Animation
 
 ## 动画
@@ -405,13 +403,13 @@ both ：向前和向后填充模式都被应用。
       return new Date().getTime();
     };
 
-  var vendors = ['webkit', 'moz'];
+  var vendors = ["webkit", "moz"];
   for (var i = 0; i < vendors.length && !window.requestAnimationFrame; ++i) {
     var vp = vendors[i];
-    window.requestAnimationFrame = window[vp + 'RequestAnimationFrame'];
+    window.requestAnimationFrame = window[vp + "RequestAnimationFrame"];
     window.cancelAnimationFrame =
-      window[vp + 'CancelAnimationFrame'] ||
-      window[vp + 'CancelRequestAnimationFrame'];
+      window[vp + "CancelAnimationFrame"] ||
+      window[vp + "CancelRequestAnimationFrame"];
   }
   if (
     /iP(ad|hone|od).*OS 6/.test(window.navigator.userAgent) || // iOS6 is buggy

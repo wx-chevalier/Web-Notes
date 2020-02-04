@@ -89,7 +89,7 @@ $.browser.msie = function detectIE() {};
 我们编写的 CSS 样式如下所示：
 
 ```scss
-nav[role='navigation'] {
+nav[role="navigation"] {
 }
 .nav {
   &__list {
@@ -106,7 +106,7 @@ nav[role='navigation'] {
 最终的输出结果大概是这个样子：
 
 ```css
-nav[role='navigation'] {
+nav[role="navigation"] {
 }
 .nav {
 }
@@ -127,7 +127,7 @@ nav[role='navigation'] {
 ```less
 .opacity(@opacity: 100) {
   opacity: @opacity / 100;
-  filter: ~'alpha(opacity=@{opacity})';
+  filter: ~"alpha(opacity=@{opacity})";
 }
 
 .sidebar {
@@ -221,9 +221,9 @@ a {
 ```js
 function Button({ onLogin }) {
   return React.createElement(
-    'div',
-    { id: 'login-btn', onClick: onLogin },
-    'Login'
+    "div",
+    { id: "login-btn", onClick: onLogin },
+    "Login"
   );
 }
 ```
@@ -233,9 +233,9 @@ function Button({ onLogin }) {
 ```js
 function User({ name, addFriend }) {
   return React.createElement(
-    'div',
+    "div",
     null,
-    React.createElement('p', null, name),
+    React.createElement("p", null, name),
     React.createElement(Button, { addFriend })
   );
 }

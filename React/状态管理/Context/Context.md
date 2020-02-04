@@ -38,7 +38,7 @@ Container 是朴素的拥有 setState 方法的 JavaScript 类，其仅负责进
 
 ```js
 // BookContainer.js
-import { Container } from 'unstated';
+import { Container } from "unstated";
 class BookContainer extends Container {
   state = {
     books: [],

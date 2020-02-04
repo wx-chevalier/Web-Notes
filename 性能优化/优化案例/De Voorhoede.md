@@ -113,7 +113,7 @@ html.fonts-loaded {
 ```html
 <script>
   // Mustard Cutting
-  if ('querySelector' in document && 'addEventListener' in window) {
+  if ("querySelector" in document && "addEventListener" in window) {
     document.write('<script src="index.js" defer><\/script>');
   }
 </script>

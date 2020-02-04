@@ -1,12 +1,10 @@
-[![返回目录](https://parg.co/U01)](https://parg.co/bWF)
-
 # Vuex 基本语法
 
 随着应用复杂度的增加，我们需要考虑如何进行应用的状态管理，将业务逻辑与界面交互相剥离，详细讨论参考笔者的 [2016-我的前端之路:工具化与工程化](https://zhuanlan.zhihu.com/p/24575395)。Vue 为我们提供了方便的组件内状态管理的机制，下面这个例子就是常见的获取列表数据然后渲染到界面中：
 
 ```js
 export default {
-  name: 'projects',
+  name: "projects",
   data: function() {
     return {
       projects: []
@@ -14,7 +12,7 @@ export default {
   },
   methods: {
     loadProjects: function() {
-      axios.get('/secured/projects').then(
+      axios.get("/secured/projects").then(
         response => {
           this.projects = response.data;
         },

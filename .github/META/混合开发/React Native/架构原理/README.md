@@ -1,5 +1,3 @@
-[![返回目录](https://i.postimg.cc/50XLzC7C/image.png)](https://github.com/wx-chevalier/Web-Series)
-
 # React Native 架构原理
 
 React Native 是一个跨平台开发框架，允许开发人员使用 Javascript 构建原生应用程序。RN 和基于 Cordova 的应用程序之间的主要区别在于：基于 Cordova 的应用程序在 Webview 中运行，而 RN 应用程序使用原生视图进行渲染；RN 应用程序可以直接访问底层移动操作系统提供的所有 Native API 和视图，因此具有与本机应用程序相同的开发体验和性能表现。

@@ -1,5 +1,3 @@
-[![返回目录](https://i.postimg.cc/50XLzC7C/image.png)](https://github.com/wx-chevalier/Web-Series)
-
 # Flexbox
 
 # Flexbox 简介
@@ -118,51 +116,51 @@ a {
 笔者所使用的 Webpack 的配置文件为：
 
 ```js
-var path = require('path');
-var autoprefixer = require('autoprefixer');
+var path = require("path");
+var autoprefixer = require("autoprefixer");
 
 module.exports = {
-  entry: path.resolve(__dirname, 'demo.js'),
+  entry: path.resolve(__dirname, "demo.js"),
   output: {
-    path: path.resolve(__dirname, ''),
-    publicPath: '',
-    filename: 'demo.dist.js'
+    path: path.resolve(__dirname, ""),
+    publicPath: "",
+    filename: "demo.dist.js"
   },
   module: {
     loaders: [
       {
         test: /\.jsx$/,
         exclude: /(libs|node_modules)/,
-        loader: 'babel?stage=0'
+        loader: "babel?stage=0"
       },
       {
         test: /\.js$/,
         exclude: /(libs|node_modules)/,
-        loader: 'babel?stage=0'
+        loader: "babel?stage=0"
       },
       {
         test: /\.(png|jpg|ttf|woff|svg|eot)$/,
-        loader: 'url-loader?limit=8192'
+        loader: "url-loader?limit=8192"
       }, // inline base64 URLs for <=8k images, direct URLs for the rest
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader!postcss-loader'
+        loader: "style-loader!css-loader!postcss-loader"
       },
       {
         test: /\.(scss|sass)$/,
-        loader: 'style-loader!css-loader!postcss-loader!sass?sourceMap'
+        loader: "style-loader!css-loader!postcss-loader!sass?sourceMap"
       }
     ]
   },
-  postcss: [autoprefixer({ browsers: ['last 10 versions', '> 1%'] })],
+  postcss: [autoprefixer({ browsers: ["last 10 versions", "> 1%"] })],
   externals: {
-    jquery: 'jQuery',
-    pageResponse: 'pageResponse'
+    jquery: "jQuery",
+    pageResponse: "pageResponse"
   },
   resolve: {
     alias: {
-      libs: path.resolve(__dirname, 'libs'),
-      nm: path.resolve(__dirname, 'node_modules')
+      libs: path.resolve(__dirname, "libs"),
+      nm: path.resolve(__dirname, "node_modules")
     }
   }
 };
@@ -272,7 +270,7 @@ flex 是 flex-grow、flex-shrink 以及 flex-basis 的组合缩写，第二和�
 
 ```css
 .item {
-  flex: none | [ < 'flex-grow' > < 'flex-shrink' >? || < 'flex-basis' > ];
+  flex: none | [ < "flex-grow" > < "flex-shrink" >? || < "flex-basis" > ];
 }
 ```
 

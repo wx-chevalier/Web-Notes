@@ -1,5 +1,3 @@
-[![返回目录](https://i.postimg.cc/50XLzC7C/image.png)](https://github.com/wx-chevalier/Web-Series)
-
 # CSS 语法基础与实践
 
 随着 Internet 的迅猛发展，HTML 被广泛应用，上网的人们当然希望网页做得漂亮些，因此 HTML 排版和界面效果的局限性日益暴露出来。为了解决这个问题，人们也走了不少弯路，用了一些不好的方法，比如给 HTML 增加很多的属性结果将代码变得很臃肿，将文本变成图片，过多利用 Table 来排版，用空白的图片表示白色的空间等。直到 CSS 出现。

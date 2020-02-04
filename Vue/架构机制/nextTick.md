@@ -10,31 +10,31 @@
 
 // JS
 var vm = new Vue({
-  el: '#example',
+  el: "#example",
   data: {
-    message: '123'
+    message: "123"
   }
 });
-vm.message = 'new message'; // 更改数据
-vm.$el.textContent === 'new message'; // false
+vm.message = "new message"; // 更改数据
+vm.$el.textContent === "new message"; // false
 Vue.nextTick(function() {
-  vm.$el.textContent === 'new message'; // true
+  vm.$el.textContent === "new message"; // true
 });
 ```
 
 在组件内使用 `vm.$nextTick()` 实例方法特别方便，因为它不需要全局 Vue，并且回调函数中的 this 将自动绑定到当前的 Vue 实例上：
 
 ```js
-Vue.component('example', {
-  template: '<span>{{ message }}</span>',
+Vue.component("example", {
+  template: "<span>{{ message }}</span>",
   data: function() {
     return {
-      message: '没有更新'
+      message: "没有更新"
     };
   },
   methods: {
     updateMessage: function() {
-      this.message = '更新完成';
+      this.message = "更新完成";
       console.log(this.$el.textContent); // => '没有更新'
       this.$nextTick(function() {
         console.log(this.$el.textContent); // => '更新完成'
@@ -65,7 +65,7 @@ export const nextTick = (function() {
     }
   } /* istanbul ignore if */ // nextTick 的回调会被加入到 MicroTask 队列中，这里我们主要通过原生的 Promise 与 MutationObserver 实现
 
-  if (typeof Promise !== 'undefined' && isNative(Promise)) {
+  if (typeof Promise !== "undefined" && isNative(Promise)) {
     let p = Promise.resolve();
     let logError = err => {
       console.error(err);
@@ -76,9 +76,9 @@ export const nextTick = (function() {
       if (isIOS) setTimeout(noop);
     };
   } else if (
-    typeof MutationObserver !== 'undefined' &&
+    typeof MutationObserver !== "undefined" &&
     (isNative(MutationObserver) || // PhantomJS and iOS 7.x
-      MutationObserver.toString() === '[object MutationObserverConstructor]')
+      MutationObserver.toString() === "[object MutationObserverConstructor]")
   ) {
     // 当 Promise 不可用时候使用 MutationObserver
     // e.g. PhantomJS IE11, iOS7, Android 4.4
@@ -107,7 +107,7 @@ export const nextTick = (function() {
         try {
           cb.call(ctx);
         } catch (e) {
-          handleError(e, ctx, 'nextTick');
+          handleError(e, ctx, "nextTick");
         }
       } else if (_resolve) {
         _resolve(ctx);
@@ -118,7 +118,7 @@ export const nextTick = (function() {
       timerFunc();
     } // 如果没有传入回调，则表示以异步方式调用
 
-    if (!cb && typeof Promise !== 'undefined') {
+    if (!cb && typeof Promise !== "undefined") {
       return new Promise((resolve, reject) => {
         _resolve = resolve;
       });

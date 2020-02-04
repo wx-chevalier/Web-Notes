@@ -39,7 +39,7 @@ declare namespace JSX {
 基于值的元素会简单的在它所在的作用域里按标识符查找。
 
 ```jsx
-import MyComponent from './myComponent';
+import MyComponent from "./myComponent";
 
 <MyComponent />; // 正确
 <SomeOtherComponent />; // 错误
@@ -60,8 +60,8 @@ const x = <div />;
 生成：
 
 ```js
-const preact = require('preact');
-const x = preact.h('div', null);
+const preact = require("preact");
+const x = preact.h("div", null);
 ```
 
 工厂函数的选择同样会影响 JSX 命名空间的查找（类型检查）。如果工厂函数使用 React.createElement 定义（默认），编译器会先检查 React.JSX，之后才检查全局的 JSX。如果工厂函数定义为 h，那么在检查全局的 JSX 之前先检查 h.JSX。

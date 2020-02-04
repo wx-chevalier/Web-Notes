@@ -1,5 +1,3 @@
-[![返回目录](https://i.postimg.cc/50XLzC7C/image.png)](https://github.com/wx-chevalier/Web-Series)
-
 # State
 
 `setState`方法最大的特点在于异步批次更新，其内部实现原理我们会在未来章节详细介绍。

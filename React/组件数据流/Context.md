@@ -1,5 +1,3 @@
-[![返回目录](https://i.postimg.cc/50XLzC7C/image.png)](https://github.com/wx-chevalier/Web-Series)
-
 # React Context 详解
 
 # Context 基本使用
@@ -7,7 +5,7 @@
 [CodeSandbox/Context](https://codesandbox.io/embed/1yx4kl1jz7)
 
 ```js
-const ThemeContext = React.createContext('dark');
+const ThemeContext = React.createContext("dark");
 
 export const { Consumer, Provider } = ThemeContext;
 
@@ -52,7 +50,7 @@ export default withTheme(Header);
 参考 React 官方示例，我们可以通过如下方式来使用 Context 跨层传递数据：
 
 ```js
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 class Button extends React.Component {
   render() {
@@ -80,7 +78,7 @@ class Message extends React.Component {
 
 class MessageList extends React.Component {
   getChildContext() {
-    return { color: 'purple' };
+    return { color: "purple" };
   }
 
   render() {

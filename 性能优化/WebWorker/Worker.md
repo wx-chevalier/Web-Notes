@@ -4,13 +4,13 @@
 
 ```js
 // 判断浏览器是否支持 Worker
-typeof Worker !== 'undefined';
+typeof Worker !== "undefined";
 
 // 从脚本中创建 Worker
-new Worker('workers.js');
+new Worker("workers.js");
 
 // 使用字符串方式创建 Worker
-new Worker('data:text/javascript;charset=US-ASCII,...');
+new Worker("data:text/javascript;charset=US-ASCII,...");
 ```
 
 ## worker-loader
@@ -18,12 +18,12 @@ new Worker('data:text/javascript;charset=US-ASCII,...');
 [worker-loader](https://github.com/webpack-contrib/worker-loader) 是一个 webpack 插件，可以将一个普通 JS 文件的全部依赖提取后打包并替换调用处，以 Blob 形式内联在源码中。
 
 ```js
-import Worker from 'worker-loader!./file.worker.js';
+import Worker from "worker-loader!./file.worker.js";
 
 const worker = new Worker();
 
 // 转化为下述代码
-const blob = new Blob([codeFromFileWorker], { type: 'application/javascript' });
+const blob = new Blob([codeFromFileWorker], { type: "application/javascript" });
 const worker = new Worker(URL.createObjectURL(blob));
 ```
 
@@ -37,7 +37,7 @@ const code = `
   self.onmessage = e => {};
 `;
 
-const blob = new Blob([code], { type: 'application/javascript' });
+const blob = new Blob([code], { type: "application/javascript" });
 const worker = new Worker(URL.createObjectURL(blob));
 ```
 
@@ -54,8 +54,8 @@ let worker = workerize(`
 `);
 
 (async () => {
-  console.log('3 + 9 = ', await worker.add(3, 9));
-  console.log('1 + 2 = ', await worker.add(1, 2));
+  console.log("3 + 9 = ", await worker.add(3, 9));
+  console.log("1 + 2 = ", await worker.add(1, 2));
 })();
 ```
 
@@ -66,7 +66,7 @@ let worker = workerize(`
 export function expensive(time) {}
 
 // app.js
-import worker from 'workerize-loader!./worker';
+import worker from "workerize-loader!./worker";
 
 let instance = worker(); // `new` is optional
 
@@ -85,7 +85,7 @@ By default, cookies are not included with fetch requests, but you can include th
 function XHRWorker(url, ready, scope) {
   var oReq = new XMLHttpRequest();
   oReq.addEventListener(
-    'load',
+    "load",
     function() {
       var worker = new Worker(
         window.URL.createObjectURL(new Blob([this.responseText]))
@@ -96,15 +96,15 @@ function XHRWorker(url, ready, scope) {
     },
     oReq
   );
-  oReq.open('get', url, true);
+  oReq.open("get", url, true);
   oReq.send();
 }
 
 function WorkerStart() {
   XHRWorker(
-    'http://static.xxx.com/js/worker.js',
+    "http://static.xxx.com/js/worker.js",
     function(worker) {
-      worker.postMessage('hello world');
+      worker.postMessage("hello world");
       worker.onmessage = function(e) {
         console.log(e.data);
       };

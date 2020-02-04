@@ -7,13 +7,13 @@ React Router 附带了一些 Hooks Api，可让您访问路由器的状态并从
 useHistory Hook 使您可以访问可用于导航的历史记录实例。
 
 ```js
-import { useHistory } from 'react-router';
+import { useHistory } from "react-router";
 
 function HomeButton() {
   let history = useHistory();
 
   function handleClick() {
-    history.push('/home');
+    history.push("/home");
   }
 
   return (
@@ -29,14 +29,14 @@ function HomeButton() {
 useLocation Hook 返回代表当前 URL 的位置对象。您可以将其想像为 useState，它会在 URL 发生更改时返回一个新位置。在您希望每次加载新页面时都使用 Web 分析工具触发新的“页面浏览”事件的情况下，如以下示例所示：
 
 ```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Switch, useLocation } from 'react-router';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Switch, useLocation } from "react-router";
 
 function usePageViews() {
   let location = useLocation();
   React.useEffect(() => {
-    ga.send(['pageview', location.pathname]);
+    ga.send(["pageview", location.pathname]);
   }, [location]);
 }
 
@@ -58,14 +58,14 @@ ReactDOM.render(
 useParams 返回 URL 参数的键/值对的对象。使用它来访问当前 `<Route>` 的 match.params。
 
 ```js
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   useParams
-} from 'react-router';
+} from "react-router";
 
 function BlogPost() {
   let { slug } = useParams();
@@ -105,7 +105,7 @@ function BlogPost() {
 }
 
 function BlogPost() {
-  let match = useMatch('/blog/:slug');
+  let match = useMatch("/blog/:slug");
   // Do whatever you want with the match...
 }
 ```

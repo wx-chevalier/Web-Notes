@@ -1,5 +1,3 @@
-[![返回目录](https://i.postimg.cc/50XLzC7C/image.png)](https://github.com/wx-chevalier/Web-Series)
-
 # 基于 JSX 的动态数据绑定
 
 笔者在 [2016-我的前端之路: 工具化与工程化](https://zhuanlan.zhihu.com/p/24575395)一文中提及，前端社区用了 15 年的时间来分割 HTML、JavaScript 与 CSS，但是随着 JSX 的出现仿佛事物一夕回到解放前。在 Angular、Vue.js 等 MVVM 前端框架中都是采用了指令的方式来描述业务逻辑，而 JSX 本质上还是 JavaScript，即用 JavaScript 来描述业务逻辑。虽然 JSX 被有些开发者评论为丑陋的语法，但是笔者还是秉持 JavaScript First 原则，尽可能地用 JavaScript 去编写业务代码。在前文 [React 初窥：JSX 详解](https://parg.co/bWj)中我们探讨了 JSX 的前世今生与基本用法，而本部分我们着手编写简单的面向 DOM 的 JSX 解析与动态数据绑定库；本部分所涉及的代码归纳于 [Ueact](https://github.com/wx-chevalier/Ueact) 库。
@@ -147,7 +145,7 @@ if (setHTML && setHTML.__html) {
 
 ```js
 // App.js
-import { createElement } from '../../../src/dom/jsx/createElement';
+import { createElement } from "../../../src/dom/jsx/createElement";
 
 // 页面内状态
 const state = {
@@ -160,18 +158,18 @@ const state = {
  */
 const handleClick = e => {
   state.count++;
-  document.querySelector('#count').innerText = state.count;
+  document.querySelector("#count").innerText = state.count;
 };
 
 export default (
   <div className="header">
-    {' '}
+    {" "}
     <section>
-      {' '}
+      {" "}
       <section>
-        {' '}
+        {" "}
         <button className="link" onClick={handleClick}>
-          Custom DOM JSX{' '}
+          Custom DOM JSX{" "}
         </button>
         <input
           type="text"
@@ -179,24 +177,27 @@ export default (
             console.log(e);
           }}
         />
-         {' '}
-      </section>{' '}
+         {" "}
+      </section>{" "}
     </section>
     <svg>
-      <circle cx="64" cy="64" r="64" style="fill: #00ccff;" /> {' '}
+      <circle cx="64" cy="64" r="64" style="fill: #00ccff;" />
+       {" "}
     </svg>
-    <br />  <span id="count" style={{ color: 'red' }}>
-      {state.count} {' '}
-    </span>{' '}
+    <br />
+     {" "}
+    <span id="count" style={{ color: "red" }}>
+      {state.count} {" "}
+    </span>{" "}
   </div>
 );
 
 // client.js
 // @flow
 
-import App from './component/Count';
+import App from "./component/Count";
 
-document.querySelector('#root').appendChild(App);
+document.querySelector("#root").appendChild(App);
 ```
 
 # 数据绑定
@@ -209,7 +210,7 @@ document.querySelector('#root').appendChild(App);
 
 ```html
 <script>
-  var ele = document.querySelector('#inline-jsx');
+  var ele = document.querySelector("#inline-jsx");
 
   Ueact.observeDOM(
     ele,
@@ -233,10 +234,10 @@ document.querySelector('#root').appendChild(App);
       },
       hooks: {
         mounted: function() {
-          console.log('mounted');
+          console.log("mounted");
         },
         updated: function() {
-          console.log('updated');
+          console.log("updated");
         }
       }
     },
@@ -251,12 +252,12 @@ document.querySelector('#root').appendChild(App);
 let input = html2JSX(ele.outerHTML);
 
 let output = Babel.transform(input, {
-  presets: ['es2015'],
+  presets: ["es2015"],
   plugins: [
     [
-      'transform-react-jsx',
+      "transform-react-jsx",
       {
-        pragma: 'Ueact.createElement'
+        pragma: "Ueact.createElement"
       }
     ]
   ]
@@ -278,7 +279,7 @@ let output = Babel.transform(input, {
  */
 function renderFromStr(innerContext) {
   let func = new Function(
-    'innerContext',
+    "innerContext",
     `
  let { state, methods, hooks } = innerContext;
  let ele = ${innerContext.rawJSX}
@@ -301,7 +302,7 @@ function renderFromStr(innerContext) {
 笔者在 [2015-我的前端之路:数据流驱动的界面](https://parg.co/bFo)中讨论了从以 DOM 为核心到数据流驱动的变化，本部分我们即讨论如何自动监听状态变化并且完成重渲染。这里我们采用监听 JavaScript 对象属性的方式进行状态变化监听，采用了笔者另一个库 [Observer-X](https://parg.co/bFA)，其基本用发如下：
 
 ```js
-import { observe } from '../../dist/observer-x';
+import { observe } from "../../dist/observer-x";
 
 const obj = observe(
   {},
@@ -314,7 +315,7 @@ obj.property = {};
 
 obj.property.listen(changes => {
   console.log(changes);
-  console.log('changes in obj');
+  console.log("changes in obj");
 });
 
 obj.property.name = 1;

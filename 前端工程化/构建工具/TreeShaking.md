@@ -12,8 +12,8 @@ export const sayBye = name => `Bye ${name}!`;
 
 ```js
 // index.js
-import { sayHello } from './module';
-sayHello('World');
+import { sayHello } from "./module";
+sayHello("World");
 ```
 
 虽然我们同样暴露了`sayBye`这个函数，但是从未使用过，那么基于 TreeShaking 优化机制，最后的打包文件如下所示：
@@ -28,22 +28,22 @@ sayHello('World');
 
 ```js
 // webpack.config.js
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
-  entry: './src/index.js',
-  output: { filename: 'bundle.js', path: 'dist' },
+  entry: "./src/index.js",
+  output: { filename: "bundle.js", path: "dist" },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        loader: "babel-loader",
         options: {
-          presets: [['es2015', { modules: false }]]
+          presets: [["es2015", { modules: false }]]
         }
       }
     ]
   },
-  plugins: [new HtmlWebpackPlugin({ title: 'Tree-shaking' })]
+  plugins: [new HtmlWebpackPlugin({ title: "Tree-shaking" })]
 };
 ```

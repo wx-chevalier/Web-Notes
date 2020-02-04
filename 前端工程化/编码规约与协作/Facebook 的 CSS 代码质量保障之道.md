@@ -1,5 +1,3 @@
-[![返回目录](https://i.postimg.cc/50XLzC7C/image.png)](https://github.com/wx-chevalier/Web-Series/)
-
 # Facebook 的 CSS 代码质量保障之道
 
 在 Facebook 里，上千名工程师工作在不同的产品线上，为全世界的用户提供可靠优质的服务，而我们在代码质量管理方面也面临着独一无二的挑战。不仅仅是因为我们面对的是一个庞大的代码基库，还有日渐增加的各种各样的特性，有时候如果你想去重构提高某一个模块，往往会影响到其他很多模块。具体在 CSS 而言，我们需要处理上千份不停变化的 CSS 文件。之前我们着力于通过 Code Review、代码样式规范以及重构等手段协同工作，而保障代码质量，但是还是会有很多的错误悄悄从眼皮底下溜走，被提交进入到代码库里。我们一直用自建的 CSS Linter 来检测基本的代码错误与保证一致的编码风格，尽管它基本上已经满足了我们的目标，但还是存在很多的问题，因此我也想在这篇文章里对如何保障 CSS 的代码质量进行一些讨论。
@@ -74,6 +72,7 @@ root.walkDecls(node => {
 我们默认使用了一些 Stylelint 内置的规则，譬如[declaration-no-important](https://www.facebook.com/l.php?u=https%3A%2F%2Fgithub.com%2Fstylelint%2Fstylelint%2Ftree%2Fmaster%2Fsrc%2Frules%2Fdeclaration-no-important&h=oAQG1Tctr&s=1),[selector-no-universal](https://github.com/stylelint/stylelint/blob/master/src/rules/selector-no-universal/README.md), 以及 [selector-class-pattern](https://github.com/stylelint/stylelint/tree/master/src/rules/selector-class-pattern)。如何添加自定义规则的方法可以参考[built-in plugin mechanism](http://stylelint.io/developer-guide/plugins/)，而我们使用的譬如：
 
 -
+
 - slow-css-properties 来告警一些性能较差的属性，譬如 opacity 或者 box-shadow
 - filters-with-svg-files 来告警 Edge 中不支持 SVG 的过滤
 - use-variables 来告警那些可以被内置的常量替换的一些变量

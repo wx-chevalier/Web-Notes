@@ -1,5 +1,3 @@
-[![返回目录](https://i.postimg.cc/50XLzC7C/image.png)](https://parg.co/UGZ)
-
 # 状态管理
 
 ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/7/1/1-WGDVzQRyXxoEG5r1PSEiAw.png)

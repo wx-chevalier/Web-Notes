@@ -1,5 +1,3 @@
-
-
 # Babel CheatSheet
 
 Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments. Babel 主要通过以下方式来保证代码的运行:
@@ -21,15 +19,15 @@ $ npm install --save @babel/polyfill
 ```js
 const presets = [
   [
-    '@babel/env',
+    "@babel/env",
     {
       targets: {
-        edge: '17',
-        firefox: '60',
-        chrome: '67',
-        safari: '11.1'
+        edge: "17",
+        firefox: "60",
+        chrome: "67",
+        safari: "11.1"
       },
-      useBuiltIns: 'usage'
+      useBuiltIns: "usage"
     }
   ]
 ];
@@ -46,9 +44,9 @@ $ ./node_modules/.bin/babel src --out-dir lib
 也可以使用编程方式进行转换:
 
 ```js
-const babel = require('@babel/core');
+const babel = require("@babel/core");
 
-babel.transform('code', optionsObject);
+babel.transform("code", optionsObject);
 ```
 
 值得一提的是，在 Babel 7 中，env 会根据浏览器的支持情况以及实际的代码使用来选择性的引入 Pollyfill 文件:
@@ -58,7 +56,7 @@ babel.transform('code', optionsObject);
 Promise.resolve().finally();
 
 // 会转化为如下形式
-require('core-js/modules/es.promise.finally');
+require("core-js/modules/es.promise.finally");
 
 Promise.resolve().finally();
 ```
@@ -66,7 +64,7 @@ Promise.resolve().finally();
 我们也可以在单个配置文件中，针对不同的环境定制不同的插件方案，Babel 默认按照如下方式加载环境变量:
 
 ```js
-process.env.BABEL_ENV || process.env.NODE_ENV || 'development';
+process.env.BABEL_ENV || process.env.NODE_ENV || "development";
 ```
 
 ```json
@@ -129,13 +127,13 @@ With webpack and When used alongside @babel/preset-env,, there are multiple ways
 我们也可以手动地载入这些 Polyfills:
 
 ```js
-require('@babel/polyfill');
+require("@babel/polyfill");
 
-import '@babel/polyfill';
+import "@babel/polyfill";
 
 // webpack.config.js
 module.exports = {
-  entry: ['@babel/polyfill', './app/js']
+  entry: ["@babel/polyfill", "./app/js"]
 };
 ```
 
@@ -182,7 +180,7 @@ npm install @babel/core @babel/register --save-dev
 
 ```js
 // entry.js
-require('@babel/register');
+require("@babel/register");
 ```
 
 All subsequent files required by node with the extensions .es6, .es, .jsx, .mjs, and .js will be transformed by Babel.

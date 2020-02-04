@@ -1,5 +1,3 @@
-[![返回目录](https://i.postimg.cc/50XLzC7C/image.png)](https://github.com/wx-chevalier/Web-Series/)
-
 # 端到端测试
 
 早期的端到端测试与爬虫的瓶颈点，都在于在于动态页面的处理，即如何执行页面中的 JavaScript 脚本，触发真实数据请求，从而获得实际有效的界面内容。不过随着 Selenium 这样的 Browser Automation 工具、PhantomJS/Puppeter 这样的 Headless Browser 工具的出现，该问题已是很容易解决。另一方面，测试用例中的步骤录制，即将用户行为转化为多个 DSL 描述的步骤，更关注于关键点的记录，而非全量（录屏工具的结果与操作应该是确定的、可预期的，而测试工具的结果应该是推导出的、不可预期的）；同时录制的时候需要将逻辑与数据相剥离，允许传入不同的测试数据。
@@ -85,16 +83,16 @@
 譬如 [SeleniumHQ/WebDriverJs](https://github.com/SeleniumHQ/selenium/wiki/WebDriverJs) 这样的工具，允许开发者将测试用例以代码的方式固化，并进行重复运行：
 
 ```js
-const { Builder, By, until } = require('selenium-webdriver');
+const { Builder, By, until } = require("selenium-webdriver");
 new Builder()
-  .forBrowser('firefox')
+  .forBrowser("firefox")
   .build()
   .then(driver => {
     return driver
-      .get('http://www.google.com/ncr')
-      .then(_ => driver.findElement(By.name('q')).sendKeys('webdriver'))
-      .then(_ => driver.findElement(By.name('btnK')).click())
-      .then(_ => driver.wait(until.titleIs('webdriver - Google Search'), 1000))
+      .get("http://www.google.com/ncr")
+      .then(_ => driver.findElement(By.name("q")).sendKeys("webdriver"))
+      .then(_ => driver.findElement(By.name("btnK")).click())
+      .then(_ => driver.wait(until.titleIs("webdriver - Google Search"), 1000))
       .then(_ => driver.quit());
   });
 ```
@@ -116,11 +114,11 @@ Feature: Is it Friday yet?
 [CodeceptJS](https://github.com/codeception/codeceptjs/) 是基于 Node.js 的 Acceptance Test 工具，其同样提供了 DSL 语法：
 
 ```js
-Feature('CodeceptJS demo');
+Feature("CodeceptJS demo");
 
-Scenario('check Welcome page on site', I => {
-  I.amOnPage('/');
-  I.see('Welcome');
+Scenario("check Welcome page on site", I => {
+  I.amOnPage("/");
+  I.see("Welcome");
 });
 ```
 
@@ -138,16 +136,16 @@ Selenium 作为老牌的端到端测试框架，本身是 Web 浏览器自动化
 
 ```js
 module.exports = {
-  tags: ['git'],
-  'Demo test GitHub': function(client) {
+  tags: ["git"],
+  "Demo test GitHub": function(client) {
     client
-      .url('http://github.com/nightwatchjs/nightwatch')
-      .waitForElementVisible('body', 1000)
-      .waitForElementVisible('.container h1 strong a')
+      .url("http://github.com/nightwatchjs/nightwatch")
+      .waitForElementVisible("body", 1000)
+      .waitForElementVisible(".container h1 strong a")
       .assert.containsText(
-        '.container h1 strong a',
-        'nightwatch',
-        'Checking project title is set to nightwatch'
+        ".container h1 strong a",
+        "nightwatch",
+        "Checking project title is set to nightwatch"
       );
   },
 

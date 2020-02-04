@@ -96,7 +96,7 @@ class MyView extends React.Component {
 }
 
 ProfilePage = connectToStores(MyView, store, (props, store) => ({
-  data: store.get('key')
+  data: store.get("key")
 }));
 ```
 
@@ -150,7 +150,7 @@ const Dispatcher = function() {
     register: function(store) {
       if (!store || !store.update) {
         throw new Error(
-          'You should provide a store that has an `update` method.'
+          "You should provide a store that has an `update` method."
         );
       } else {
         const consumers = [];
@@ -229,7 +229,7 @@ const Dispatcher = function() {
     register: function(store) {
       if (!store || !store.update) {
         throw new Error(
-          'You should provide a store that has an `update` method.'
+          "You should provide a store that has an `update` method."
         );
       } else {
         const consumers = [];

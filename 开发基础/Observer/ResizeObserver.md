@@ -27,7 +27,7 @@ const observer = new ResizeObserver(handler);
 定义目标对象，其大小的变化应该被观察到。
 
 ```js
-const child = document.querySelector('.child');
+const child = document.querySelector(".child");
 observer.observe(child);
 ```
 
@@ -45,8 +45,8 @@ function handler(entries) {
 ```
 
 ```js
-if (!('ResizeObserver' in window)) {
-  document.body.innerText = 'Not supported by your browser';
+if (!("ResizeObserver" in window)) {
+  document.body.innerText = "Not supported by your browser";
 }
 /* Create resize observer */
 const observer = new ResizeObserver(handler);
@@ -56,14 +56,12 @@ function handler(entries) {
   entries.forEach(entry => {
     const size = entry.contentRect;
     console.log(
-      `Resize Observer's callback: box size: width: ${size.width} , height:  ${
-        size.height
-      }`
+      `Resize Observer's callback: box size: width: ${size.width} , height:  ${size.height}`
     );
   });
 }
 
 /* Observe child element */
-const child = document.querySelector('.box');
+const child = document.querySelector(".box");
 observer.observe(child);
 ```

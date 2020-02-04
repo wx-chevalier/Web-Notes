@@ -1,5 +1,3 @@
-[![返回目录](https://i.postimg.cc/50XLzC7C/image.png)](https://github.com/wx-chevalier/Web-Series)
-
 # React Router
 
 # 中心化路由
@@ -21,8 +19,8 @@
 React-Router 的核心原理是将子组件根据选择注入到`{this.props.children}`中。在一个多页面的应用程序中，如果我们不使用 React-Router，那么整体的代码可能如下所示:
 
 ```js
-import React from 'react';
-import { render } from 'react-dom';
+import React from "react";
+import { render } from "react-dom";
 
 const About = React.createClass({
   /*...*/
@@ -42,7 +40,7 @@ const App = React.createClass({
   },
 
   componentDidMount() {
-    window.addEventListener('hashchange', () => {
+    window.addEventListener("hashchange", () => {
       this.setState({
         route: window.location.hash.substr(1)
       });
@@ -52,10 +50,10 @@ const App = React.createClass({
   render() {
     let Child;
     switch (this.state.route) {
-      case '/about':
+      case "/about":
         Child = About;
         break;
-      case '/inbox':
+      case "/inbox":
         Child = Inbox;
         break;
       default:
@@ -73,8 +71,7 @@ const App = React.createClass({
             <a href="#/inbox">Inbox</a>
           </li> 
         </ul>
-        <Child />
-         
+        <Child /> 
       </div>
     );
   }
@@ -88,11 +85,11 @@ render(<App />, document.body);
 在 React-Router 的协助下，我们的路由配置可能如下所示:
 
 ```js
-import React from 'react';
-import { render } from 'react-dom';
+import React from "react";
+import { render } from "react-dom";
 
 // First we import some modules...
-import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router';
+import { Router, Route, IndexRoute, Link, hashHistory } from "react-router";
 
 // Then we delete a bunch of code from App and
 // add some <Link> elements...
@@ -100,20 +97,20 @@ const App = React.createClass({
   render() {
     return (
       <div>
-          <h1>App</h1>  {/* change the <a>s to <Link>s */} {' '}
+          <h1>App</h1>  {/* change the <a>s to <Link>s */} {" "}
         <ul>
-           {' '}
+           {" "}
           <li>
             <Link to="/about">About</Link>
           </li>
             <li>
             <Link to="/inbox">Inbox</Link>
-          </li> {' '}
+          </li> {" "}
         </ul>
           {/*
   next we replace `<Child>` with `this.props.children`
   the router will figure out the children for us
-  */}  {this.props.children} {' '}
+  */}  {this.props.children} {" "}
       </div>
     );
   }
@@ -137,12 +134,12 @@ React Router 提供了统一的声明式全局路由配置方案，使我们在�
 
 ```js
 const routes = {
-  path: '/',
+  path: "/",
   component: App,
   indexRoute: { component: Home },
   childRoutes: [
-    { path: 'about', component: About },
-    { path: 'inbox', component: Inbox }
+    { path: "about", component: About },
+    { path: "inbox", component: Inbox }
   ]
 };
 
@@ -152,14 +149,14 @@ render(<Router history={history} routes={routes} />, document.body);
 在 2.4.0 版本之前，`router`对象通过`this.context`进行传递，不过这种方式往往会引起莫名的错误。因此在 2.4.0 版本之后推荐的是采取所谓的 HOC 模式进行 router 对象的访问，React Router 也提供了一个`withRouter`函数来方便进行封装：
 
 ```js
-import React from 'react';
-import { withRouter } from 'react-router';
+import React from "react";
+import { withRouter } from "react-router";
 
 const Page = React.createClass({
   componentDidMount() {
     this.props.router.setRouteLeaveHook(this.props.route, () => {
       if (this.state.unsaved)
-        return 'You have unsaved information, are you sure you want to leave this page?';
+        return "You have unsaved information, are you sure you want to leave this page?";
     });
   },
 
@@ -174,11 +171,11 @@ export default withRouter(Page);
 然后在某个具体的组件内部，可以使用`this.props.router`来获取`router`对象:
 
 ```js
-router.push('/users/12');
+router.push("/users/12");
 
 // or with a location descriptor object
 router.push({
-  pathname: '/users/12',
+  pathname: "/users/12",
   query: { modal: true },
   state: { fromDashboard: true }
 });
@@ -207,7 +204,7 @@ const Home = withRouter(
       // return false to prevent a transition w/o prompting the user,
       // or return a string to allow the user to decide:
       if (!this.state.isSaved)
-        return 'Your work is not saved! Are you sure you want to leave?';
+        return "Your work is not saved! Are you sure you want to leave?";
     } // ...
   })
 );

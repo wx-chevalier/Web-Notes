@@ -32,9 +32,12 @@ import { connect } from "react-redux";
 import { reduxForm } from "redux-form";
 import { registerPerson } from "actions/coolStuff";
 
-@connect(null, dispatch => ({
-  registerPerson: bindActionCreators(registerPerson, dispatch)
-}))
+@connect(
+  null,
+  dispatch => ({
+    registerPerson: bindActionCreators(registerPerson, dispatch)
+  })
+)
 export default class ExampleComponent extends Component {
   render() {
     const myInitialValues = {

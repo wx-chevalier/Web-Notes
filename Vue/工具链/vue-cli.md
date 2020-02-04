@@ -1,5 +1,3 @@
-[![返回目录](https://parg.co/U01)](https://parg.co/bWF)
-
 # Vue.js 概述
 
 Vue 是专注于构建用户界面层的渐进式 JavaScript 框架，它可以很方便地与各种中间件或者后端应用程序集成使用。Vue 为我们构建界面层提供了大量有用的工具，助我们构建复杂的单页应用。Vue 的特性包括但不限于：
@@ -77,32 +75,32 @@ $ npm run build
   </head>
   <body>
     <style>
-    .sidebar {
-      margin-top: 48px;
-    }
+      .sidebar {
+        margin-top: 48px;
+      }
 
-    #nav {
-      position: fixed;
-      z-index: 9;
-      padding: 0 8px;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      width: 300px;
-      top: 0;
-      height: 60px;
-    }
-  </style>
-  <div id="nav">
-    <h3><a href="http://ng-tech.icu/books">Books</a></h3>
-    <span style="margin:0 8px;display:inline-block">|</span>
-    <h3><a href="https://github.com/FE-Kits">FE-Kits</a></h3>
-    <span style="margin:0 8px;display:inline-block">|</span>
-    <h3><a href="https://github.com/BE-Kits">BE-Kits</a></h3>
-    <span style="margin:0 8px;display:inline-block">|</span>
-    <h3><a href="https://github.com/AI-Kits">AI-Kits</a></h3>
-  </div>
-  <div id="app"></div>
+      #nav {
+        position: fixed;
+        z-index: 9;
+        padding: 0 8px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 300px;
+        top: 0;
+        height: 60px;
+      }
+    </style>
+    <div id="nav">
+      <h3><a href="http://ng-tech.icu/books">Books</a></h3>
+      <span style="margin:0 8px;display:inline-block">|</span>
+      <h3><a href="https://github.com/FE-Kits">FE-Kits</a></h3>
+      <span style="margin:0 8px;display:inline-block">|</span>
+      <h3><a href="https://github.com/BE-Kits">BE-Kits</a></h3>
+      <span style="margin:0 8px;display:inline-block">|</span>
+      <h3><a href="https://github.com/AI-Kits">AI-Kits</a></h3>
+    </div>
+    <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
 </html>
@@ -112,8 +110,8 @@ $ npm run build
 
 ```js
 new Vue({
-  el: '#app',
-  template: '<App/>',
+  el: "#app",
+  template: "<App/>",
   components: { App }
 });
 ```

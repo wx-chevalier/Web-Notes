@@ -5,15 +5,15 @@
 [react-intl](https://github.com/formatjs/react-intl) 是 FormatJS 的 React 绑定版，它能够自动地帮我们进行时间日期、数字、金钱等国际化操作：
 
 ```ts
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import { IntlProvider, FormattedMessage } from 'react-intl';
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import { IntlProvider, FormattedMessage } from "react-intl";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'Eric',
+      name: "Eric",
       unreadCount: 1000
     };
   }
@@ -40,7 +40,7 @@ ReactDOM.render(
   <IntlProvider locale="en">
     <App />
   </IntlProvider>,
-  document.getElementById('container')
+  document.getElementById("container")
 );
 ```
 

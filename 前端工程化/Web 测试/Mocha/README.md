@@ -1,5 +1,3 @@
-[![返回目录](https://i.postimg.cc/50XLzC7C/image.png)](https://github.com/wx-chevalier/Web-Series/)
-
 # Mocha
 
 Mocha(发音"摩卡")诞生于 2011 年，是现在最流行的 JavaScript 测试框架之一，在浏览器和 Node 环境都可以使用。所谓"测试框架"，就是运行测试的工具。通过它，可以为 JavaScript 应用添加测试，从而保证代码的质量。Mocha 侧重于提供 TDD/BDD 上下文与报告，而 Karma 侧重于在浏览器中运行测试脚本。
@@ -77,33 +75,33 @@ import 'babel-polyfill'
 #  使用 Chai 作为断言库
 
 ```js
-var expect = require('chai').expect;
+var expect = require("chai").expect;
 
 expect(4 + 5).to.be.equal(9);
 expect(4 + 5).to.be.not.equal(10);
-expect(foo).to.be.deep.equal({ bar: 'baz' });
+expect(foo).to.be.deep.equal({ bar: "baz" });
 
 // 布尔值为true
-expect('everthing').to.be.ok;
+expect("everthing").to.be.ok;
 expect(false).to.not.be.ok;
 
 // typeof
-expect('test').to.be.a('string');
-expect({ foo: 'bar' }).to.be.an('object');
+expect("test").to.be.a("string");
+expect({ foo: "bar" }).to.be.an("object");
 expect(foo).to.be.an.instanceof(Foo);
 
 // include
 expect([1, 2, 3]).to.include(2);
-expect('foobar').to.contain('foo');
-expect({ foo: 'bar', hello: 'universe' }).to.include.keys('foo');
+expect("foobar").to.contain("foo");
+expect({ foo: "bar", hello: "universe" }).to.include.keys("foo");
 
 // empty
 expect([]).to.be.empty;
-expect('').to.be.empty;
+expect("").to.be.empty;
 expect({}).to.be.empty;
 
 // match
-expect('foobar').to.match(/^foo/);
+expect("foobar").to.match(/^foo/);
 ```
 
 ## Assert
@@ -111,28 +109,28 @@ expect('foobar').to.match(/^foo/);
 The assert style is exposed through assert interface. This provides the classic assert-dot notation, similar to that packaged with node.js. This assert module, however, provides several additional tests and is browser compatible。
 
 ```js
-var assert = require('chai').assert,
-  foo = 'bar',
-  beverages = { tea: ['chai', 'matcha', 'oolong'] };
-assert.typeOf(foo, 'string'); // without optional message
-assert.typeOf(foo, 'string', 'foo is a string'); // with optional message
-assert.equal(foo, 'bar', 'foo equal `bar`');
-assert.lengthOf(foo, 3, 'foo`s value has a length of 3');
-assert.lengthOf(beverages.tea, 3, 'beverages has 3 types of tea');
+var assert = require("chai").assert,
+  foo = "bar",
+  beverages = { tea: ["chai", "matcha", "oolong"] };
+assert.typeOf(foo, "string"); // without optional message
+assert.typeOf(foo, "string", "foo is a string"); // with optional message
+assert.equal(foo, "bar", "foo equal `bar`");
+assert.lengthOf(foo, 3, "foo`s value has a length of 3");
+assert.lengthOf(beverages.tea, 3, "beverages has 3 types of tea");
 ```
 
 ## Expect
 The BDD style is exposed through expect or should interfaces. In both scenarios, you chain together natural language assertions.
 
 ```js
-var expect = require('chai').expect,
-  foo = 'bar',
-  beverages = { tea: ['chai', 'matcha', 'oolong'] };
-expect(foo).to.be.a('string');
-expect(foo).to.equal('bar');
+var expect = require("chai").expect,
+  foo = "bar",
+  beverages = { tea: ["chai", "matcha", "oolong"] };
+expect(foo).to.be.a("string");
+expect(foo).to.equal("bar");
 expect(foo).to.have.length(3);
 expect(beverages)
-  .to.have.property('tea')
+  .to.have.property("tea")
   .with.length(3);
 ```
 
@@ -145,7 +143,7 @@ var answer = 43;
 expect(answer).to.equal(42);
 
 // AssertionError: topic [answer]: expected 43 to equal 42.
-expect(answer, 'topic [answer]').to.equal(42);
+expect(answer, "topic [answer]").to.equal(42);
 ```
 
 ## Should
@@ -153,50 +151,50 @@ expect(answer, 'topic [answer]').to.equal(42);
 The `should` style allows for the same chainable assertions as the `expect` interface, however it extends each object with a `should` property to start your chain. This style has some issues when used with Internet Explorer, so be aware of browser compatibility.
 
 ```js
-var should = require('chai').should(), //actually call the function
-  foo = 'bar',
-  beverages = { tea: ['chai', 'matcha', 'oolong'] };
+var should = require("chai").should(), //actually call the function
+  foo = "bar",
+  beverages = { tea: ["chai", "matcha", "oolong"] };
 
-foo.should.be.a('string');
-foo.should.equal('bar');
+foo.should.be.a("string");
+foo.should.equal("bar");
 foo.should.have.length(3);
-beverages.should.have.property('tea').with.length(3);
+beverages.should.have.property("tea").with.length(3);
 ```
 
 #  异步代码与模拟对象
 
 ```js
 /*global fetch*/
-'use strict';
+"use strict";
 
-require('es6-promise').polyfill();
-require('../fetch-npm-node');
-var expect = require('chai').expect;
-var nock = require('nock');
-var good = 'hello world. 你好世界。';
-var bad = 'good bye cruel world. 再见残酷的世界。';
+require("es6-promise").polyfill();
+require("../fetch-npm-node");
+var expect = require("chai").expect;
+var nock = require("nock");
+var good = "hello world. 你好世界。";
+var bad = "good bye cruel world. 再见残酷的世界。";
 
 function responseToText(response) {
-  if (response.status >= 400) throw new Error('Bad server response');
+  if (response.status >= 400) throw new Error("Bad server response");
   return response.text();
 }
 
-describe('fetch', function() {
+describe("fetch", function() {
   before(function() {
-    nock('https://mattandre.ws')
-      .get('/succeed.txt')
+    nock("https://mattandre.ws")
+      .get("/succeed.txt")
       .reply(200, good);
-    nock('https://mattandre.ws')
-      .get('/fail.txt')
+    nock("https://mattandre.ws")
+      .get("/fail.txt")
       .reply(404, bad);
   });
 
-  it('should be defined', function() {
-    expect(fetch).to.be.a('function');
+  it("should be defined", function() {
+    expect(fetch).to.be.a("function");
   });
 
-  it('should facilitate the making of requests', function(done) {
-    fetch('//mattandre.ws/succeed.txt')
+  it("should facilitate the making of requests", function(done) {
+    fetch("//mattandre.ws/succeed.txt")
       .then(responseToText)
       .then(function(data) {
         expect(data).to.equal(good);
@@ -205,11 +203,11 @@ describe('fetch', function() {
       .catch(done);
   });
 
-  it('should do the right thing with bad requests', function(done) {
-    fetch('//mattandre.ws/fail.txt')
+  it("should do the right thing with bad requests", function(done) {
+    fetch("//mattandre.ws/fail.txt")
       .then(responseToText)
       .catch(function(err) {
-        expect(err.toString()).to.equal('Error: Bad server response');
+        expect(err.toString()).to.equal("Error: Bad server response");
         done();
       })
       .catch(done);
@@ -220,19 +218,19 @@ describe('fetch', function() {
 在真实的测试环境中，我们往往需要对相同的测试流程输入不同的测试参数来验证其鲁棒性，也就是所谓的参数化测试(Parameterized Test)。参数化测试能够保证我们的函数可以处理不同类型的输入，特别是那些边界异常值的情况。传统的多参数测试用例可能如下，我们需要为每个参数编写单独而重复的测试流程：
 
 ```js
-describe('测试表单校验', () => {
-  it('用户名中不可以包含数字', () => {
-    let valid = validateName('Adam5');
+describe("测试表单校验", () => {
+  it("用户名中不可以包含数字", () => {
+    let valid = validateName("Adam5");
     expect(valid).to.be.false;
   });
 
-  it('用户名中不可以包含 @', () => {
-    let valid = validateName('Ad@am');
+  it("用户名中不可以包含 @", () => {
+    let valid = validateName("Ad@am");
     expect(valid).to.be.false;
   });
 
-  it('用户名中不可以包含 -', () => {
-    let valid = validateName('Ad-am');
+  it("用户名中不可以包含 -", () => {
+    let valid = validateName("Ad-am");
     expect(valid).to.be.false;
   });
 });
@@ -241,11 +239,11 @@ describe('测试表单校验', () => {
 这种编写测试用例的方式毫无疑问会增加代码的冗余度，并且将原本同目标的测试用例变得支离破碎。在 Mocha 中我们可以使用 `mocha-param` 库中提供的 `itParam` 方法，其允许将多个测试参数形成数组输入到测试用例中：
 
 ```js
-const itParam = require('mocha-param').itParam;
+const itParam = require("mocha-param").itParam;
 
-describe('测试表单校验', () => {
-  const data = ['Adam5', 'Ad@am', 'Ad-am'];
-  itParam('拒绝非法输入', data, name => {
+describe("测试表单校验", () => {
+  const data = ["Adam5", "Ad@am", "Ad-am"];
+  itParam("拒绝非法输入", data, name => {
     let valid = validateName(name);
     expect(valid).to.be.false;
   });
@@ -268,7 +266,7 @@ Mocha  的一大特性就是支持在浏览器中运行测试用例，我们首
     <script src="node_modules/mocha/mocha.js"></script>
     <script src="node_modules/chai/chai.js"></script>
     <script>
-      mocha.setup('bdd');
+      mocha.setup("bdd");
     </script>
 
     <!-- load code you want to test here -->
@@ -295,24 +293,24 @@ function addClass(el, newClass) {
 该函数的功能非常简单，就是为某个元素添加不重复的元素名，即测试要点在于如果当前元素的`className`  属性中尚不包含要添加的类名，则添加；否则不添加。我们的测试用例编写如下：
 
 ```js
-describe('addClass', function() {
-  it('should add class to element', function() {
-    var element = { className: '' };
+describe("addClass", function() {
+  it("should add class to element", function() {
+    var element = { className: "" };
 
-    addClass(element, 'test-class');
+    addClass(element, "test-class");
 
-    assert.equal(element.className, 'test-class');
+    assert.equal(element.className, "test-class");
   });
 
-  it('should not add a class which already exists');
+  it("should not add a class which already exists");
 });
 
-it('should not add a class which already exists', function() {
-  var element = { className: 'exists' };
+it("should not add a class which already exists", function() {
+  var element = { className: "exists" };
 
-  addClass(element, 'exists');
+  addClass(element, "exists");
 
-  var numClasses = element.className.split(' ').length;
+  var numClasses = element.className.split(" ").length;
   assert.equal(numClasses, 1);
 });
 ```
@@ -331,14 +329,14 @@ module.exports = {
 };
 
 // classNameTest.js
-var chai = require('chai');
+var chai = require("chai");
 var assert = chai.assert;
 
-var className = require('../js/className.js');
+var className = require("../js/className.js");
 var addClass = className.addClass;
 
 // The rest of the file remains the same
-describe('addClass', function() {
+describe("addClass", function() {
   // ...
 });
 ```

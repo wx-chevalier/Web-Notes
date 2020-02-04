@@ -1,5 +1,3 @@
-[![返回目录](https://i.postimg.cc/50XLzC7C/image.png)](https://github.com/wx-chevalier/Web-Series/)
-
 # 基于 Jest 的单元测试
 
 Jest 是由 Facebook 开源出来的一个测试框架，它集成了断言库、mock、快照测试、覆盖率报告等功能。React 官方文档中提及，Jest 是 Facebook 官方使用的组件测试库。不过 React 也并不排斥其他测试框架，你也可以根据自己的喜好或者团队的统一选择譬如 Mocha、AVA 等测试框架。本部分我们就介绍如何从零开始为项目添加基于 Jest 的测试用例。
@@ -45,9 +43,9 @@ export default function sum(a, b) {
 该函数对应的测试用例放置在 sum.test.js 文件中，我们可以参考 Maven 中的文件目录格式，尽量保持 src 与 test 目录下文件结构的一致性。Jest 也会为我们自动寻找项目目录下的以 .spec、.test 结尾的文件，或者放置在 `__test__` 目录下的文件。我们的测试用例编写如下：
 
 ```js
-import sum from '../../src/util/sum.js';
+import sum from "../../src/util/sum.js";
 
-test('adds 1 + 2 to equal 3', () => {
+test("adds 1 + 2 to equal 3", () => {
   expect(sum(1, 2)).toBe(3);
 });
 ```
@@ -87,7 +85,7 @@ Ran all test suites matching "test/util/sum.test.js".
 module.exports = {};
 
 // __mocks__/fileMock.js
-module.exports = 'test-file-stub';
+module.exports = "test-file-stub";
 ```
 
 除了对于静态资源文件的配置之外，我们还可以使用类似于 Webpack 中的 `modulesDirectories`、`extensions` 等配置项来自定义 Jest 的文件搜索规则：
@@ -163,13 +161,13 @@ $ yarn add -D typescript jest ts-jest @types/jest
 ```
 
 ```ts
-const tsc = require('typescript');
+const tsc = require("typescript");
 
-const tsConfig = require('./tsconfig.json');
+const tsConfig = require("./tsconfig.json");
 
 module.exports = {
   process(src, path) {
-    if (path.endsWith('.ts') || path.endsWith('.tsx')) {
+    if (path.endsWith(".ts") || path.endsWith(".tsx")) {
       return tsc.transpile(src, tsConfig.compilerOptions, path, []);
     }
 
@@ -183,9 +181,9 @@ module.exports = {
 ```ts
 module.exports = {
   transform: {
-    '^.+\\.tsx?$': 'ts-jest'
+    "^.+\\.tsx?$": "ts-jest"
   },
-  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node']
+  testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"]
 };
 ```

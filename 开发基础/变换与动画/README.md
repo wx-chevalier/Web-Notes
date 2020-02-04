@@ -1,5 +1,3 @@
-[![返回目录](https://i.postimg.cc/50XLzC7C/image.png)](https://github.com/wx-chevalier/Web-Series)
-
 # 变换与动画
 
 The terms transitions and animations are often used interchangeably but are not, in my experience, one and the same:

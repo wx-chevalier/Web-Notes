@@ -1,5 +1,3 @@
-[![返回目录](https://i.postimg.cc/50XLzC7C/image.png)](https://github.com/wx-chevalier/Web-Series)
-
 # 组件数据流
 
 组件的主要职责是将原始数据转化为 HTML 中的富文本格式，而 Props 与 State 协作完成这件事，换言之，Props 与 State 的并集即是全部的原始数据。Props 与 State 之间也是有很多交集的，譬如：

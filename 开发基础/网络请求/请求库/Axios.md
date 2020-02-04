@@ -3,11 +3,11 @@
 Axios 是著名的兼容浏览器与 Node 环境的 HTTP 请求库。
 
 ```ts
-const axios = require('axios');
+const axios = require("axios");
 
 // Make a request for a user with a given ID
 axios
-  .get('/user?ID=12345')
+  .get("/user?ID=12345")
   .then(function(response) {
     // handle success
     console.log(response);
@@ -22,7 +22,7 @@ axios
 
 // Optionally the request above could also be done as
 axios
-  .get('/user', {
+  .get("/user", {
     params: {
       ID: 12345
     }
@@ -40,7 +40,7 @@ axios
 // Want to use async/await? Add the `async` keyword to your outer function/method.
 async function getUser() {
   try {
-    const response = await axios.get('/user?ID=12345');
+    const response = await axios.get("/user?ID=12345");
     console.log(response);
   } catch (error) {
     console.error(error);
@@ -59,21 +59,21 @@ const CancelToken = axios.CancelToken;
 const source = CancelToken.source();
 
 axios
-  .get('/user/12345', {
+  .get("/user/12345", {
     cancelToken: source.token
   })
   .catch(function(thrown) {
     if (axios.isCancel(thrown)) {
-      console.log('Request canceled', thrown.message);
+      console.log("Request canceled", thrown.message);
     } else {
       // handle error
     }
   });
 
 axios.post(
-  '/user/12345',
+  "/user/12345",
   {
-    name: 'new name'
+    name: "new name"
   },
   {
     cancelToken: source.token
@@ -81,7 +81,7 @@ axios.post(
 );
 
 // cancel the request (the message parameter is optional)
-source.cancel('Operation canceled by the user.');
+source.cancel("Operation canceled by the user.");
 ```
 
 # 文件操作
@@ -137,14 +137,14 @@ customRequest({
 
 ```ts
 axios({
-  url: 'http://api.dev/file-download', //your url
-  method: 'GET',
-  responseType: 'blob' // important
+  url: "http://api.dev/file-download", //your url
+  method: "GET",
+  responseType: "blob" // important
 }).then(response => {
   const url = window.URL.createObjectURL(new Blob([response.data]));
-  const link = document.createElement('a');
+  const link = document.createElement("a");
   link.href = url;
-  link.setAttribute('download', 'file.pdf'); //or any other extension
+  link.setAttribute("download", "file.pdf"); //or any other extension
   document.body.appendChild(link);
   link.click();
 });

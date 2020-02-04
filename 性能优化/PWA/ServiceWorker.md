@@ -1,5 +1,3 @@
-[![返回目录](https://i.postimg.cc/50XLzC7C/image.png)](https://parg.co/UGZ)
-
 # ServiceWorker
 
 A web worker is a JavaScript script executed from an HTML page that runs in the background, independently of other user-interface scripts that may also have been executed from the same HTML page.Mimics multithreading, allowing intensive scripts to be run in the background so they do not block other scripts from running. Ideal for keeping your UI responsive while also performing processor-intensive functions. Cannot directly interact with the DOM. Communication must go through the Web Worker’s postMessage method.
@@ -49,7 +47,7 @@ ServiceWorker 的关键生命周期函数包括了 install, activate, fetch 等�
 
 ```js
 // 当浏览器解析完 SW 文件时触发 install 事件
-self.addEventListener('install', function(e) {
+self.addEventListener("install", function(e) {
   // install 事件中一般会将 cacheList 中要换存的内容通过 addAll 方法，请求一遍放入 caches 中
   e.waitUntil(
     caches.open(cacheStorageKey).then(function(cache) {
@@ -63,7 +61,7 @@ self.addEventListener('install', function(e) {
 
 ```js
 // 激活时触发 activate 事件
-self.addEventListener('activate', function(e) {
+self.addEventListener("activate", function(e) {
   var cacheDeletePromises = caches.keys().then(cacheNames => {
     return Promise.all(
       cacheNames.map(name => {

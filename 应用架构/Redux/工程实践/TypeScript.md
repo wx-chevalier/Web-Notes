@@ -5,8 +5,8 @@
 ## Thunk
 
 ```ts
-import { Action, ActionCreator, Dispatch } from 'redux';
-import { ThunkAction } from 'redux-thunk';
+import { Action, ActionCreator, Dispatch } from "redux";
+import { ThunkAction } from "redux-thunk";
 
 // Redux action
 const reduxAction: ActionCreator<Action> = (text: string) => {

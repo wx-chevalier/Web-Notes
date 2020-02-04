@@ -135,8 +135,8 @@ JavaScript 調用觸發插件請求到本機的一邊，和相應的 iOS 目標 
 
 請注意以下複雜的傳回值為：
 
-* `messageAsArrayBuffer`預計 `NSData*` 並將轉換為 `ArrayBuffer` 在 JavaScript 回檔。同樣，任何 `ArrayBuffer` JavaScript 發送到一個外掛程式都將轉換為`NSData*`.
-* `messageAsMultipart`預計，`NSArray*` 包含任何其他支援類型，並將發送整個陣列作為 `arguments` 給您的 JavaScript 回檔。這種方式，所有參數在序列化或反序列化作為必要的所以它是能夠安全返回 `NSData*` 作為多部分，但不是 `Array` /`Dictionary`.
+- `messageAsArrayBuffer`預計 `NSData*` 並將轉換為 `ArrayBuffer` 在 JavaScript 回檔。同樣，任何 `ArrayBuffer` JavaScript 發送到一個外掛程式都將轉換為`NSData*`.
+- `messageAsMultipart`預計，`NSArray*` 包含任何其他支援類型，並將發送整個陣列作為 `arguments` 給您的 JavaScript 回檔。這種方式，所有參數在序列化或反序列化作為必要的所以它是能夠安全返回 `NSData*` 作為多部分，但不是 `Array` /`Dictionary`.
   #### 异步执行
   如果对于部分执行时间较长的代码，可以放在后台进程中执行。
 

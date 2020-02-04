@@ -8,4 +8,4 @@ TTI: Time To Interactive - the time at which a page becomes interactive (events 
 
 # 链接
 
-- https://zhuanlan.zhihu.com/p/82981365 10分钟彻底搞懂前端页面性能监控
+- https://zhuanlan.zhihu.com/p/82981365 10 分钟彻底搞懂前端页面性能监控
