@@ -181,12 +181,9 @@ export default (
       </section>{" "}
     </section>
     <svg>
-      <circle cx="64" cy="64" r="64" style="fill: #00ccff;" />
-       {" "}
+      <circle cx="64" cy="64" r="64" style="fill: #00ccff;" /> {" "}
     </svg>
-    <br />
-     {" "}
-    <span id="count" style={{ color: "red" }}>
+    <br />  <span id="count" style={{ color: "red" }}>
       {state.count} {" "}
     </span>{" "}
   </div>

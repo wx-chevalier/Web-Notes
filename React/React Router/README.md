@@ -71,7 +71,8 @@ const App = React.createClass({
             <a href="#/inbox">Inbox</a>
           </li> 
         </ul>
-        <Child /> 
+        <Child />
+         
       </div>
     );
   }
