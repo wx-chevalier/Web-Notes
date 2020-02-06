@@ -12,7 +12,7 @@ Web 开发，入门易，深度难，分为初窥门径、登堂入室、融会�
 
 - 如果你是颇有经验的开发者，想要了解前端工程化与架构方面的知识，那么建议阅读[前端演化](./架构与优化/前端工程化)一文。
 
-- 如果你希望了解全栈开发，可以参阅 [Node-Series](https://github.com/wx-chevalier/Node-Series)。
+- 如果你希望了解 Node.js 全栈开发，可以参阅 [Node-Series](https://github.com/wx-chevalier/Node-Series)。
 
 # About
 
