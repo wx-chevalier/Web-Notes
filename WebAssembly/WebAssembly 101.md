@@ -1,4 +1,4 @@
-WebAssembly 的概念、意义以及未来带来的性能提升相信已是耳熟能详，笔者在[前端每周清单系列](https://parg.co/bh1)中也是经常会推荐 WebAssembly 相关文章。不过笔者也只是了解其概念而未真正付诸实践，本文即是笔者在将我司某个简单项目中的计算模块重构为 WebAssembly 过程中的总结。在简单的实践中笔者个人感觉，WebAssembly 的抽象程度会比 JavaScript 高不少，未来对于大型项目的迁移，对于纯前端工程师而言可能存在的坑也是不少，仿佛又回到了被指针统治的年代。本文笔者使用的案例已经集成到了 React 脚手架 [create-react-boilerplate](https://github.com/wx-chevalier/create-react-boilerplate) 中 ，可以方便大家快速本地实践。
+WebAssembly 的概念、意义以及未来带来的性能提升相信已是耳熟能详，笔者在[前端每周清单系列](https://parg.co/bh1)中也是经常会推荐 WebAssembly 相关文章。不过笔者也只是了解其概念而未真正付诸实践，本文即是笔者在将我司某个简单项目中的计算模块重构为 WebAssembly 过程中的总结。在简单的实践中笔者个人感觉，WebAssembly 的抽象程度会比 JavaScript 高不少，未来对于大型项目的迁移，对于纯前端工程师而言可能存在的坑也是不少，仿佛又回到了被指针统治的年代。本文笔者使用的案例已经集成到了 React 脚手架 [create-react-boilerplate](https://github.com/wx-chevalier/create-react-boilerplate) 中，可以方便大家快速本地实践。
 
 # 编译环境搭建
 

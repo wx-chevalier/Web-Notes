@@ -178,7 +178,7 @@ fetch("https://example.com:1234/users", {
 });
 ```
 
-另外需要注意的是，当你为了配置在 CORS 请求中附带 Cookie 等信息时，来自于服务器的响应中的 Access-Control-Allow-Origin 不可以再被设置为 `*` ，必须设置为某个具体的域名,则响应会失败。
+另外需要注意的是，当你为了配置在 CORS 请求中附带 Cookie 等信息时，来自于服务器的响应中的 Access-Control-Allow-Origin 不可以再被设置为 `*`，必须设置为某个具体的域名,则响应会失败。
 
 # Response | 响应处理
 

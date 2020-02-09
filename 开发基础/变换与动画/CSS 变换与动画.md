@@ -88,7 +88,7 @@ transition : transition-property transition-duration transition-timing-function 
 
 - transition-delay
 
-用来指定动画开始执行的时间，取值同 transition-duration ，但是可以为负数。
+用来指定动画开始执行的时间，取值同 transition-duration，但是可以为负数。
 
 一个最简单的例子如下所示：
 
@@ -137,25 +137,25 @@ transform: rotate | scale | skew | translate |matrix;
 
   rotate 的单位是 `deg 度`
 
-  ，正数表示顺时针旋转，负数表示逆时针旋转。
+，正数表示顺时针旋转，负数表示逆时针旋转。
 
-  DEMO: [http://codepen.io/CodingMonkeyzh/pen/XbNYOa](http://codepen.io/CodingMonkeyzh/pen/XbNYOa)
+DEMO: [http://codepen.io/CodingMonkeyzh/pen/XbNYOa](http://codepen.io/CodingMonkeyzh/pen/XbNYOa)
 
 - scale 缩放
 
   scale 的取值范围是 `0~n`
 
-  ，小于 `1`
+，小于 `1`
 
-  时表示缩小，反之表示放大。例如 `scale(0.5, 2)`
+时表示缩小，反之表示放大。例如 `scale(0.5, 2)`
 
-  表示水平方向缩小 1 倍，垂直方向放大 1 倍， 另外，也可以通过 `scaleX`
+表示水平方向缩小 1 倍，垂直方向放大 1 倍， 另外，也可以通过 `scaleX`
 
-  或者 `scaleY`
+或者 `scaleY`
 
-  对一个方向进行设置。
+对一个方向进行设置。
 
-  DEMO: [http://codepen.io/CodingMonkeyzh/pen/doOKrg](http://codepen.io/CodingMonkeyzh/pen/doOKrg)
+DEMO: [http://codepen.io/CodingMonkeyzh/pen/doOKrg](http://codepen.io/CodingMonkeyzh/pen/doOKrg)
 
 - skew 扭曲
 

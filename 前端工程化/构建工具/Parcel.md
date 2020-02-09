@@ -126,13 +126,13 @@ module.exports = {
 
 <style lang="css">
   #app {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
   }
   h1 {
-      font-weight: 300;
+    font-weight: 300;
   }
 </style>
 ```
@@ -297,7 +297,7 @@ async function renderPage(page) {
 }
 ```
 
-注意：如果你仍然想在本地浏览器中使用不支持的语法 async/await ，切记需要在你的应用程序引入 babel-polyfill 或在你的库中引入 babel-runtime + babel-plugin-transform-runtime 。
+注意：如果你仍然想在本地浏览器中使用不支持的语法 async/await，切记需要在你的应用程序引入 babel-polyfill 或在你的库中引入 babel-runtime + babel-plugin-transform-runtime 。
 
 ```sh
 yarn add babel-polyfill
