@@ -33,7 +33,7 @@ class WindowWidth extends React.Component {
 
 ## 使用 Props 而非 render
 
-记住仅仅是因为这一模式被称为 “render props” 而你不必为使用该模式而用一个名为 render 的 prop。实际上，组件能够知道什么需要渲染的任何函数 prop 在技术上都是 “render prop” 。尽管之前的例子使用了 render，我们也可以简单地使用 children prop。
+记住仅仅是因为这一模式被称为 “render props” 而你不必为使用该模式而用一个名为 render 的 prop。实际上，组件能够知道什么需要渲染的任何函数 prop 在技术上都是 “render prop”。尽管之前的例子使用了 render，我们也可以简单地使用 children prop。
 
 ```js
 <Mouse

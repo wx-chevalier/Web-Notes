@@ -80,11 +80,11 @@ transition : transition-property transition-duration transition-timing-function 
 
 - transition-duration
 
-动画执行的持续时间，单位为 s(秒) 或者 ms(毫秒) 。
+动画执行的持续时间，单位为 s(秒) 或者 ms(毫秒)。
 
 - transition-timing-function
 
-变换速率效果，可选值为 ease|linear|ease-in|ease-out|ease-in-out|cubic-bezier(自定义时间曲线) 。
+变换速率效果，可选值为 ease|linear|ease-in|ease-out|ease-in-out|cubic-bezier(自定义时间曲线)。
 
 - transition-delay
 
@@ -163,11 +163,11 @@ DEMO: [http://codepen.io/CodingMonkeyzh/pen/doOKrg](http://codepen.io/CodingMonk
 
   一样都是 `deg 度`
 
-  。例如 `skew(30deg, 10deg)`
+。例如 `skew(30deg, 10deg)`
 
-  表示水平方向倾斜 30 度，垂直方向倾斜 10 度。
+表示水平方向倾斜 30 度，垂直方向倾斜 10 度。
 
-  DEMO: [http://codepen.io/CodingMonkeyzh/pen/KpNeYg](http://codepen.io/CodingMonkeyzh/pen/KpNeYg)
+DEMO: [http://codepen.io/CodingMonkeyzh/pen/KpNeYg](http://codepen.io/CodingMonkeyzh/pen/KpNeYg)
 
 - translate 偏移
 
@@ -307,7 +307,7 @@ cubic-bezier(n,n,n,n)：在 cubic-bezier 函数中自己的值。可能的值是
 
 语法: animation-delay: time;
 
-Time 值：可选。定义动画开始前等待的时间，以秒或毫秒计。默认值是 0 。允许负值，-2s 使动画马上开始，但跳过 2 秒进入动画。
+Time 值：可选。定义动画开始前等待的时间，以秒或毫秒计。默认值是 0。允许负值，-2s 使动画马上开始，但跳过 2 秒进入动画。
 
 {
 
@@ -323,7 +323,7 @@ animation-delay:2s;
 
 n：定义动画播放次数的数值。
 
-infinite ：规定动画应该无限次播放。默认值为：1 。
+infinite ：规定动画应该无限次播放。默认值为：1。
 
 示例：
 
