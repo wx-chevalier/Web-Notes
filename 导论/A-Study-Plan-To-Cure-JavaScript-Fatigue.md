@@ -21,7 +21,7 @@
 
 >
 
-- [State Of JavaScript ：前端框架现状调查](https://segmentfault.com/a/1190000006728971)
+- [State Of JavaScript：前端框架现状调查](https://segmentfault.com/a/1190000006728971)
 
 为了便于理解现代 JavaScript 为啥看起来如何复杂，我们首先要明白其工作原理。我们首先来看下 2008 年左右流行的所谓传统 Web 应用的架构 : ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/10/3/1-k8ouvk608TxH5FaLM8XUxQ.png) 1. 服务端从数据库中获取数据。2. 服务端读取这些数据然后渲染到 HTML 中。3.HTML 文件被发送到浏览器，浏览器将 HTML 转化为 DOM 树并且展示出来。
 

@@ -107,7 +107,7 @@ test("calls the callback after 1 second", () => {
 
 ## 递归计时器
 
-在某些情况下，您可能具有递归计时器，这是一个在自己的回调中设置新计时器的计时器。对于这些，运行所有计时器将是一个无休止的循环……因此，不需要诸如 jest.runAllTimers() 之类的东西。对于这些情况，您可以使用 jest.runOnlyPendingTimers() ：
+在某些情况下，您可能具有递归计时器，这是一个在自己的回调中设置新计时器的计时器。对于这些，运行所有计时器将是一个无休止的循环……因此，不需要诸如 jest.runAllTimers() 之类的东西。对于这些情况，您可以使用 jest.runOnlyPendingTimers()：
 
 ```js
 // infiniteTimerGame.js
@@ -176,16 +176,16 @@ describe("infiniteTimerGame", () => {
 // sound-player.js
 export default class SoundPlayer {
   constructor() {
-    this.foo = 'bar';
+    this.foo = "bar";
   }
 
   playSoundFile(fileName) {
-    console.log('Playing sound file ' + fileName);
+    console.log("Playing sound file " + fileName);
   }
 }
 
 // sound-player-consumer.js
-import SoundPlayer from './sound-player';
+import SoundPlayer from "./sound-player";
 
 export default class SoundPlayerConsumer {
   constructor() {
@@ -193,7 +193,7 @@ export default class SoundPlayerConsumer {
   }
 
   playSomethingCool() {
-    const coolSoundFileName = 'song.mp3';
+    const coolSoundFileName = "song.mp3";
     this.soundPlayer.playSoundFile(coolSoundFileName);
   }
 }

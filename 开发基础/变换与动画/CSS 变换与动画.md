@@ -285,7 +285,7 @@ ease：默认。动画以低速开始，然后加快，在结束前变慢。
 
 ease-in：动画以低速开始。
 
-ease-out ：动画以低速结束。
+ease-out：动画以低速结束。
 
 ease-in-out：动画以低速开始和结束。
 
@@ -323,7 +323,7 @@ animation-delay:2s;
 
 n：定义动画播放次数的数值。
 
-infinite ：规定动画应该无限次播放。默认值为：1。
+infinite：规定动画应该无限次播放。默认值为：1。
 
 示例：
 
@@ -339,9 +339,9 @@ animation-iteration-count:infinite;
 
 语法: animation-direction: normal|alternate;
 
-normal ：默认值。动画应该正常播放。
+normal：默认值。动画应该正常播放。
 
-alternate ：动画应该轮流反向播放。
+alternate：动画应该轮流反向播放。
 
 注释：如果把动画设置为只播放一次，则该属性没有效果。
 
@@ -359,9 +359,9 @@ animation-direction:alternate;
 
 语法: animation-play-state: paused|running;
 
-paused ：规定动画已暂停。
+paused：规定动画已暂停。
 
-running ：规定动画正在播放。
+running：规定动画正在播放。
 
 注释：可以在 JavaScript 中使用该属性，这样就能在播放过程中暂停动画。
 
@@ -379,13 +379,13 @@ animation-play-state:running;
 
 语法: animation-fill-mode : none | forwards | backwards | both;
 
-none ：不改变默认行为。
+none：不改变默认行为。
 
-forwards ：当动画完成后，保持最后一个属性值(在最后一个关键帧中定义)。
+forwards：当动画完成后，保持最后一个属性值(在最后一个关键帧中定义)。
 
-backwards ：在 animation-delay 所指定的一段时间内，在动画显示之前，应用开始属性值(在第一个关键帧中定义)。
+backwards：在 animation-delay 所指定的一段时间内，在动画显示之前，应用开始属性值(在第一个关键帧中定义)。
 
-both ：向前和向后填充模式都被应用。
+both：向前和向后填充模式都被应用。
 
 # JavaScript-Animation
 
