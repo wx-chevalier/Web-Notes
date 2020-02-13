@@ -59,7 +59,7 @@ CSS 资源不但可以通过@import 语法包含其他依赖，也可以通过 u
 
 ### PostCSS
 
-PostCSS 是一个通过各类插件转换 CSS 的工具，如：autoprefixer, Preset Env, 和 CSS Modules。在 Parcel 中通过创建一个名字为.postcssrc (JSON), .postcssrc.js, 或 postcss.config.js 的配置文件来配置 PostCSS。
+PostCSS 是一个通过各类插件转换 CSS 的工具，如：autoprefixer, Preset Env, 和 CSS Modules。在 Parcel 中通过创建一个名字为.postcssrc (JSON), .postcssrc.js,或 postcss.config.js 的配置文件来配置 PostCSS。
 
 在你的应用中安装下列插件：
 
