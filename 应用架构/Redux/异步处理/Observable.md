@@ -236,7 +236,7 @@ const pollingEpic: Epic = (action$, state$) => {
 const stopPolling$ = action$.ofType(POLLING_STOP);
 ```
 
-参数来源于状态，由于现在状态可观测，我们可以从状态流 `state$` 派发一个下游 —— 参数流：
+参数来源于状态，由于现在状态可观测，我们可以从状态流 `state$` 派发一个下游：参数流：
 
 ```ts
 const params$: Observable<ISearchParam> = state$.pipe(
