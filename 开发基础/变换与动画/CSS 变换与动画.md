@@ -149,7 +149,7 @@ DEMO: [http://codepen.io/CodingMonkeyzh/pen/XbNYOa](http://codepen.io/CodingMonk
 
 时表示缩小，反之表示放大。例如 `scale(0.5, 2)`
 
-表示水平方向缩小 1 倍，垂直方向放大 1 倍， 另外，也可以通过 `scaleX`
+表示水平方向缩小 1 倍，垂直方向放大 1 倍，另外，也可以通过 `scaleX`
 
 或者 `scaleY`
 
