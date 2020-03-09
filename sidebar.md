@@ -396,6 +396,7 @@
       - [事件处理](/混合开发/Electron/事件处理.md)
       - [应用发布](/混合开发/Electron/应用发布.md)
       - [开发基础](/混合开发/Electron/开发基础.md)
+      - [截图与视频](/混合开发/Electron/截图与视频.md)
     - [Flutter](/混合开发/Flutter/README.md)
       - [引擎与运行时](/混合开发/Flutter/引擎与运行时/README.md)
         
@@ -423,6 +424,10 @@
     - [Remax](/混合开发/Remax/README.md)
       
     - [Taro](/混合开发/Taro/README.md)
+      - [TaroUI](/混合开发/Taro/TaroUI/README.md)
+        
+      - 开发基础
+        - [快速开始](/混合开发/Taro/开发基础/快速开始.md)
       - [设计模式](/混合开发/Taro/设计模式/README.md)
         - [权限校验](/混合开发/Taro/设计模式/权限校验.md)
     - [Weapp](/混合开发/Weapp/README.md)
