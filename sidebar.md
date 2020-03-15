@@ -65,6 +65,7 @@
         - [Flux](/React/状态管理/Redux/Flux.md)
         - [React Router](/React/状态管理/Redux/React%20Router.md)
         - [Redux Hooks](/React/状态管理/Redux/Redux%20Hooks.md)
+        - [State 结构设计](/React/状态管理/Redux/State%20结构设计.md)
         - [redux form](/React/状态管理/Redux/redux-form.md)
         - [代码组织](/React/状态管理/Redux/代码组织.md)
     - 类 React 库
@@ -79,6 +80,7 @@
       - [Context](/React/组件数据流/Context.md)
       - [Props](/React/组件数据流/Props.md)
       - [State](/React/组件数据流/State.md)
+      - [不可变操作](/React/组件数据流/不可变操作.md)
     - 组件样式
       - [CSS in JS](/React/组件样式/CSS-in-JS.md)
       - [样式定义与引入](/React/组件样式/样式定义与引入.md)
