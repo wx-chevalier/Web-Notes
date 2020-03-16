@@ -362,8 +362,8 @@
       - [离线存储](/性能优化/PWA/离线存储.md)
     - [WebWorker](/性能优化/WebWorker/README.md)
       - [SharedWorker](/性能优化/WebWorker/SharedWorker.md)
-      - [Worker](/性能优化/WebWorker/Worker.md)
-      - [跨线程消息](/性能优化/WebWorker/跨线程消息.md)
+      - [Worker 使用](/性能优化/WebWorker/Worker%20使用.md)
+      - [第三方库](/性能优化/WebWorker/第三方库.md)
     - 优化案例
       - [De Voorhoede](/性能优化/优化案例/De%20Voorhoede.md)
     - [体验优化](/性能优化/体验优化/README.md)

@@ -1,8 +1,90 @@
+# Web Worker
+
+# 基础使用
+
+```js
+// 判断浏览器是否支持 Worker
+typeof Worker !== "undefined";
+
+// 从脚本中创建 Worker
+new Worker("workers.js");
+
+// 使用字符串方式创建 Worker
+new Worker("data:text/javascript;charset=US-ASCII,...");
+```
+
+## worker-loader
+
+[worker-loader](https://github.com/webpack-contrib/worker-loader) 是一个 webpack 插件，可以将一个普通 JS 文件的全部依赖提取后打包并替换调用处，以 Blob 形式内联在源码中。
+
+```js
+import Worker from "worker-loader!./file.worker.js";
+
+const worker = new Worker();
+
+// 转化为下述代码
+const blob = new Blob([codeFromFileWorker], { type: "application/javascript" });
+const worker = new Worker(URL.createObjectURL(blob));
+```
+
+## Blob
+
+我们也可以自己通过 Blob 的方式创建：
+
+```js
+const code = `
+  importScripts('https://xxx.com/xxx.js');
+  self.onmessage = e => {};
+`;
+
+const blob = new Blob([code], { type: "application/javascript" });
+const worker = new Worker(URL.createObjectURL(blob));
+```
+
+# 网络请求
+
+By default, cookies are not included with fetch requests, but you can include them as follows: fetch(url, {credentials: 'include'}).
+
+```js
+function XHRWorker(url, ready, scope) {
+  var oReq = new XMLHttpRequest();
+  oReq.addEventListener(
+    "load",
+    function() {
+      var worker = new Worker(
+        window.URL.createObjectURL(new Blob([this.responseText]))
+      );
+      if (ready) {
+        ready.call(scope, worker);
+      }
+    },
+    oReq
+  );
+  oReq.open("get", url, true);
+  oReq.send();
+}
+
+function WorkerStart() {
+  XHRWorker(
+    "http://static.xxx.com/js/worker.js",
+    function(worker) {
+      worker.postMessage("hello world");
+      worker.onmessage = function(e) {
+        console.log(e.data);
+      };
+    },
+    this
+  );
+}
+
+WorkerStart();
+```
+
 # 跨线程消息
 
 开启新的线程伴随而来的问题就是通讯问题。webworker 的 postMessage 可以帮助我们完成通信，但是这种通信机制是将数据从一部分内存空间复制到主线程的内存下。这个赋值过程就会造成性能的消耗。而共享内存，顾名思义，可以让我们在不同的线程间，共享一块内存，这些现成都可以对内存进行操作，也可以读取这块内存。省去了赋值数据的过程，不言而喻，整个性能会有较大幅度的提升。
 
-# postMessage
+## postMessage
 
 创建完毕之后，我们主要依靠 postMessage 与 onmessage 回调来在 Worker 线程与 UI 线程之间进行消息传递：
 
@@ -58,7 +140,7 @@ function increaseData(data) {
 
 由上述代码可知，每一个消息内的数据在不同的线程中，都是被克隆一份以后再传输的。数据量越大，数据传输速度越慢。
 
-# sharedBufferArray
+## sharedBufferArray
 
 对象转移使用方式很简单，给 postMessage 增加一个参数，把对象引用传过去即可：
 
