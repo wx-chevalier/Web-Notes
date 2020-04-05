@@ -135,10 +135,6 @@
     - [WebAssembly 101](/WebAssembly/WebAssembly%20101.md)
     - [概念与使用](/WebAssembly/概念与使用.md)
   - [前端工程化](/前端工程化/README.md)
-    - [Babel](/前端工程化/Babel/README.md)
-      - [插件开发](/前端工程化/Babel/插件开发.md)
-      - [编译配置](/前端工程化/Babel/编译配置.md)
-      - [语法转换](/前端工程化/Babel/语法转换.md)
     - CSS 处理器
       - [Less](/前端工程化/CSS%20处理器/Less.md)
       - [PostCSS](/前端工程化/CSS%20处理器/PostCSS.md)
@@ -251,6 +247,7 @@
       - [状态管理](/应用架构/Svelte/状态管理.md)
       - [组件基础](/应用架构/Svelte/组件基础.md)
       - [组件样式](/应用架构/Svelte/组件样式.md)
+      - [语法编译](/应用架构/Svelte/语法编译.md)
     - [Virtual DOM](/应用架构/Virtual%20DOM/README.md)
       
     - [WebComponents](/应用架构/WebComponents/README.md)
