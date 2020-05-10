@@ -132,6 +132,8 @@
       - [单文件组件](/Vue/组件/单文件组件.md)
       - [类组件](/Vue/组件/类组件.md)
   - [WebAssembly](/WebAssembly/README.md)
+    - [OpenCV](/WebAssembly/OpenCV/README.md)
+      
     - [WebAssembly 101](/WebAssembly/WebAssembly%20101.md)
     - [概念与使用](/WebAssembly/概念与使用.md)
   - [前端工程化](/前端工程化/README.md)
@@ -182,6 +184,7 @@
       - [异常上报](/前端工程化/异常处理/异常上报.md)
       - [异常处理](/前端工程化/异常处理/异常处理.md)
       - [用户追踪](/前端工程化/异常处理/用户追踪.md)
+      - [监控体系](/前端工程化/异常处理/监控体系.md)
     - [录屏与重放](/前端工程化/录屏与重放/README.md)
       
     - [控件开发](/前端工程化/控件开发/README.md)
