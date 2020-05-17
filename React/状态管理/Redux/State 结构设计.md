@@ -1,32 +1,27 @@
 # State 结构设计
 
-# State 结构设计
-
 接下来我们一起讨论下 State 的结构设计问题，在复杂组件中，我们可能需要在但单组件内维持复杂的具有项目依赖关系的状态数据，譬如在经典的 TODOList 组件中，我们首先需要保存当前全部的待做事项数据：
 
 ```js
 const initialState = [
   { id: 1, text: "laundry" },
-  { id: 2, text: "shopping" } // ...
+  { id: 2, text: "shopping" }, // ...
 ];
 
 class List extends React.Component {
   state = {
-    todos: initialState
+    todos: initialState,
   };
 
   render() {
     return (
       <div>
-                        
+                     
         <ul>
-                              
-          {this.state.todos.map(todo => (
+          {this.state.todos.map((todo) => (
             <li key={todo.id}>{todo.text}</li>
           ))}
-                          
-        </ul>
-                    
+        </ul>     
       </div>
     );
   }
@@ -39,12 +34,12 @@ class List extends React.Component {
 class List extends React.Component {
   state = {
     todos: initialState,
-    filteredTodos: null
+    filteredTodos: null,
   };
 
   search(searchText) {
     const filteredTodos = this.state.todos.filter(
-      todo => todo.text.indexOf(searchText) > 0
+      (todo) => todo.text.indexOf(searchText) > 0
     );
     this.setState({ filteredTodos: filteredTodos });
   }
@@ -61,11 +56,10 @@ class List extends React.Component {
         <SearchBox onChange={this.search} />
                         
         <ul>
-                              
-          {list.map(todo => (
+              
+          {list.map((todo) => (
             <li key={todo.id}>{todo.text}</li>
           ))}
-                          
         </ul>
                     
       </div>
@@ -80,7 +74,7 @@ class List extends React.Component {
 class List extends React.Component {
   state = {
     todos: initialState,
-    searchText: null
+    searchText: null,
   };
 
   search(searchText) {
@@ -92,7 +86,7 @@ class List extends React.Component {
       return todos;
     }
 
-    return todos.filter(todo => todo.text.indexOf(this.state.searchText) > 0);
+    return todos.filter((todo) => todo.text.indexOf(this.state.searchText) > 0);
   }
 
   render() {
@@ -104,11 +98,10 @@ class List extends React.Component {
         <SearchBox onChange={this.search} />
                         
         <ul>
-                              
-          {this.filter(todos).map(todo => (
+              
+          {this.filter(todos).map((todo) => (
             <li key={todo.id}>{todo.text}</li>
           ))}
-                          
         </ul>
                     
       </div>

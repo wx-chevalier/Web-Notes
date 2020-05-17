@@ -2,7 +2,7 @@
 
 ## Simple Form
 
-如果在 Redux Form 中需要手动地设置值，应该在 Field 的`onChange`方法中进行修改，譬如：
+如果在 Redux Form 中需要手动地设置值，应该在 Field 的 `onChange` 方法中进行修改，譬如：
 
 ```jsx
 <Select
@@ -10,7 +10,7 @@
   placeholder="请选择关联列"
   multiple
   defaultValue={result_columns.value || []}
-  onChange={value => {
+  onChange={(value) => {
     result_columns.onChange(value);
   }}
 >
@@ -32,27 +32,24 @@ import { connect } from "react-redux";
 import { reduxForm } from "redux-form";
 import { registerPerson } from "actions/coolStuff";
 
-@connect(
-  null,
-  dispatch => ({
-    registerPerson: bindActionCreators(registerPerson, dispatch)
-  })
-)
+@connect(null, (dispatch) => ({
+  registerPerson: bindActionCreators(registerPerson, dispatch),
+}))
 export default class ExampleComponent extends Component {
   render() {
     const myInitialValues = {
       initialValues: {
         name: "John Doe",
         age: 42,
-        fruitPreference: "apples"
-      }
+        fruitPreference: "apples",
+      },
     };
     return (
       <div>
         <h1>Check out my cool form!</h1>
         <CoolForm
           {...myInitialValues}
-          onSubmit={fields => {
+          onSubmit={(fields) => {
             this.props.registerPerson(fields);
           }}
         />
@@ -63,13 +60,13 @@ export default class ExampleComponent extends Component {
 
 @reduxForm({
   form: "exampleForm",
-  fields: ["name", "age", "fruitPreference"]
+  fields: ["name", "age", "fruitPreference"],
 })
 class CoolForm extends Component {
   render() {
     const {
       fields: { name, age, fruitPreference },
-      handleSubmit
+      handleSubmit,
     } = this.props;
     return (
       <form onSubmit={handleSubmit}>
