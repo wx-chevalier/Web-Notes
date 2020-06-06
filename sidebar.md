@@ -27,6 +27,7 @@
     - [A Study Plan To Cure JavaScript Fatigue](/Web%20导论/A-Study-Plan-To-Cure-JavaScript-Fatigue.md)
     - [HTML 与 CSS 简史](/Web%20导论/HTML%20与%20CSS%20简史.md)
     - [从路人甲到英雄无敌的前端开发指南](/Web%20导论/从路人甲到英雄无敌的前端开发指南.md)
+    - [前端演化](/Web%20导论/前端演化.md)
     - [开发环境与工具链](/Web%20导论/开发环境与工具链.md)
   - [WebAssembly](/WebAssembly/README.md)
     - [OpenCV](/WebAssembly/OpenCV/README.md)
@@ -74,7 +75,6 @@
       - [Internationalization API](/前端工程化/主题与国际化/Internationalization%20API.md)
       - [动态主题](/前端工程化/主题与国际化/动态主题.md)
     - 工程化体系
-      - [前端演化](/前端工程化/工程化体系/前端演化.md)
       - [工具化与工程化](/前端工程化/工程化体系/工具化与工程化.md)
       - [工程化体系](/前端工程化/工程化体系/工程化体系.md)
     - [异常处理](/前端工程化/异常处理/README.md)
