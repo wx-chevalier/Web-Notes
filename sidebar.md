@@ -75,6 +75,7 @@
       - [Internationalization API](/前端工程化/主题与国际化/Internationalization%20API.md)
       - [动态主题](/前端工程化/主题与国际化/动态主题.md)
     - 工程化体系
+      - [App Development Engine](/前端工程化/工程化体系/App%20Development%20Engine.md)
       - [工具化与工程化](/前端工程化/工程化体系/工具化与工程化.md)
       - [工程化体系](/前端工程化/工程化体系/工程化体系.md)
     - [异常处理](/前端工程化/异常处理/README.md)
