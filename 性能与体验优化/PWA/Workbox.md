@@ -1,6 +1,6 @@
 # Workbox
 
-Workbox 极大地简化了 PWA 的构建过程，可以把 Workbox 理解为 Google 官方的 PWA 框架，它解决的就是用底层 API 写 PWA 太过复杂的问题，接管了监听 SW 的 install、active、 fetch 事件做相应逻辑处理等。
+Workbox 极大地简化了 PWA 的构建过程，可以把 Workbox 理解为 Google 官方的 PWA 框架，它解决的就是用底层 API 写 PWA 太过复杂的问题，接管了监听 SW 的 install、active、fetch 事件做相应逻辑处理等。
 
 ```js
 // 首先引入 Workbox 框架
@@ -63,7 +63,7 @@ $ workbox wizard
 module.exports = {
   globDirectory: "./",
   globPatterns: ["**/*.{html,json,js}"],
-  swDest: "./src/sw.js"
+  swDest: "./src/sw.js",
 };
 ```
 

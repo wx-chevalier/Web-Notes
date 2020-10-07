@@ -161,7 +161,7 @@ AppRegistry.registerComponent("HelloWorld", () => HelloWorld);
 会被转化为：
 
 ```js
-AppRegistry.registerComponent("HelloWorld", function() {
+AppRegistry.registerComponent("HelloWorld", function () {
   return HelloWorld;
 });
 ```
@@ -195,7 +195,7 @@ $ npm start
 除此之外，Expo 还提供了 [Sketch](https://sketch.expo.io/Sk90tMVol) 这个在线编辑器，提供了组件拖拽、内建的 ESLint 等功能，允许开发者直接在网页中进行快速开发与共享，然后通过二维码在应用内预览。
 ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/QQ201703151111.png)
 
-Expo 支持标准的 React Native 组件，目前已经内置了相机、视频、通讯录等等常用的系统 API，并且预置了 Airbnb react-native-maps、 Facebook authentication 等优秀的工具库，未来也在逐步将常用的微信、百度地图等依赖作为预置纳入到 SDK 中。我们也可以使用 `npm run eject` 来将其恢复为类似于 `react-native init` 创建的包含原生代码的初始化项目，这样我们就能够自由地添加原生模块。我们也可以使用 Expo 提供的 `exp` 命令行将项目编译为独立可发布的应用。我们需要使用 `npm install -g exp` 安装命令行工具，然后配置 exp.json 文件：
+Expo 支持标准的 React Native 组件，目前已经内置了相机、视频、通讯录等等常用的系统 API，并且预置了 Airbnb react-native-maps、Facebook authentication 等优秀的工具库，未来也在逐步将常用的微信、百度地图等依赖作为预置纳入到 SDK 中。我们也可以使用 `npm run eject` 来将其恢复为类似于 `react-native init` 创建的包含原生代码的初始化项目，这样我们就能够自由地添加原生模块。我们也可以使用 Expo 提供的 `exp` 命令行将项目编译为独立可发布的应用。我们需要使用 `npm install -g exp` 安装命令行工具，然后配置 exp.json 文件：
 
 ```
  {
@@ -262,8 +262,8 @@ npm install jest-cli --save-dev
 ```js
 "use strict";
 
-describe("a silly test", function() {
-  it("expects true to be true", function() {
+describe("a silly test", function () {
+  it("expects true to be true", function () {
     expect(true).toBe(true);
   });
 });

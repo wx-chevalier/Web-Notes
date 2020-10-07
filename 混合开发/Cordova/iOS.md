@@ -85,17 +85,17 @@ pod 'Cordova', '~> 4.0.1' # 支持Cordova WebView容器
    <feature name="CordovaPluginsBridge">        <param name="ios-package" value="Echo" />        <param name="onload" value="true" />    </feature>
 ```
 
-有沒有指定插件的初始值設定項。相反，應使用插件 pluginInitialize 為其啟動邏輯方法。插件需要長時間運行的請求，如媒體重播、 聽眾，保持內部狀態應執行的背景活動 onReset 方法來清理這些活動。在方法運行時 UIWebView 定位到新的一頁或刷新，重新載入 JavaScript。
+有沒有指定插件的初始值設定項。相反，應使用插件 pluginInitialize 為其啟動邏輯方法。插件需要長時間運行的請求，如媒體重播、聽眾，保持內部狀態應執行的背景活動 onReset 方法來清理這些活動。在方法運行時 UIWebView 定位到新的一頁或刷新，重新載入 JavaScript。
 
 ### JS Modules
 
 关于 JS 部分的详细配置可以参考官方的 JS Modules 部分，这里不做赘述，仅展示下基本的用法：
 
 ```js
-window.echo = function(str, callback) {
+window.echo = function (str, callback) {
   cordova.exec(
     callback,
-    function(err) {
+    function (err) {
       callback("Nothing to echo.");
     },
     "CordovaPluginsBridge",
@@ -108,7 +108,7 @@ window.echo = function(str, callback) {
 调用：
 
 ```js
-window.echo("echome", function(echoValue) {
+window.echo("echome", function (echoValue) {
   alert(echoValue == "echome"); // should alert true.
 });
 ```

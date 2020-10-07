@@ -14,10 +14,10 @@
 | minHeight       | `{ minHeight: 100 }` 元素当前最小高度到 100px                                                                                    |
 | lineHeight      | `{ lineHeight: 100 }` 区块行高到 100px                                                                                           |
 | opacity         | `{ opacity: 0 }` 元素当前透明度到 0                                                                                              |
-| top             | `{ top: 100 }` 元素当前顶部距离到 100px, 需配合 `position: relative | absolute`                                                  |
-| right           | `{ right: 100 }` 元素当前右部距离到 100px, 需配合 `position: relative | absolute`                                                |
-| bottom          | `{ bottom: 100 }` 元素当前下部距离到 100px, 需配合 `position: relative | absolute`                                               |
-| left            | `{ left: 100 }` 元素当前左部距离到 100px, 需配合 `position: relative | absolute`                                                 |
+| top             | `{ top: 100 }` 元素当前顶部距离到 100px, 需配合 `position: relative                                                              | absolute` |
+| right           | `{ right: 100 }` 元素当前右部距离到 100px, 需配合 `position: relative                                                            | absolute` |
+| bottom          | `{ bottom: 100 }` 元素当前下部距离到 100px, 需配合 `position: relative                                                           | absolute` |
+| left            | `{ left: 100 }` 元素当前左部距离到 100px, 需配合 `position: relative                                                             | absolute` |
 | marginTop       | `{ marginTop: 100 }` 元素当前顶部外边距离到 100px                                                                                |
 | marginRight     | `{ marginRight: 100 }` 元素当前右部外边距离到 100px                                                                              |
 | marginBottom    | `{ marginBottom: 100 }` 元素当前下部外边距离到 100px                                                                             |
@@ -64,7 +64,7 @@
 
 # CSS-Animation&Transition
 
-CSS3 提供了 `transition` 过渡、 `transform 变换`和 `animation 动画`来实现页面中的一些样式转化
+CSS3 提供了 `transition` 过渡、`transform 变换`和 `animation 动画`来实现页面中的一些样式转化
 
 ## Transition(变换)
 
@@ -397,9 +397,9 @@ both：向前和向后填充模式都被应用。
 /* tick https://github.com/AlloyTeam/AlloyTouch/blob/master/transformjs/asset/tick.js
  * By dntzhang|当耐特
  */
-(function() {
+(function () {
   if (!Date.now)
-    Date.now = function() {
+    Date.now = function () {
       return new Date().getTime();
     };
 
@@ -417,10 +417,10 @@ both：向前和向后填充模式都被应用。
     !window.cancelAnimationFrame
   ) {
     var lastTime = 0;
-    window.requestAnimationFrame = function(callback) {
+    window.requestAnimationFrame = function (callback) {
       var now = Date.now();
       var nextTime = Math.max(lastTime + 16, now);
-      return setTimeout(function() {
+      return setTimeout(function () {
         callback((lastTime = nextTime));
       }, nextTime - now);
     };
@@ -429,11 +429,11 @@ both：向前和向后填充模式都被应用。
 
   var tickArr = [];
 
-  var tick = function(fn) {
+  var tick = function (fn) {
     tickArr.push(fn);
   };
 
-  var execTick = function() {
+  var execTick = function () {
     var i = 0,
       len = tickArr.length;
     for (; i < len; i++) {

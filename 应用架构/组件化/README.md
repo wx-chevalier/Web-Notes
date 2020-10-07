@@ -122,7 +122,7 @@ nav[role="navigation"] {
 
 ## CSS-in-JS
 
-广义上说，目标格式为 CSS 的 预处理器 是 CSS 预处理器，但本文 特指 以最终生成 CSS 为目的的 领域特定语言。Sass 、 LESS、Stylus 是目前最主流的 CSS 预处理器。
+广义上说，目标格式为 CSS 的 预处理器 是 CSS 预处理器，但本文 特指 以最终生成 CSS 为目的的 领域特定语言。Sass 、LESS、Stylus 是目前最主流的 CSS 预处理器。
 
 ```less
 .opacity(@opacity: 100) {
