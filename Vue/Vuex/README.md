@@ -5,26 +5,26 @@
 ```js
 export default {
   name: "projects",
-  data: function() {
+  data: function () {
     return {
-      projects: []
+      projects: [],
     };
   },
   methods: {
-    loadProjects: function() {
+    loadProjects: function () {
       axios.get("/secured/projects").then(
-        response => {
+        (response) => {
           this.projects = response.data;
         },
-        err => {
+        (err) => {
           console.log(err);
         }
       );
-    }
+    },
   },
-  mounted: function() {
+  mounted: function () {
     this.loadProjects();
-  }
+  },
 };
 ```
 
@@ -461,4 +461,3 @@ getters: {
 ```
 
 最后我们将该统计信息添加到项目列表中，效果图示如下：
-![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2017/1/3/1-SxdeunwXHo6jLNymDqFz9g.gif)

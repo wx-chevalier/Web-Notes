@@ -1,18 +1,12 @@
 # Web 构建与打包工具
 
-![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2017/6/1/IMG_0438.PNG)
-
 自 2011 年开始随着前端项目复杂度的增加，社区提出了很多工具或者框架的方案；首先崛起的是以 RequireJS 与 SeaJS 为代表的模块加载器(Module Loader)；虽然譬如 Yui、Dojo 这些当时流行的前端框架已经有了自己的模块化支持方案，但是 RequireJS 是首个通用的流行前端模块化规范。不过 RequireJS 中所有模块都是异步加载，导致了发布到生产环境时会非常麻烦，因此又出现了如 r.js 这样的能够帮助模块加载器进行文件合并与压缩的工具。
 
 此时在开发流程中需要针对每个入口文件使用 r.js 等工具进行打包，于是社区又提出了以 Grunt、Gulp 为代表的任务自动化运行工具(Task Runner)。Grunt 与 Gulp 殊途同归，前者基于临时文件进行构建，后者通过文件流处理；但是它们都是旨在解决文件自动化处理问题，通过结合模块加载器、加载器打包工具以及任务自动化工具，我们可以实现初步的开发流程自动化。虽然任务自动化运行工具允许开发者在项目中配置一些自动化的任务以便捷进行文件合并、代码压缩、后处理等操作，不过它们存在的问题在于其不能够去真正的自动化解析依赖，并且对于 HTML、CSS、JavaScript 这些不同类型的资源文件只能分割独立地处理，无形会大大拉低开发部署的速度。
 
 在前端模块化尚未流行的年代里，每个 HTML 文件的尾部都会挂载很多的 `script` 标签来载入 JavaScript 代码，各个文件之间的依赖异常混乱，项目的可维护性随着代码的增加而迅速降低，整个应用的开发流程中也尚未有专门的编译流程。后来出现了以 Grunt/Gulp 为代表的所谓的 Task Runner：
 
-![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2017/2/1/1-yBt2rFj2DbckFliGE0LEyg.png)
-
 虽然类似于 Gulp 这样的 Task Runner 也能添加很多的预处理器或者转换器，但是本质上它仍然需要指定元输入。而 Webpack 最早的动因即是希望能够让开发工具自己去处理模块依赖问题，开发者不需要再为每一个任务去指定输入输出：
-
-![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2017/2/1/1-TOFfoH0cXTc8G3Y_F6j3Jg.png)
 
 综上所述，Webpack 具有如下优点：
 

@@ -14,7 +14,6 @@ Vue 是专注于构建用户界面层的渐进式 JavaScript 框架，它可以�
 - 过滤
 
 Vue.js 2 核心库大概只有 17KB，非常小，这就保证了引入 Vue.js 并不会对你的编译后的版本添加过多的代码，加速网站的加载。Vue.js 的官方代码位于：[https://vuejs.org/](https://vuejs.org/)。
-![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2017/1/2/1-jh3ITjmvej5l-T-t_GmqmA.png)
 
 # 如何引入 Vue.js
 
@@ -42,7 +41,6 @@ $ vue init webpack vueapp01
 ```
 
 这里我们让 Vue-cli 以 Webpack 模板创建新的项目，并且个新项目取名为 vueapp01，运行该命令之后它会向你咨询基本的项目信息，截图如下：
-![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2017/1/2/1-KmPTe6A0_9qG_OR5awet4A.png)
 
 到这里项目的模板文件被添加到了 vueapp01 目录下，进入该目录即可以启动开发服务器：
 
@@ -51,7 +49,6 @@ $ npm run dev
 ```
 
 该命令会启动一个监听 8080 端口的开发服务器，在浏览器中打开该端口可以看到如下界面：
-![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2017/1/2/1-GuIRPERP01oedu0iIAtqyA.png)
 
 如果你希望将项目打包出开发版本，可以使用 build 命令，它会将项目打包编译之后的文件放置在 dist 目录下：
 
@@ -62,7 +59,6 @@ $ npm run build
 # 项目结构
 
 该部分的代码参考[vue-boilerplate](https://github.com/wx-chevalier/Web-Frontend-Introduction-And-Engineering-Practices/tree/master/OpenSource/vue-boilerplate)。首先我们来看下 Vue-cli 构建的项目目录结构：
-![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2017/1/2/1-hvpOnNNjqls-qRbFj7LSMg.png)
 
 进入项目根目录之后我们使用`npm intsall`命令安装所有依赖，所有的依赖被声明在`package.json`文件中。文件`index.html`中包含了如下 HTML 代码：
 
@@ -112,7 +108,7 @@ $ npm run build
 new Vue({
   el: "#app",
   template: "<App/>",
-  components: { App }
+  components: { App },
 });
 ```
 
@@ -329,4 +325,3 @@ a {
 ```
 
 最后的结果如下所示：
-![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2017/1/2/1-xdoMDrZ5XUIFRz8Bg1AFMA.png)

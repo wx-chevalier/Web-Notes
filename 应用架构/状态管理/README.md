@@ -1,7 +1,5 @@
 # 状态管理
 
-![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/7/1/1-WGDVzQRyXxoEG5r1PSEiAw.png)
-
 记得上次面试的时候，有人问我怎么看待全栈开发这个概念，笔者一直觉得，对于小团队与较简单的业务逻辑，全栈可以极大地提高产品开发效率。但是所谓磨刀不误砍柴工，随着对性能、清晰可维护的代码架构的需求日渐提升，类似于 Meteor 这样所谓的 Isomorphic 全栈架构反而成了一种阻碍，大大增加整个产品架构的复杂度。其中一个核心的 Issue 就是在于当你将前后端的状态无差别的处理，而不进行任何分割的时候，你来自于 Domain/DataBase/Server/UI 的状态迅猛增长，最终将你的代码变成一团乱麻。而作为全栈开发者，应该如何应对这种复杂性的陡升呢？还是需要在所谓的客户端与服务端之间划分一个明确的状态界限，并且以 API Provider 与 Consumer 的方式将客户端与服务端进行解耦，这也符合 SOLID 原则，每个系统内部应该尽量少的了解外部系统的细节。
 
 # What is State? | 何谓状态
@@ -137,7 +135,7 @@ function inputFromUser(state = {}, action) {
 // the dispatch represents the executor
 // the object passed to the dispathcer is the command
 Store.dispatch({
-  type: "TOGGLE_VISIBILITY"
+  type: "TOGGLE_VISIBILITY",
 });
 
 ("REVIOUS STATE: { visibilityOfButton: false, inputFromUser: {} }");

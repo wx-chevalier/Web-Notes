@@ -129,9 +129,7 @@ var expect = require("chai").expect,
 expect(foo).to.be.a("string");
 expect(foo).to.equal("bar");
 expect(foo).to.have.length(3);
-expect(beverages)
-  .to.have.property("tea")
-  .with.length(3);
+expect(beverages).to.have.property("tea").with.length(3);
 ```
 
 Expect also allows you to include arbitrary messages to prepend to any failed assertions that might occur.
@@ -179,34 +177,30 @@ function responseToText(response) {
   return response.text();
 }
 
-describe("fetch", function() {
-  before(function() {
-    nock("https://mattandre.ws")
-      .get("/succeed.txt")
-      .reply(200, good);
-    nock("https://mattandre.ws")
-      .get("/fail.txt")
-      .reply(404, bad);
+describe("fetch", function () {
+  before(function () {
+    nock("https://mattandre.ws").get("/succeed.txt").reply(200, good);
+    nock("https://mattandre.ws").get("/fail.txt").reply(404, bad);
   });
 
-  it("should be defined", function() {
+  it("should be defined", function () {
     expect(fetch).to.be.a("function");
   });
 
-  it("should facilitate the making of requests", function(done) {
+  it("should facilitate the making of requests", function (done) {
     fetch("//mattandre.ws/succeed.txt")
       .then(responseToText)
-      .then(function(data) {
+      .then(function (data) {
         expect(data).to.equal(good);
         done();
       })
       .catch(done);
   });
 
-  it("should do the right thing with bad requests", function(done) {
+  it("should do the right thing with bad requests", function (done) {
     fetch("//mattandre.ws/fail.txt")
       .then(responseToText)
-      .catch(function(err) {
+      .catch(function (err) {
         expect(err.toString()).to.equal("Error: Bad server response");
         done();
       })
@@ -243,7 +237,7 @@ const itParam = require("mocha-param").itParam;
 
 describe("测试表单校验", () => {
   const data = ["Adam5", "Ad@am", "Ad-am"];
-  itParam("拒绝非法输入", data, name => {
+  itParam("拒绝非法输入", data, (name) => {
     let valid = validateName(name);
     expect(valid).to.be.false;
   });
@@ -293,8 +287,8 @@ function addClass(el, newClass) {
 该函数的功能非常简单，就是为某个元素添加不重复的元素名，即测试要点在于如果当前元素的`className`  属性中尚不包含要添加的类名，则添加；否则不添加。我们的测试用例编写如下：
 
 ```js
-describe("addClass", function() {
-  it("should add class to element", function() {
+describe("addClass", function () {
+  it("should add class to element", function () {
     var element = { className: "" };
 
     addClass(element, "test-class");
@@ -305,7 +299,7 @@ describe("addClass", function() {
   it("should not add a class which already exists");
 });
 
-it("should not add a class which already exists", function() {
+it("should not add a class which already exists", function () {
   var element = { className: "exists" };
 
   addClass(element, "exists");
@@ -316,16 +310,16 @@ it("should not add a class which already exists", function() {
 ```
 
 在浏览器中运行测试代码，会得到 Mocha  的如下提示：
-![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2017/3/1/111111111111.png)
+
 我们在上文中介绍的都是如何在 Node.js  中运行测试用例，如果我们希望将上述代码转化为在 Node.js  中可以运行的代码，需要将其转化为标准的 CommonJS  模块：
 
 ```js
 // className.js
 
 module.exports = {
-  addClass: function(el, newClass) {
+  addClass: function (el, newClass) {
     // ...
-  }
+  },
 };
 
 // classNameTest.js
@@ -336,7 +330,7 @@ var className = require("../js/className.js");
 var addClass = className.addClass;
 
 // The rest of the file remains the same
-describe("addClass", function() {
+describe("addClass", function () {
   // ...
 });
 ```

@@ -82,8 +82,6 @@ In our projects we have daily discussions...
 
 - 最重要的一点是我们可以使用 CSS 去改变其样式或者添加动画效果，关于这一点可以参考[CodePen 上的这个演示](https://codepen.io/voorhoede/pen/qNgWod/)。
 
-![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/8/2/autolayout.gif)
-
 ## Custom Web Fonts
 
 我们首先回顾下浏览器是如何使用自定义字体的，当浏览器识别到用户在 CSS 中基于`@font-size`定义的字体时，会尝试下载该字体文件。而在下载的过程中，浏览器是不会展示该字体所属的文本内容，最终导致了所谓的`Flash of Invisible Text`现象。现在很多的网站都存在这个问题，这也是导致用户体验差的一个重要原因，即会影响用户最主要的内容浏览这一操作。而我们的优化点即在于首先将字体设置为默认字体，而后在自定义的 Web Font 下载完毕之后对标准字体再进行替换操作，并且重新渲染整个文本块。而如果自定义的字体下载失败，整个内容还是能保证基本的可读性，不会对用户体验造成毁灭性的打击。
@@ -154,7 +152,7 @@ html.fonts-loaded {
 ```html
 <!-- #if expr="($HTTP_COOKIE!=/css-loaded/) || ($HTTP_COOKIE=/.*css-loaded=([^;]+);?.*/ && ${1} != '0d82f.css' )"-->
 
-<noscript><link rel="stylesheet" href="0d82f.css"/></noscript>
+<noscript><link rel="stylesheet" href="0d82f.css" /></noscript>
 <script>
   (function() {
     function loadCSS(url) {...}
