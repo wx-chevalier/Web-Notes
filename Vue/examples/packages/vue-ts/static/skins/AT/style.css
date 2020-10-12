@@ -1,0 +1,18 @@
+H3
+{
+    color:blue;
+}
+div.logo:before {
+
+  content: "";
+  background-image:url("/static/skins/at/img/logo1.png");
+  background-size: 100% 100%;
+  display: inline-block;
+  /*size of your image*/
+  height: 40px;
+  width:40px;
+  /*if you want to change the position you can use margins or:*/
+  position:relative;
+ /* top:5px;*/
+
+}

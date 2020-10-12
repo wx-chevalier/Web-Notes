@@ -1,0 +1,14 @@
+{
+  "presets":
+   ["es2015","latest"],
+    //["latest", {     "es2015": { "modules": false }    }], 
+ // ["es2015","stage-2"], //"stage-2",
+  //"compact": true,
+ //"plugins": ["syntax-flow","transform-flow-strip-types","transform-runtime","transform-vue-jsx","transform-es2015-modules-commonjs","transform-decorators-legacy"],//"transform-es2015-modules-commonjs"
+  //"plugins": ["syntax-flow","transform-flow-strip-types","transform-vue-jsx", "transform-decorators-legacy","transform-class-properties","transform-es2015-modules-commonjs"],
+   "plugins": ["transform-es2015-modules-commonjs","syntax-flow","transform-flow-strip-types",
+    "transform-decorators-legacy",
+    "transform-class-properties"
+              ],
+  "comments": false
+}

@@ -1,0 +1,14 @@
+{
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "typescript.referencesCodeLens.enabled": true,
+  "git.enabled": false,
+  "debug.allowBreakpointsEverywhere": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true //, "**/dist**":true
+  },
+  "typescript.implementationsCodeLens.enabled": true,
+  "typescript.tsserver.log": "off"
+}

@@ -1,0 +1,12 @@
+{
+  "files.associations": {
+    "*.vue": "vue"
+  },
+  "tslint.autoFixOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    { "language": "typescript", "autoFix": true },
+    { "language": "typescriptreact", "autoFix": true }
+  ]
+}

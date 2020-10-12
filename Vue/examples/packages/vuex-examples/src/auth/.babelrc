@@ -1,0 +1,4 @@
+{
+	"presets": [["@babel/preset-env", { "modules": false }]],
+	"plugins": ["@babel/plugin-syntax-object-rest-spread"]
+}
