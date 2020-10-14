@@ -51,7 +51,7 @@
 
 # Week 1:Start With React
 
-在你了解了 JavaScript 基础语法知识之后，我推荐你下一步开始学习[React](https://facebook.github.io/react/)。 React 是由 Facebook 开发并且开源的 UI 库，换言之，其专注于完成将数据渲染到 HTML 这一步骤，也就是所谓的 View 层。不过需要注意的是，我在这里并不是安利 React 为最优秀的库，这个是因项目而定的，不过我觉得 React 是个挺不错的合适初学者的库：
+在你了解了 JavaScript 基础语法知识之后，我推荐你下一步开始学习[React](https://facebook.github.io/react/)。React 是由 Facebook 开发并且开源的 UI 库，换言之，其专注于完成将数据渲染到 HTML 这一步骤，也就是所谓的 View 层。不过需要注意的是，我在这里并不是安利 React 为最优秀的库，这个是因项目而定的，不过我觉得 React 是个挺不错的合适初学者的库：
 
 - React 不一定就是最受欢迎的库，不过其受欢迎程度相当高
 - React 不一定是最轻量级的库，不过其谈不上是一个重量级的库
@@ -113,7 +113,7 @@
 
 - [GraphQL 初探 : 从 REST 到 GraphQL，更完善的数据查询定义](https://segmentfault.com/a/1190000005766732)
 
-现在我们已经讨论了很多客户端开发中所需要的知识栈，不过对于有追求的前端开发者而言这远远不够。不谈整个 Node 生态社区，我们还需要注意这个服务端的数据是如何传递到客户端的。这里要着重介绍下[GraphQL](http://graphql.org/)，一个由 Facebook 出品的可以替代传统的 REST API 的标准。 传统的 REST API 会通过暴露多个 REST 路由来允许用户访问些数据集，譬如`/api/posts,/api/comments`。而 GraphQL 将多个后端的 REST 接口整合为单个端点，允许用户从单个端点获取所需要的数据。
+现在我们已经讨论了很多客户端开发中所需要的知识栈，不过对于有追求的前端开发者而言这远远不够。不谈整个 Node 生态社区，我们还需要注意这个服务端的数据是如何传递到客户端的。这里要着重介绍下[GraphQL](http://graphql.org/)，一个由 Facebook 出品的可以替代传统的 REST API 的标准。传统的 REST API 会通过暴露多个 REST 路由来允许用户访问些数据集，譬如`/api/posts,/api/comments`。而 GraphQL 将多个后端的 REST 接口整合为单个端点，允许用户从单个端点获取所需要的数据。
 
 # Beyond & Next Steps
 
