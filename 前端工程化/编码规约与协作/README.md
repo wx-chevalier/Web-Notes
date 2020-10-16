@@ -46,6 +46,6 @@ Web 应用程序的体系结构受框架开发人员做出的隐式和显式设�
 
 - #HISTORY API：客户端的 JavaScript 触发的任何动态路由或 URI 状态修改都应使用 HTML5 历史记录 API。
 
-# 链接
+# TBD
 
 - https://mp.weixin.qq.com/s/FxhtAFI9nS2zytdontFMSg 非常全面的前端协作规范

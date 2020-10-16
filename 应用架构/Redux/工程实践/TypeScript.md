@@ -12,7 +12,7 @@ import { ThunkAction } from "redux-thunk";
 const reduxAction: ActionCreator<Action> = (text: string) => {
   return {
     type: SET_TEXT,
-    text
+    text,
   };
 };
 
@@ -23,27 +23,29 @@ const thunkAction: ActionCreator<ThunkAction<Action, IState, void>> = (
   return (dispatch: Dispatch<IState>): Action => {
     return dispatch({
       type: SET_TEXT,
-      text
+      text,
     });
   };
 };
 
 // Async Redux-Thunk action
-const asyncThinkAction: ActionCreator<
-  ThunkAction<Promise<Action>, IState, void>
-> = () => {
+const asyncThinkAction: ActionCreator<ThunkAction<
+  Promise<Action>,
+  IState,
+  void
+>> = () => {
   return async (dispatch: Dispatch<IState>): Promise<Action> => {
     try {
       const text = await Api.call();
       return dispatch({
         type: SET_TEXT,
-        text
+        text,
       });
     } catch (e) {}
   };
 };
 ```
 
-# 链接
+# TBD
 
 - https://redux.js.org/recipes/usage-with-typescript

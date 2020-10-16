@@ -29,7 +29,7 @@ const store = {
   listeners: [], // 监听器是一个函数数组
   dispatch: () => {}, // dispatch是一个函数
   subscribe: () => {}, // subscribe是一个函数
-  getState: () => {} // getState是一个函数
+  getState: () => {}, // getState是一个函数
 };
 ```
 
@@ -43,13 +43,13 @@ const createStore = (reducer, initialState) => {
 
   store.getState = () => store.state;
 
-  store.subscribe = listner => {
+  store.subscribe = (listner) => {
     store.listners.push(listener);
   };
 
-  store.dispatch = action => {
+  store.dispatch = (action) => {
     store.state = reducer(store.state, action);
-    store.listeners.forEach(listener => listener());
+    store.listeners.forEach((listener) => listener());
   };
 
   return store;
@@ -63,7 +63,7 @@ createStore 函数接收两个参数，一个是 reducer 和一个 initialState�
 我们允许 UI 订阅(subscribe)状态的变化。订阅实际上是传递一个函数给 subscribe 方法，并且这个函数作为监听器会被添加到监听器数组中。typeof listener === 'function'的结果是 true。在每一个状态变化的时候，我们会遍历所有的监听器函数数组，并逐个执行。
 
 ```ts
-store.listeners.forEach(listener => listener());
+store.listeners.forEach((listener) => listener());
 ```
 
 接下来，定义了 dispatch 函数。dispatch 函数是当用户和 UI 交互时，组件进行调用的。dispatch 接收
@@ -95,7 +95,7 @@ const reducer = (prevState, action) => {
 ```ts
 const todoAction = {
   type: "ADD_TODO",
-  text: "Get milk from the store"
+  text: "Get milk from the store",
 };
 ```
 
@@ -103,14 +103,14 @@ const todoAction = {
 
 ```ts
 const getInitialState = () => ({
-  todoList: []
+  todoList: [],
 });
 
 const reducer = (prevState = getInitialState(), action) => {
   switch (action.type) {
     case "ADD_TODO":
       const nextState = {
-        todoList: [...prevState.todoList, action.text]
+        todoList: [...prevState.todoList, action.text],
       };
 
       return nextState;
@@ -139,7 +139,7 @@ action 的 type 为例，对应更新状态的代码块。这个使用 if...else
 ```ts
 if (action.type === "ADD_TODO") {
   const nextState = {
-    todoList: [...prevState.todoList, action.text]
+    todoList: [...prevState.todoList, action.text],
   };
 
   return nextState;
@@ -178,13 +178,13 @@ interface Store {
 const todos: Todo[] = [
   {
     title: "title",
-    content: "content"
-  }
+    content: "content",
+  },
 ];
 
 const getInitialState = () => {
   return {
-    todos
+    todos,
   };
 };
 
@@ -202,7 +202,7 @@ const createStore = (reducer: Function, initialState?: InitialState) => {
   store.dispatch = (action: Action) => {
     console.log("> Action", action);
     store.state = reducer(store.state, action);
-    store.listeners!.forEach(listener => listener());
+    store.listeners!.forEach((listener) => listener());
   };
 
   return store;
@@ -218,7 +218,7 @@ const reducer = (
   switch (action.type) {
     case "ADD_TODO":
       const nextState = {
-        todos: [...state.todos, action.payload]
+        todos: [...state.todos, action.payload],
       };
 
       return nextState;
@@ -242,7 +242,7 @@ export const ReduxScratch = () => {
 
   return (
     <div>
-      {store.getState!().todos.map(todo => (
+      {store.getState!().todos.map((todo) => (
         <div>
           <h1>{todo.title}</h1>
           <p>{todo.content}</p>
@@ -257,8 +257,8 @@ export const ReduxScratch = () => {
             type: "ADD_TODO",
             payload: {
               title: `title：${num}`,
-              content: `content：${num}`
-            }
+              content: `content：${num}`,
+            },
           });
           setSlosh(num);
         }}
@@ -270,7 +270,7 @@ export const ReduxScratch = () => {
 };
 ```
 
-# 链接
+# TBD
 
 - https://blog.bookcell.org/2019/08/04/learn-redux-by-build-a-redux/
 - http://huziketang.mangojuice.top/books/react/lesson30

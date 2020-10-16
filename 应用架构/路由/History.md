@@ -62,7 +62,7 @@ history.pushState(null, "", newURL);
 到此，就解决了 F5 刷新状态还原的事了。在浏览器中点击后退，例如从 `?page=3` 退到 `?page=2`，会发现没有变化。按道理说，这时候也应该对应变化。这就要用到 `popstate` 事件了。为 `window` 添加 `popstate` 事件，加入这种导航变化时的处理：
 
 ```js
-$(window).on("popstate", function(event) {
+$(window).on("popstate", function (event) {
   // 取得之前通过pushState保存的state object，尽管本示例并不打算使用它。
   // jQuery对event做了一层包装，需要通过originalEvent取得原生event。
   var state = event.originalEvent.state, // 本示例直接取URL参数来处理
@@ -76,6 +76,6 @@ $(window).on("popstate", function(event) {
 
 这样，就完成了。这样看起来是否会觉得还挺容易的呢？在支持 HTML5 history API 的浏览器中，以上部分就已经做到了带页码记录的 Ajax 翻页。
 
-# 链接
+# TBD
 
 - [阮一峰 浏览器对象之 History](http://javascript.ruanyifeng.com/bom/history.html)

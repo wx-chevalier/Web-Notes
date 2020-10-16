@@ -18,7 +18,7 @@ Redux 的一大卖点就是所谓的时间旅行，即可以方便地回到某�
 
 ![Redux 有无对比](https://s2.ax1x.com/2019/09/01/n9la5j.png)
 
-# 链接
+# TBD
 
 - https://www.redux.org.cn/docs/introduction/Motivation.html
 

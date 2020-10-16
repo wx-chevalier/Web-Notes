@@ -14,7 +14,7 @@
 
 总的优化策略会从[资源请求与缓存、关键渲染路径、图片优化、脚本解析与执行、页面布局与渲染策略、交互与动画、移动端优化、PWA]()等几个角度进行考虑。
 
-# 链接
+# TBD
 
 - https://zhuanlan.zhihu.com/p/66398148
 - https://mp.weixin.qq.com/s/vEO4r3-pSROgBzOQjzjV3A 深度解读当代前端架构进化史，下一个趋势在哪？

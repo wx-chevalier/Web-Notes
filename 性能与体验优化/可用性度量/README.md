@@ -8,6 +8,6 @@ FCP: First Contentful Paint - the time when requested content (article body, etc
 
 TTI: Time To Interactive - the time at which a page becomes interactive (events wired up, etc).
 
-# 链接
+# TBD
 
 - https://zhuanlan.zhihu.com/p/82981365 10 分钟彻底搞懂前端页面性能监控
