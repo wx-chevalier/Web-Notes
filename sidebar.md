@@ -96,24 +96,6 @@
       - [脚本执行与交互](/前端工程化/Chrome%20Extension/脚本执行与交互.md)
     - [Snowpack](/前端工程化/Snowpack/README.md)
       
-    - [Web 测试](/前端工程化/Web%20测试/README.md)
-      - [Jest](/前端工程化/Web%20测试/Jest/README.md)
-        - [DOM 测试](/前端工程化/Web%20测试/Jest/DOM%20测试.md)
-        - [Mock](/前端工程化/Web%20测试/Jest/Mock.md)
-        - [基础语法](/前端工程化/Web%20测试/Jest/基础语法.md)
-        - [异步测试](/前端工程化/Web%20测试/Jest/异步测试.md)
-      - [Karma](/前端工程化/Web%20测试/Karma/README.md)
-        
-      - [Mocha](/前端工程化/Web%20测试/Mocha/README.md)
-        
-      - 浏览器自动化
-        - [Headless Chrome](/前端工程化/Web%20测试/浏览器自动化/Headless-Chrome.md)
-        - [Puppeteer](/前端工程化/Web%20测试/浏览器自动化/Puppeteer.md)
-      - [端到端测试](/前端工程化/Web%20测试/端到端测试/README.md)
-        - [Cypress](/前端工程化/Web%20测试/端到端测试/Cypress.md)
-        - [Nightwatch](/前端工程化/Web%20测试/端到端测试/Nightwatch.md)
-        - [TestCafe](/前端工程化/Web%20测试/端到端测试/TestCafe.md)
-        - [Watir](/前端工程化/Web%20测试/端到端测试/Watir.md)
     - [Webpack](/前端工程化/Webpack/README.md)
       - [内部机制](/前端工程化/Webpack/内部机制.md)
       - [基础配置](/前端工程化/Webpack/基础配置.md)
@@ -135,6 +117,9 @@
       - [Gulp](/前端工程化/构建工具/Gulp.md)
       - [Parcel](/前端工程化/构建工具/Parcel.md)
       - [TreeShaking](/前端工程化/构建工具/TreeShaking.md)
+    - 浏览器自动化
+      - [Headless Chrome](/前端工程化/浏览器自动化/Headless-Chrome.md)
+      - [Puppeteer](/前端工程化/浏览器自动化/Puppeteer.md)
     - [编码规约与协作](/前端工程化/编码规约与协作/README.md)
       - [DOM 与组件](/前端工程化/编码规约与协作/DOM%20与组件.md)
       - [ESLint](/前端工程化/编码规约与协作/ESLint.md)
