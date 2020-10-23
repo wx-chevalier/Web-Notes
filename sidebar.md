@@ -94,6 +94,8 @@
       - [应用配置与界面](/前端工程化/Chrome%20Extension/应用配置与界面.md)
       - [网络请求与存储](/前端工程化/Chrome%20Extension/网络请求与存储.md)
       - [脚本执行与交互](/前端工程化/Chrome%20Extension/脚本执行与交互.md)
+    - [Snowpack](/前端工程化/Snowpack/README.md)
+      
     - [Web 测试](/前端工程化/Web%20测试/README.md)
       - [Jest](/前端工程化/Web%20测试/Jest/README.md)
         - [DOM 测试](/前端工程化/Web%20测试/Jest/DOM%20测试.md)
