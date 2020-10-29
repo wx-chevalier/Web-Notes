@@ -59,11 +59,8 @@ PostCSS 编译之后就是我们所需要的带 vw 代码：
 上面解决了 px 到 vw 的转换计算。那么在哪些地方可以使用 vw 来适配我们的页面。根据相关的测试：
 
 - 容器适配，可以使用 vw
-
 - 文本的适配，可以使用 vw
-
 - 大于 1px 的边框、圆角、阴影都可以使用 vw
-
 - 内距和外距，可以使用 vw
 
 # 1px 问题
@@ -124,7 +121,7 @@ PostCSS 编译之后就是我们所需要的带 vw 代码：
 }
 ```
 
-这个方案简单易用，是我所需要的。目前测试下来，基本能达到我所需要的需求。但有一点千万别忘了，记得在``中添加：
+这个方案简单易用，是我所需要的。目前测试下来，基本能达到我所需要的需求。但有一点千万别忘了，记得在中添加：
 
 ```html
 <meta
@@ -139,7 +136,7 @@ PostCSS 编译之后就是我们所需要的带 vw 代码：
 
 - 为了更好的实现长宽比，特别是针对于`img`、`vedio`和`iframe`元素，通过 PostCSS 插件[postcss-aspect-ratio-mini](https://github.com/yisibl/postcss-aspect-ratio-mini)来实现，在实际使用中，只需要把对应的宽和高写进去即可
 
-- 为了解决`1px`的问题，使用 PostCSS 插件[postcss-write-svg](https://github.com/jonathantneal/postcss-write-svg),自动生成`border-image`或者`background-image`的图片
+- 为了解决 `1px` 的问题，使用 PostCSS 插件 [postcss-write-svg](https://github.com/jonathantneal/postcss-write-svg),自动生成 `border-image` 或者 `background-image` 的图片
 
 # Viewport 不足之处
 
