@@ -90,10 +90,6 @@
       - [CSS in JS](/前端工程化/CSS%20模块化/CSS-in-JS.md)
       - [Naming Conventions and Modularity en](/前端工程化/CSS%20模块化/Naming%20Conventions%20and%20Modularity-en.md)
       - [命名约定](/前端工程化/CSS%20模块化/命名约定.md)
-    - [Chrome Extension](/前端工程化/Chrome%20Extension/README.md)
-      - [应用配置与界面](/前端工程化/Chrome%20Extension/应用配置与界面.md)
-      - [网络请求与存储](/前端工程化/Chrome%20Extension/网络请求与存储.md)
-      - [脚本执行与交互](/前端工程化/Chrome%20Extension/脚本执行与交互.md)
     - [Snowpack](/前端工程化/Snowpack/README.md)
       
     - [Webpack](/前端工程化/Webpack/README.md)
@@ -117,6 +113,19 @@
       - [Gulp](/前端工程化/构建工具/Gulp.md)
       - [Parcel](/前端工程化/构建工具/Parcel.md)
       - [TreeShaking](/前端工程化/构建工具/TreeShaking.md)
+    - [测试](/前端工程化/测试/README.md)
+      - [API Mock](/前端工程化/测试/API%20Mock/README.md)
+        
+      - [测试框架](/前端工程化/测试/测试框架/README.md)
+        - [Jest](/前端工程化/测试/测试框架/Jest/README.md)
+          - [DOM 测试](/前端工程化/测试/测试框架/Jest/DOM%20测试.md)
+          - [Mock](/前端工程化/测试/测试框架/Jest/Mock.md)
+          - [基础语法](/前端工程化/测试/测试框架/Jest/基础语法.md)
+          - [异步测试](/前端工程化/测试/测试框架/Jest/异步测试.md)
+        - [Karma](/前端工程化/测试/测试框架/Karma/README.md)
+          
+        - [Mocha](/前端工程化/测试/测试框架/Mocha/README.md)
+          
     - 浏览器自动化
       - [Headless Chrome](/前端工程化/浏览器自动化/Headless-Chrome.md)
       - [Puppeteer](/前端工程化/浏览器自动化/Puppeteer.md)
@@ -328,6 +337,10 @@
       - [设计优化](/性能与体验优化/资源加载优化/设计优化.md)
       - [预加载](/性能与体验优化/资源加载优化/预加载.md)
   - [混合开发](/混合开发/README.md)
+    - [Chrome Extension](/混合开发/Chrome%20Extension/README.md)
+      - [应用配置与界面](/混合开发/Chrome%20Extension/应用配置与界面.md)
+      - [网络请求与存储](/混合开发/Chrome%20Extension/网络请求与存储.md)
+      - [脚本执行与交互](/混合开发/Chrome%20Extension/脚本执行与交互.md)
     - Cordova
       - [iOS](/混合开发/Cordova/iOS.md)
     - [Electron](/混合开发/Electron/README.md)
