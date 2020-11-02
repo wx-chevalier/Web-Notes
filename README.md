@@ -1,18 +1,20 @@
-![image](https://user-images.githubusercontent.com/5803001/43637212-f62daf14-9746-11e8-84e0-78247690b3c6.png)
-
-[中文版本](./README.md) | [English Version](./README-en.md)
-
 # Web 全栈开发与工程架构
 
-`Copyright © 2019 王下邀月熊`
+Web 开发，入门易，深度难，分为初窥门径、登堂入室、融会贯通等阶段，如果您是首次阅读笔者的系列文章，建议前往[某熊的技术之路指北 ☯](https://github.com/wx-chevalier/Developer-Zero-To-Mastery)以做整体了解。
 
-Web 开发，入门易，深度难，分为初窥门径、登堂入室、融会贯通等阶段，如果您是首次阅读笔者的系列文章，建议前往[某熊的技术之路指北 ☯](https://github.com/wx-chevalier/Developer-Zero-To-Mastery)以做整体了解。如果您对于 JavaScript 基础语法尚不完全了解，那么建议您首先浏览[《现代 JavaScript 语法基础与工程实践》](https://ngte-pl.gitbook.io/i/javascript) 以了解基础的 JavaScript 语法及实践应用。在了解了理论知识之后，建议前往 [wx-fe](https://github.com/topics/wx-fe) 查阅笔者所有的前端相关的开源项目。
+![image](https://user-images.githubusercontent.com/5803001/43637212-f62daf14-9746-11e8-84e0-78247690b3c6.png)
 
 # Nav | 导读
 
+[中文版本](./README.md) | [English Version](./README-en.md)
+
 - 如果你是颇有经验的开发者，想要了解前端工程化与架构方面的知识，那么建议阅读[前端演化](./架构与优化/前端工程化)一文。
 
+- 如果您对于 JavaScript 基础语法尚不完全了解，那么建议您首先浏览[《现代 JavaScript 语法基础与工程实践》](https://ngte-pl.gitbook.io/i/javascript) 以了解基础的 JavaScript 语法及实践应用。
+
 - 如果你希望了解 Node.js 全栈开发，可以参阅 [Node-Series](https://github.com/wx-chevalier/Node-Series)。
+
+- 在了解了理论知识之后，建议前往 [wx-fe](https://github.com/topics/wx-fe) 查阅笔者所有的前端相关的开源项目。
 
 # About
 

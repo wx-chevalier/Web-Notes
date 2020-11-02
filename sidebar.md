@@ -68,8 +68,9 @@
   - [WebAssembly](/WebAssembly/README.md)
     - [OpenCV](/WebAssembly/OpenCV/README.md)
       
-    - [WebAssembly 101](/WebAssembly/WebAssembly%20101.md)
-    - [概念与使用](/WebAssembly/概念与使用.md)
+    - 导论
+      - [WebAssembly 101](/WebAssembly/导论/WebAssembly%20101.md)
+      - [概念与使用](/WebAssembly/导论/概念与使用.md)
   - [examples](/examples/README.md)
     - packages
       - es5 todomvc
@@ -209,10 +210,9 @@
         - [响应式设计](/应用架构/响应式适配/媒介查询/响应式设计.md)
         - [媒介查询](/应用架构/响应式适配/媒介查询/媒介查询.md)
     - [微前端](/应用架构/微前端/README.md)
-      - [Web Components](/应用架构/微前端/Web%20Components.md)
       - [iframe](/应用架构/微前端/iframe.md)
-      - [微前端](/应用架构/微前端/微前端.md)
-      - [微应用](/应用架构/微前端/微应用.md)
+      - [硬隔离](/应用架构/微前端/硬隔离.md)
+      - [软隔离](/应用架构/微前端/软隔离.md)
     - [插件系统](/应用架构/插件系统/README.md)
       
     - [状态管理](/应用架构/状态管理/README.md)
