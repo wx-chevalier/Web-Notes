@@ -131,7 +131,7 @@ JavaScript 調用觸發插件請求到本機的一邊，和相應的 iOS 目標 
     + (CDVPluginResult*)resultWithStatus:(CDVCommandStatus)statusOrdinal messageAs...
 ```
 
-您可以創建 `String` ，`Int` ，`Double` ，`Bool` ，`Array` ，`Dictionary` ，`ArrayBuffer` ，和 `Multipart` 類型。你可以也離開了任何參數來發送狀態，或返回錯誤，或甚至選擇不發送任何外掛程式的結果，在這種情況下既不回撥火。
+您可以創建 `String`，`Int`，`Double`，`Bool`，`Array`，`Dictionary`，`ArrayBuffer`，和 `Multipart` 類型。你可以也離開了任何參數來發送狀態，或返回錯誤，或甚至選擇不發送任何外掛程式的結果，在這種情況下既不回撥火。
 
 請注意以下複雜的傳回值為：
 

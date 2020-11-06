@@ -59,12 +59,6 @@
       - [函数式组件](/Vue/组件/函数式组件.md)
       - [单文件组件](/Vue/组件/单文件组件.md)
       - [类组件](/Vue/组件/类组件.md)
-  - Web 导论
-    - [A Study Plan To Cure JavaScript Fatigue](/Web%20导论/A-Study-Plan-To-Cure-JavaScript-Fatigue.md)
-    - [HTML 与 CSS 简史](/Web%20导论/HTML%20与%20CSS%20简史.md)
-    - [从路人甲到英雄无敌的前端开发指南](/Web%20导论/从路人甲到英雄无敌的前端开发指南.md)
-    - [前端演化](/Web%20导论/前端演化.md)
-    - [开发环境与工具链](/Web%20导论/开发环境与工具链.md)
   - [WebAssembly](/WebAssembly/README.md)
     - [OpenCV](/WebAssembly/OpenCV/README.md)
       
@@ -258,6 +252,12 @@
     - [变换与动画](/开发基础/变换与动画/README.md)
       - [CSS 变换与动画](/开发基础/变换与动画/CSS%20变换与动画.md)
       - [JavaScript 动画](/开发基础/变换与动画/JavaScript%20动画.md)
+    - 导论
+      - [A Study Plan To Cure JavaScript Fatigue](/开发基础/导论/A-Study-Plan-To-Cure-JavaScript-Fatigue.md)
+      - [HTML 与 CSS 简史](/开发基础/导论/HTML%20与%20CSS%20简史.md)
+      - [从路人甲到英雄无敌的前端开发指南](/开发基础/导论/从路人甲到英雄无敌的前端开发指南.md)
+      - [前端演化](/开发基础/导论/前端演化.md)
+      - [开发环境与工具链](/开发基础/导论/开发环境与工具链.md)
     - [数据存储](/开发基础/数据存储/README.md)
       - [Cookie](/开发基础/数据存储/Cookie.md)
       - [剪贴板](/开发基础/数据存储/剪贴板.md)
@@ -317,11 +317,9 @@
     - [录屏与重放](/性能与体验优化/录屏与重放/README.md)
       
     - [浏览器工作机制](/性能与体验优化/浏览器工作机制/README.md)
-      - Edge
-        - [多进程体系结构](/性能与体验优化/浏览器工作机制/Edge/多进程体系结构.md)
-      - [Web History and Mechanism en](/性能与体验优化/浏览器工作机制/Web%20History%20and%20Mechanism-en.md)
       - [网络与资源请求](/性能与体验优化/浏览器工作机制/网络与资源请求.md)
       - [解析与渲染](/性能与体验优化/浏览器工作机制/解析与渲染.md)
+      - [进程与线程架构](/性能与体验优化/浏览器工作机制/进程与线程架构.md)
     - [渲染执行优化](/性能与体验优化/渲染执行优化/README.md)
       - [交互与动画](/性能与体验优化/渲染执行优化/交互与动画.md)
       - [布局与渲染策略](/性能与体验优化/渲染执行优化/布局与渲染策略.md)
