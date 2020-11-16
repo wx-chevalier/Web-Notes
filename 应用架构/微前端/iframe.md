@@ -1,6 +1,72 @@
 # iframe
 
-IFrame 能够帮助我们嵌入更为丰富的视图内容，譬如 VSCode 这样的 IDE 也是典型的微前端框架，他使用了 Electron 作为底层，并且使用 webview 标签作为视图的容器。而在浏览器中我们往往使用 IFrame 来加载不同域的内容。
+iframe 能够帮助我们嵌入更为丰富的视图内容，譬如 VSCode 这样的 IDE 也是典型的微前端框架，他使用了 Electron 作为底层，并且使用 webview 标签作为视图的容器。而在浏览器中我们往往使用 iframe 来加载不同域的内容。
+
+iFrame 可以创建一个全新的独立的宿主环境，iFrame 的页面和父页面是分开的，作为独立区域而不受父页面的 CSS 或者全局的 JavaScript 影响。iFrame 的不足或缺陷也非常明显，其会进行资源的重复加载，占用额外的内存；其会阻塞主页面的 onload 事件，和主页面共享连接池，而浏览器对相同域的连接有限制，所以会影响页面的并行加载。
+
+iFrame 的改造门槛较低，但是从功能需求的角度看，其无法提供 SEO，并且需要我们自定义应用管理与应用通讯机制。iFrame 的应用管理不仅要关注其加载与生命周期，还需要考虑到浏览器缩放等场景下的界面重适配问题，以提供用户一致的交互体验；这里我们再简要讨论下同源场景中的跨界面通讯解决方案。
+
+> 📖 详细解读参阅 [DOM CheatSheet](https://parg.co/YlB)
+
+- BroadcastChannel
+
+BroadcastChannel 能够用于同源不同页面之间完成通信的功能。它与 window.postMessage 的区别就是，BroadcastChannel 只能用于同源的页面之间进行通信，而 window.postMessage 却可以用于任何的页面之间；BroadcastChannel 可以认为是 window.postMessage 的一个实例，它承担了 window.postMessage 的一个方面的功能。
+
+```js
+const channel = new BroadcastChannel("channel-name");
+
+channel.postMessage("some message");
+channel.postMessage({ key: "value" });
+
+channel.onmessage = function (e) {
+  const message = e.data;
+};
+
+channel.close();
+```
+
+- SharedWorker API
+
+Shared Worker 类似于 Web Workers，不过其会被来自同源的不同浏览上下文间共享，因此也可以用作消息的中转站。
+
+```js
+// main.js
+const worker = new SharedWorker("shared-worker.js");
+
+worker.port.postMessage("some message");
+
+worker.port.onmessage = function (e) {
+  const message = e.data;
+};
+
+// shared-worker.js
+const connections = [];
+
+onconnect = function (e) {
+  const port = e.ports[0];
+  connections.push(port);
+};
+
+onmessage = function (e) {
+  connections.forEach(function (connection) {
+    if (connection !== port) {
+      connection.postMessage(e.data);
+    }
+  });
+};
+```
+
+- Local Storage
+
+localStorage 是常见的持久化同源存储机制，其会在内容变化时触发事件，也就可以用作同源界面的数据通信。
+
+```js
+localStorage.setItem("key", "value");
+
+window.onstorage = function (e) {
+  const message = e.newValue; // previous value at e.oldValue
+};
+```
 
 # 线程独立性问题
 
