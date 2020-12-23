@@ -140,8 +140,8 @@
         - [3.4.5.3 开发环境](/前端工程化/构建工具/Webpack/开发环境.md)
         - [3.4.5.4 打包部署](/前端工程化/构建工具/Webpack/打包部署.md)
     - [3.5 测试](/前端工程化/测试/README.md)
-      - [3.5.1 API Mock](/前端工程化/测试/API%20Mock/README.md)
-        
+      - [3.5.1 Mock](/前端工程化/测试/Mock/README.md)
+        - [3.5.1.1 Mock Service Worker](/前端工程化/测试/Mock/Mock%20Service%20Worker.md)
       - [3.5.2 测试框架](/前端工程化/测试/测试框架/README.md)
         - [3.5.2.1 Jest](/前端工程化/测试/测试框架/Jest/README.md)
           - [3.5.2.1.1 DOM 测试](/前端工程化/测试/测试框架/Jest/DOM%20测试.md)
