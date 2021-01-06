@@ -10,7 +10,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "cxlt-vue2-toastr": "^1.1.0",
     "node-sass": "^4.8.3",
     "sass-loader": "^6.0.7",
