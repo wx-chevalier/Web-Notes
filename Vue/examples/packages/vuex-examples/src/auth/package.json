@@ -10,7 +10,7 @@
 		"start": "node server.js"
 	},
 	"dependencies": {
-		"axios": "^0.16.2",
+		"axios": "^0.21.1",
 		"bcrypt-nodejs": "0.0.3",
 		"body-parser": "^1.18.2",
 		"express": "^4.16.3",
