@@ -41,7 +41,7 @@ sayHello();
 const Koa = require("koa");
 const app = new Koa();
 
-app.use(ctx => {
+app.use((ctx) => {
   ctx.body = "Hello, World!";
 });
 
@@ -249,7 +249,7 @@ __proto__: Object;
 var animals = [
   { animal: "Horse", name: "Henry", age: 43 },
   { animal: "Dog", name: "Fred", age: 13 },
-  { animal: "Cat", name: "Frodo", age: 18 }
+  { animal: "Cat", name: "Frodo", age: 18 },
 ];
 
 console.table(animals);
@@ -274,7 +274,7 @@ console.important('This is an important message');
 
 ![](https://raygun.com/blog/wp-content/uploads/2015/06/Screen-Shot-2015-06-02-at-3.40.29-pm.png)
 
-在`console.log()`中你可以使用`%s`来代表一个字符串 , `%i` 来代表数字，以及 `%c` 来代表自定义的样式。
+在`console.log()`中你可以使用`%s`来代表一个字符串, `%i` 来代表数字，以及 `%c` 来代表自定义的样式。
 
 ## 调用追踪
 
@@ -285,34 +285,34 @@ JavaScript 框架极大方便了我们的开发，但是也会带来大量的预
 ```js
 var car;
 
-var func1 = function() {
+var func1 = function () {
   func2();
 };
 
-var func2 = function() {
+var func2 = function () {
   func4();
 };
 
-var func3 = function() {};
+var func3 = function () {};
 
-var func4 = function() {
+var func4 = function () {
   car = new Car();
   car.funcX();
 };
 
-var Car = function() {
+var Car = function () {
   this.brand = "volvo";
   this.color = "red";
 
-  this.funcX = function() {
+  this.funcX = function () {
     this.funcY();
   };
 
-  this.funcY = function() {
+  this.funcY = function () {
     this.funcZ();
   };
 
-  this.funcZ = function() {
+  this.funcZ = function () {
     console.trace("trace car");
   };
 };
@@ -333,16 +333,16 @@ func1();
 不过这两种方法都存在一个小问题就是都要到对应的脚本文件中然后再找到对应的行，这样会比较麻烦。这边介绍一个相对快捷点的方法，就是在 console 中使用`debug(funcName)`然后脚本会在指定到对应函数的地方自动停止。这种方法有个缺陷就是无法在私有函数或者匿名函数处停止，所以还是要因时而异：
 
 ```js
-var func1 = function() {
+var func1 = function () {
   func2();
 };
 
-var Car = function() {
-  this.funcX = function() {
+var Car = function () {
+  this.funcX = function () {
     this.funcY();
   };
 
-  this.funcY = function() {
+  this.funcY = function () {
     this.funcZ();
   };
 };

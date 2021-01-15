@@ -35,11 +35,9 @@ observer.observe(child);
 
 ```js
 function handler(entries) {
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     const size = entry.target.contentRect;
-    console.log(
-      `Element’s size: width: ${size.width} , height: ${size.height}`
-    );
+    console.log(`Element’s size: width: ${size.width}, height: ${size.height}`);
   });
 }
 ```
@@ -53,10 +51,10 @@ const observer = new ResizeObserver(handler);
 
 /* Callback handler */
 function handler(entries) {
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     const size = entry.contentRect;
     console.log(
-      `Resize Observer's callback: box size: width: ${size.width} , height:  ${size.height}`
+      `Resize Observer's callback: box size: width: ${size.width}, height:  ${size.height}`
     );
   });
 }
