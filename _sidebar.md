@@ -117,9 +117,9 @@
         
       - [3.1.2 原子 CSS](/前端工程化/CSS%20模块化/原子%20CSS/README.md)
         - [3.1.2.1 TailwindCSS](/前端工程化/CSS%20模块化/原子%20CSS/TailwindCSS.md)
-      - 3.1.3 约定命名
-        - [3.1.3.1 Naming Conventions and Modularity en](/前端工程化/CSS%20模块化/约定命名/Naming%20Conventions%20and%20Modularity-en.md)
-        - [3.1.3.2 命名约定](/前端工程化/CSS%20模块化/约定命名/命名约定.md)
+      - [3.1.3 约定命名](/前端工程化/CSS%20模块化/约定命名/README.md)
+        - [3.1.3.1 BEM](/前端工程化/CSS%20模块化/约定命名/BEM.md)
+        - [3.1.3.2 OOCSS](/前端工程化/CSS%20模块化/约定命名/OOCSS.md)
     - [3.2 主题与国际化](/前端工程化/主题与国际化/README.md)
       - [3.2.1 FormatJS](/前端工程化/主题与国际化/FormatJS.md)
       - [3.2.2 Internationalization API](/前端工程化/主题与国际化/Internationalization%20API.md)
