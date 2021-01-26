@@ -243,9 +243,10 @@
       - [5.1.2 用户体验](/性能与体验优化/H5%20优化/用户体验.md)
       - [5.1.3 触摸滚动](/性能与体验优化/H5%20优化/触摸滚动.md)
     - [5.2 PWA](/性能与体验优化/PWA/README.md)
-      - [5.2.1 ServiceWorker](/性能与体验优化/PWA/ServiceWorker.md)
-      - [5.2.2 Workbox](/性能与体验优化/PWA/Workbox.md)
-      - [5.2.3 离线存储](/性能与体验优化/PWA/离线存储.md)
+      - [5.2.1 App Manifest](/性能与体验优化/PWA/App%20Manifest.md)
+      - [5.2.2 ServiceWorker](/性能与体验优化/PWA/ServiceWorker.md)
+      - [5.2.3 Workbox](/性能与体验优化/PWA/Workbox.md)
+      - [5.2.4 离线存储](/性能与体验优化/PWA/离线存储.md)
     - 5.3 优化案例
       - [5.3.1 De Voorhoede](/性能与体验优化/优化案例/De%20Voorhoede.md)
     - [5.4 内存优化](/性能与体验优化/内存优化/README.md)

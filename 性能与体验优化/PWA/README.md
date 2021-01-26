@@ -1,61 +1,12 @@
 # Progressive Web Apps
 
-Progressive web apps are a new breed of web apps. They combine the benefits of a native app with the low friction nature of the web. Progressive web apps start off as simple websites, but as the user interacts with them, they progressively gain new powers. They transform from a website into something much more like a traditional native app.
+PWA 即 Progressive Web App，是谷歌于 2016 年在 Google I/O 大会上提出的下一代 Web App 概念，于 2017 年落地的 web 技术，旨在增强 Web 体验，缩小 Web App 与 Native App 的差距并创建类似的用户体验。理论上来说，对于所有 Web App，只要参考 PWA 的标准对其进行改造，就可实现 PWA ，而对 App 来说，用户的体验是判断一个应用好坏的重要标准，PWA 的改造并不复杂，却可以很大程度上提升用户体验，是投入/产出比很高的一项技术，且 PWA 的相关功能和浏览器对 PWA 的支持程度也在不断地增加，未来还有很大的潜力。
+
+市面上现存的 App 类型可以分为以下四种，我们比较了它们在不同指标上的表现，可以看到 PWA 本质上还是一个 Web App ，但在表现上比 Web App 更加接近 Native App 。虽然我们在此与 Native App 进行了比较，但是 PWA 的目的并不是为了取代 Native App ，也不是为了与 Native App 一较高下，而是对 Web App 的升级，是为了带给用户更好的用户体验。
+
+![应用对比](https://s3.ax1x.com/2021/01/25/sOZ8BV.png)
 
 # 离线优先
-
-我们不可以在 Service Worker 中使用 Local Storage，并且 Service Worker 不可以使用任何的同步 API，不过可以使用 IndexDB，CacheAPI，或者利用 postMessage() 与界面进行交互。参考 [GoogleChromeLabs/airhorn](https://github.com/GoogleChromeLabs/airhorn)，可以使用如下的代码注册 ServiceWorker，并且使用 Cache API 来进行资源与请求缓存，首先需要注册 ServiceWorker：
-
-```js
-if (‘serviceWorker’ in navigator) {
-  window.addEventListener(‘load’, function() {
-    navigator.serviceWorker.register(‘/sw.js’).then(
-      function(registration) {
-        // Registration was successful
-        console.log(‘ServiceWorker registration successful with scope: ‘, registration.scope); },
-      function(err) {
-        // registration failed :(
-        console.log(‘ServiceWorker registration failed: ‘, err);
-      });
-  });
-}
-```
-
-然后在 sw.js 文件中缓存资源：
-
-```js
-self.addEventListener("install", e => {
-  let timeStamp = Date.now();
-  e.waitUntil(
-    caches.open("airhorner").then(cache => {
-      return cache
-        .addAll([
-          `/`,
-          `/index.html?timestamp=${timeStamp}`,
-          `/styles/main.css?timestamp=${timeStamp}`,
-          `/scripts/main.min.js?timestamp=${timeStamp}`,
-          `/scripts/comlink.global.js?timestamp=${timeStamp}`,
-          `/scripts/messagechanneladapter.global.js?timestamp=${timeStamp}`,
-          `/sounds/airhorn.mp3?timestamp=${timeStamp}`
-        ])
-        .then(() => self.skipWaiting());
-    })
-  );
-});
-
-self.addEventListener("activate", event => {
-  event.waitUntil(self.clients.claim());
-});
-
-self.addEventListener("fetch", event => {
-  event.respondWith(
-    caches.match(event.request, { ignoreSearch: true }).then(response => {
-      // 默认不会保护 Cookie，可以使用 fetch(url, {credentials: 'include'}) 来发送 Cookie
-      return response || fetch(event.request);
-    })
-  );
-});
-```
 
 # 交互友好
 
