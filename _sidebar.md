@@ -303,27 +303,30 @@
   - [7 Vue](/Vue/README.md)
     - [7.1 TypeScript](/Vue/TypeScript/README.md)
       
-    - [7.2 Vuex](/Vue/Vuex/README.md)
-      - [7.2.1 基础组件](/Vue/Vuex/基础组件.md)
-      - [7.2.2 异步处理](/Vue/Vuex/异步处理.md)
-    - [7.3 工具链](/Vue/工具链/README.md)
-      - [7.3.1 Webpack 配置](/Vue/工具链/Webpack%20配置.md)
-      - [7.3.2 vue cli](/Vue/工具链/vue-cli.md)
-    - 7.4 性能优化
-      - [7.4.1 组件异步加载](/Vue/性能优化/组件异步加载.md)
-    - [7.5 架构机制](/Vue/架构机制/README.md)
-      - [7.5.1 nextTick](/Vue/架构机制/nextTick.md)
-      - [7.5.2 响应式原理](/Vue/架构机制/响应式原理.md)
-    - 7.6 状态管理
-      - [7.6.1 MobX](/Vue/状态管理/MobX.md)
-      - [7.6.2 Redux](/Vue/状态管理/Redux.md)
-      - [7.6.3 数据通信](/Vue/状态管理/数据通信.md)
-    - 7.7 组件
-      - [7.7.1 Hooks](/Vue/组件/Hooks.md)
-      - [7.7.2 函数式组件](/Vue/组件/函数式组件.md)
-      - [7.7.3 单文件组件](/Vue/组件/单文件组件.md)
-      - [7.7.4 指令](/Vue/组件/指令.md)
-      - [7.7.5 类组件](/Vue/组件/类组件.md)
+    - [7.2 工具链](/Vue/工具链/README.md)
+      - [7.2.1 Webpack 配置](/Vue/工具链/Webpack%20配置.md)
+      - [7.2.2 vue cli](/Vue/工具链/vue-cli.md)
+    - 7.3 性能优化
+      - [7.3.1 异步加载](/Vue/性能优化/异步加载.md)
+    - [7.4 架构机制](/Vue/架构机制/README.md)
+      - [7.4.1 nextTick](/Vue/架构机制/nextTick.md)
+      - [7.4.2 响应式原理](/Vue/架构机制/响应式原理.md)
+    - 7.5 状态管理
+      - [7.5.1 MobX](/Vue/状态管理/MobX.md)
+      - [7.5.2 Redux](/Vue/状态管理/Redux.md)
+      - [7.5.3 Vuex](/Vue/状态管理/Vuex/README.md)
+        - [7.5.3.1 基础组件](/Vue/状态管理/Vuex/基础组件.md)
+        - [7.5.3.2 异步处理](/Vue/状态管理/Vuex/异步处理.md)
+    - [7.6 组件系统](/Vue/组件系统/README.md)
+      - 7.6.1 Prop
+        - [7.6.1.1 Prop](/Vue/组件系统/Prop/Prop.md)
+      - 7.6.2 事件
+        - [7.6.2.1 数据通信](/Vue/组件系统/事件/数据通信.md)
+      - [7.6.3 函数式组件](/Vue/组件系统/函数式组件.md)
+      - [7.6.4 类组件](/Vue/组件系统/类组件.md)
+    - 7.7 语法基础
+      - [7.7.1 实例](/Vue/语法基础/实例.md)
+      - [7.7.2 模板语法](/Vue/语法基础/模板语法.md)
   - [8 WebAssembly](/WebAssembly/README.md)
     - 8.1 Emscripten
       - [8.1.1 Emscripten](/WebAssembly/Emscripten/Emscripten.md)
