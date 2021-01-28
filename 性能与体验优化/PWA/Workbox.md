@@ -152,7 +152,7 @@ const handlerCb = ({ url, event, params }) => {
 
 ## 缓存策略
 
-拦截请求后我们可能会缓存响应，通常我们需要自己来编写相应的策略，Workbox 提供了常用的几种策略可以直接使用。 workbox.strategies 对象提供了一系列常用的动态缓存策略来实现对资源请求的处理，有以下五种：
+拦截请求后我们可能会缓存响应，通常我们需要自己来编写相应的策略，Workbox 提供了常用的几种策略可以直接使用。workbox.strategies 对象提供了一系列常用的动态缓存策略来实现对资源请求的处理，有以下五种：
 
 - NetworkFirst：网络优先
 - CacheFirst：缓存优先

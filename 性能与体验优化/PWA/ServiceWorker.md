@@ -1,6 +1,6 @@
 # Service Worker
 
-Service Worker 是 Web Worker 的一种，其常被当做 Web 应用之间，或者浏览器与网络之间的代理；致力于提供更良好的离线体验，并且能够介入到网络请求中完成缓存与更新等操作，此外还能够被用于通知推送、后台同步接口等。Service Worker 是一种独立于浏览器主线程且可以在离线环境下运行的工作线程，与当前的浏览器主线程是完全隔离的，并有自己独立的执行上下文。 HTML5 提供的一个 Service Worker API，能够进行 Service Worker 线程的注册、注销等工作。且 Service Worker 一旦被安装成功就永远存在，除非线程被程序主动解除，而且 Service Worker 在访问页面的时候可以直接被激活，如果关闭浏览器或者浏览器标签的时候会自动睡眠，以减少资源损耗。利用 Service Worker 的这些特性我们可以预缓存 offline 页面和静态资源。
+Service Worker 是 Web Worker 的一种，其常被当做 Web 应用之间，或者浏览器与网络之间的代理；致力于提供更良好的离线体验，并且能够介入到网络请求中完成缓存与更新等操作，此外还能够被用于通知推送、后台同步接口等。Service Worker 是一种独立于浏览器主线程且可以在离线环境下运行的工作线程，与当前的浏览器主线程是完全隔离的，并有自己独立的执行上下文。HTML5 提供的一个 Service Worker API，能够进行 Service Worker 线程的注册、注销等工作。且 Service Worker 一旦被安装成功就永远存在，除非线程被程序主动解除，而且 Service Worker 在访问页面的时候可以直接被激活，如果关闭浏览器或者浏览器标签的时候会自动睡眠，以减少资源损耗。利用 Service Worker 的这些特性我们可以预缓存 offline 页面和静态资源。
 
 它采用 JavaScript 文件的形式，可以控制与其相关联的网页/网站，拦截和修改导航和资源请求，并以非常细化的方式缓存资源，让您完全控制您的应用程序在某些情况下的行为，（最明显的是当网络不可用时）。Service Worker 是在 Worker 上下文中运行的：因此，它没有 DOM 访问权，并在与为您的应用程序提供动力的主 JavaScript 不同的线程上运行，因此它不会阻塞。它被设计为完全异步；因此，在 Service Worker 中不能使用同步 XHR 和 localStorage 等 API。出于安全考虑，Service Worker 只能通过 HTTPS 运行。有修改过的网络请求，大开大合的中间人攻击会非常糟糕。在 Firefox 中，Service Worker 的 API 也是隐藏的，当用户处于私人浏览模式时，无法使用。
 
@@ -72,7 +72,7 @@ PWA 还提供了 API 在网站上向用户推送消息，通常有 Push API 和 
 
 ![消息推送](https://s3.ax1x.com/2021/01/25/sOMd3D.png)
 
-推送通知使用两个 API 进行组装： Notifications API 和 Push API 。Notifications API 使应用程序可以向用户显示系统通知。Notification 和 Push API 构建在 Service Worker API 之上，该 API 在后台响应推送消息事件并将它们中继到应用程序。
+推送通知使用两个 API 进行组装：Notifications API 和 Push API 。Notifications API 使应用程序可以向用户显示系统通知。Notification 和 Push API 构建在 Service Worker API 之上，该 API 在后台响应推送消息事件并将它们中继到应用程序。
 
 ## Notification API
 

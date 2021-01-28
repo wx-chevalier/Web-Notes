@@ -152,7 +152,7 @@ Module.HEAPU8.set(jsonstr, ptr);
 Module._json_parse(ptr);
 ```
 
-在这里，`intArrayFromString`、`Module._malloc` 以及 `Module.HEAPU8` 等都是 Emscripten 提供给我们的方法。 `intArrayFromString` 会将字符串转化成 UTF8 的字符串数组，由于我们知道 C/C++中的字符串是需要 `\0` 结尾的，因此我们在末尾 concat 了一个 0 作为字符串的结尾符。接着，我们使用 `Module._malloc` 创建了一块堆内存并使用 `Module.HEAPU8.set` 方法将字符串数组赋值给这块内存，最后我们调用 `_json_parse` 函数即可完成 WebAssembly 的调用。
+在这里，`intArrayFromString`、`Module._malloc` 以及 `Module.HEAPU8` 等都是 Emscripten 提供给我们的方法。`intArrayFromString` 会将字符串转化成 UTF8 的字符串数组，由于我们知道 C/C++中的字符串是需要 `\0` 结尾的，因此我们在末尾 concat 了一个 0 作为字符串的结尾符。接着，我们使用 `Module._malloc` 创建了一块堆内存并使用 `Module.HEAPU8.set` 方法将字符串数组赋值给这块内存，最后我们调用 `_json_parse` 函数即可完成 WebAssembly 的调用。
 
 需要注意的是，由于 WebAssembly 端的 C/C++代码接收的是指针，因此你是不能够将 JavaScript 的字符串直接传给 WebAssembly 的。但如果你传递的是 int、float 等基本类型，那么就可以直接进行传递操作。当然，上面的代码我们还可以进一步简化为：
 
