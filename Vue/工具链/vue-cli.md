@@ -1,32 +1,4 @@
-# Vue.js 概述
-
-Vue 是专注于构建用户界面层的渐进式 JavaScript 框架，它可以很方便地与各种中间件或者后端应用程序集成使用。Vue 为我们构建界面层提供了大量有用的工具，助我们构建复杂的单页应用。Vue 的特性包括但不限于：
-
-- 响应式界面
-- 声明式路由
-- 数据绑定
-- 指令
-- 模板逻辑
-- 组件
-- 事件处理
-- 属性推断
-- CSS 变换与动画
-- 过滤
-
-Vue.js 2 核心库大概只有 17KB，非常小，这就保证了引入 Vue.js 并不会对你的编译后的版本添加过多的代码，加速网站的加载。Vue.js 的官方代码位于：[https://vuejs.org/](https://vuejs.org/)。
-
-# 如何引入 Vue.js
-
-Vue.js 为我们提供了多种引入方式，可以根据我们项目的实际需求自由选择：
-
-- 在 HTML 中添加`script`标签从 CDN 引入
-- 使用 NPM 安装
-- 使用 Bower 安装
-- 使用 Vue-cli 初始化项目
-
-本文是选择了最后一种初始化的方式来创建新的项目。
-
-## 使用 Vue-cli
+# 使用 Vue-cli
 
 首先，我们可以使用 NPM 安装 Vue-cli。你必须要检查下系统中是否已经安装好了 NodeJS 并且 npm 命令行工具可以正常使用，然后使用如下命令在本地系统进行全局安装：
 
@@ -125,22 +97,22 @@ new Vue({
 
 该模板仅包含一个元素：`<App />`，当然这并不是 HTML 标准元素，整个 App 组件的的定义在`App.vue`文件中：
 
-```
+```vue
 <template>
-  <div id="app">
-  <img src="./assets/logo.png">
-  <hello></hello>
-  </div>
+   
+  <div id="app">  <img src="./assets/logo.png" />   <hello></hello>  </div>
 </template>
+
 <script>
-import Hello from './components/Hello'
+import Hello from "./components/Hello";
 export default {
-  name: 'app',
-  components: {
-  Hello
-  }
-}
+  name: "app",
+  components: {
+    Hello,
+  },
+};
 </script>
+
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -155,41 +127,60 @@ export default {
 
 对于每个 Vue.js 2 单文件组件，其会包含三部分：
 
-- `<template></template>`: Component's template code- `<script></script>`: Component's script code- `<style></style>`: Component' CSS code
-  我们先看看`template`与`script`这两块。`script`块导出了某个声明为`app`的组件，该组件中的属性声明了对于`Hello`组件的引用。`Hello`组件则是被定义在`hello.vue`文件中，为了使用其他组件我们同样需要在`script`首部引入该组件。整个 Hello 组件的定义如下：```<template>
+- `<template></template>`: Component's template code
+- `<script></script>`: Component's script code
+- `<style></style>`: Component' CSS code
+
+我们先看看`template`与`script`这两块。`script`块导出了某个声明为`app`的组件，该组件中的属性声明了对于`Hello`组件的引用。`Hello`组件则是被定义在`hello.vue`文件中，为了使用其他组件我们同样需要在`script`首部引入该组件。整个 Hello 组件的定义如下：
+
+```html
+<template>
   <div class="hello">
-  <h1>{{ msg }}</h1>
-  <h2>Essential Links</h2>
-  <ul>
-  <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-  <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-  <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
-  <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-  <br>
-  <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
-  </ul>
-  <h2>Ecosystem</h2>
-  <ul>
-  <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-  <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-  <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-  <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-  </ul>
-    </div>
-  </template>
-  <script>
+    <h1>{{ msg }}</h1>
+    <h2>Essential Links</h2>
+    <ul>
+      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
+      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
+      <li>
+        <a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a>
+      </li>
+      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
+      <br />
+      <li>
+        <a href="http://vuejs-templates.github.io/webpack/" target="_blank"
+          >Docs for This Template</a
+        >
+      </li>
+    </ul>
+    <h2>Ecosystem</h2>
+    <ul>
+      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
+      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
+      <li>
+        <a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a>
+      </li>
+      <li>
+        <a href="https://github.com/vuejs/awesome-vue" target="_blank"
+          >awesome-vue</a
+        >
+      </li>
+    </ul>
+  </div>
+</template>
+<script>
   export default {
-    name: 'hello',
-    data () {
+    name: "hello",
+    data() {
       return {
-        msg: 'Welcome to Your Vue.js App'
-      }
-    }
-  }
-  </script>
-  <!-- Add "scoped" attribute to limit CSS to this component only -->
-  <style scoped>
-  h1, h2 {
+        msg: "Welcome to Your Vue.js App",
+      };
+    },
+  };
+</script>
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+  h1,
+  h2 {
     font-weight: normal;
   }
   ul {
@@ -203,125 +194,5 @@ export default {
   a {
     color: #42b983;
   }
-  </style>
-
-```
-# 使用标准指令
-
-
-我们可以使用基本的Vue.js指令来为Hello组件添加更多的功能与数据逻辑。
-
-
-## v-for
-`v-fot`指令允许我们遍历某个数组并且将每一个元素渲染到模板中，我们可以先创建如下的数组：
-```
-
-users: [
-  {firstname: 'Sebastian', lastname: 'Eschweiler'},
-  {firstname: 'Bill', lastname: 'Smith'},
-  {firstname: 'John', lastname: 'Porter'}
-  ],
-
-```
-然后使用`v-for`指令遍历该列表并且提取出每个元素的`firstname`与`lastname`值：
-```
-
-<div>
-  <ul>
-  <li v-for="user in users">
-  {{user.firstname}} {{user.lastname}}
-  </li>
-  </ul>
-</div>
-```
-
-## v-model
-
-`v-model`指令会在输入元素与组件之间创建双向数据绑定，我们首选需要定义一个存放数据的变量：
-
-```
-input_val: ''
-```
-
-然后使用`v-model`将变量绑定到元素上：
-
-```
-<div>
-  <input type="text" v-model="input_val">
-</div>
-```
-
-这种双向绑定会有两个效果：
-
-- 每次用户输入值时都会同步更新到`input_val`变量
-- 如果我们在程序中手动修改`input_val`变量的值，元素中的展示值也会被相应更新
-
-## v-text
-
-`v-text`指令被用于设置文本内容，其作用等效于`{{...}}`，我们可以用其来展示部分文本：
-
-```
-Input Value: <span v-text="input_val"></span>
-```
-
-## 总结
-
-完整的 Hello 组件的实现如下：
-
-```
-<template>
-  <div class="hello">
-  <h1>{{ msg }}</h1>
-  <hr />
-  <div>
-  <ul>
-  <li v-for="user in users">
-  {{user.firstname}} {{user.lastname}}
-  </li>
-  </ul>
-  </div>
-  <hr />
-  <div>
-  <input type="text" v-model="input_val">
-  </div>
-  <div>
-  Input Value: <span v-text="input_val"></span>
-  </div>
-  <hr />
-  <div>
-  <button class="btn btn-primary" v-on:click="counter++">You've clicked this button {{counter}} times!</button>
-  </div>
-  </div>
-</template>
-<script>
-export default {
-  name: 'hello',
-  data () {
-  return {
-  msg: 'Welcome to Your Vue.js App',
-  users: [
-  {firstname: 'Sebastian', lastname: 'Eschweiler'},
-  {firstname: 'Bill', lastname: 'Smith'},
-  {firstname: 'John', lastname: 'Porter'}
-  ],
-  input_val: '',
-  counter: 0
-  }
-  }
-}
-</script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-position: inside;
-}
-a {
-  color: #42b983;
-}
 </style>
 ```
-
-最后的结果如下所示：
