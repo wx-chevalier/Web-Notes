@@ -6,7 +6,7 @@
 <button class="button button--state-danger">Danger button</button>
 ```
 
-现在，人们真的很喜欢 Tailwind CSS 和它的 实用工具优先（utility-first） 的概念。这与 Functional CSS 和 Tachyon 这个库的理念非常接近。
+现在，人们真的很喜欢 Tailwind CSS 和它的 实用工具优先（utility-first）的概念。这与 Functional CSS 和 Tachyon 这个库的理念非常接近。
 
 ```html
 <button
