@@ -17,3 +17,88 @@ Redux Toolkit 包含这些 API。
 - createAsyncThunk: 接受一个动作类型字符串和一个返回承诺的函数，并根据该承诺生成一个 thunk，调度待定/已完成/已拒绝的动作类型。
 - createEntityAdapter: 生成一组可重用的还原器和选择器，以管理存储中的标准化数据。
 - createSelector: Reselect 库中的 createSelector 实用程序，为了方便使用，重新导出。
+
+典型的库使用方式如下：
+
+```ts
+// store.ts
+import { configureStore } from "@reduxjs/toolkit";
+
+import rootReducer from "./rootReducer";
+
+const store = configureStore({
+  reducer: rootReducer,
+});
+
+if (process.env.NODE_ENV === "development" && module.hot) {
+  module.hot.accept("./rootReducer", () => {
+    const newRootReducer = require("./rootReducer").default;
+    store.replaceReducer(newRootReducer);
+  });
+}
+
+export type AppDispatch = typeof store.dispatch;
+
+export default store;
+
+// commentsSlice
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+
+import { Comment, getComments, Issue } from "api/githubAPI";
+import { AppThunk } from "app/store";
+
+interface CommentsState {
+  commentsByIssue: Record<number, Comment[] | undefined>;
+  loading: boolean;
+  error: string | null;
+}
+
+interface CommentLoaded {
+  issueId: number;
+  comments: Comment[];
+}
+
+const initialState: CommentsState = {
+  commentsByIssue: {},
+  loading: false,
+  error: null,
+};
+
+const comments = createSlice({
+  name: "comments",
+  initialState,
+  reducers: {
+    getCommentsStart(state) {
+      state.loading = true;
+      state.error = null;
+    },
+    getCommentsSuccess(state, action: PayloadAction<CommentLoaded>) {
+      const { comments, issueId } = action.payload;
+      state.commentsByIssue[issueId] = comments;
+      state.loading = false;
+      state.error = null;
+    },
+    getCommentsFailure(state, action: PayloadAction<string>) {
+      state.loading = false;
+      state.error = action.payload;
+    },
+  },
+});
+
+export const {
+  getCommentsStart,
+  getCommentsSuccess,
+  getCommentsFailure,
+} = comments.actions;
+export default comments.reducer;
+
+export const fetchComments = (issue: Issue): AppThunk => async (dispatch) => {
+  try {
+    dispatch(getCommentsStart());
+    const comments = await getComments(issue.comments_url);
+    dispatch(getCommentsSuccess({ issueId: issue.number, comments }));
+  } catch (err) {
+    dispatch(getCommentsFailure(err));
+  }
+};
+```
