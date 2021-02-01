@@ -41,12 +41,12 @@ const INCREMENT_COUNTER = "INCREMENT_COUNTER";
 
 function increment() {
   return {
-    type: INCREMENT_COUNTER
+    type: INCREMENT_COUNTER,
   };
 }
 
 function incrementAsync() {
-  return dispatch => {
+  return (dispatch) => {
     setTimeout(() => {
       // 这里同样可以使用 dispatch 调用其他同步或者异步函数
       dispatch(increment());
@@ -112,12 +112,9 @@ function NotifyButton(props) {
   );
 }
 
-export default connect(
-  null,
-  {
-    showTimedNotification: notificationActions.showTimed
-  }
-)(NotifyButton);
+export default connect(null, {
+  showTimedNotification: notificationActions.showTimed,
+})(NotifyButton);
 ```
 
 # 数据请求
@@ -127,7 +124,7 @@ export default connect(
 ```js
 // thunk1
 export function fetchPublishedPosts() {
-  return async function(dispatch, getState) {
+  return async function (dispatch, getState) {
     dispatch({ type: "LOADING", loading: true });
     const posts = await postService.fetch("published");
     dispatch({ type: "PUBLISHED_POSTS", newPosts: posts });
@@ -137,7 +134,7 @@ export function fetchPublishedPosts() {
 
 // thunk2
 export function fetchUnpublishedPosts() {
-  return async function(dispatch, getState) {
+  return async function (dispatch, getState) {
     dispatch({ type: "LOADING", loading: true });
     const posts = await postService.fetch("unpublished");
     dispatch({ type: "UNPUBLISHED_POSTS", newPosts: posts });
@@ -147,7 +144,7 @@ export function fetchUnpublishedPosts() {
 
 // thunk3
 export function fetchAllPosts() {
-  return async function(dispatch, getState) {
+  return async function (dispatch, getState) {
     const promise1 = dispatch(fetchPublishedPosts());
     const promise2 = dispatch(fetchUnpublishedPosts());
     await Promise.all([promise1, promise2]);
@@ -165,7 +162,7 @@ const REQ_STATE = {
   INIT: "@INIT",
   REQUESTING: "@REQUESTING",
   SUCCESS: "@SUCCESS",
-  FAILED: "@FAILED"
+  FAILED: "@FAILED",
 };
 
 let reqActionAndReducerCreator = (reqName, fetch, initData) => {
@@ -176,7 +173,7 @@ let reqActionAndReducerCreator = (reqName, fetch, initData) => {
   let actions = {
     [request]: createAction(request),
     [success]: createAction(success),
-    [failure]: createAction(failure)
+    [failure]: createAction(failure),
   };
 
   let reducer = handleActions(
@@ -184,30 +181,30 @@ let reqActionAndReducerCreator = (reqName, fetch, initData) => {
       [request]: (state, action) =>
         update(state, {
           state: { $set: REQ_STATE.REQUESTING },
-          time: { $set: new Date() }
+          time: { $set: new Date() },
         }),
       [success]: (state, action) =>
         update(state, {
           state: { $set: REQ_STATE.SUCCESS },
           data: { $set: action.payload },
-          time: { $set: new Date() }
+          time: { $set: new Date() },
         }),
       [failure]: (state, action) =>
         update(state, {
           state: { $set: REQ_STATE.FAILED },
           err: { $set: action.payload },
-          time: { $set: new Date() }
-        })
+          time: { $set: new Date() },
+        }),
     },
     {
       state: REQ_STATE.INIT,
       time: new Date(),
       err: null,
-      data: initData || null
+      data: initData || null,
     }
   );
 
-  let asyncFetch = (...args) => dispatch => {
+  let asyncFetch = (...args) => (dispatch) => {
     dispatch(actions[request]());
     try {
       let data = fetch(...args);
@@ -222,12 +219,54 @@ let reqActionAndReducerCreator = (reqName, fetch, initData) => {
     actions: {
       REQUEST: actions[request],
       SUCCESS: actions[success],
-      FAILURE: actions[failure]
+      FAILURE: actions[failure],
     },
-    asyncReq: asyncFetch
+    asyncReq: asyncFetch,
   };
 };
 
 export { REQ_STATE };
 export default reqActionAndReducerCreator;
+```
+
+# TypeScript
+
+```ts
+import { Action, ActionCreator, Dispatch } from "redux";
+import { ThunkAction } from "redux-thunk";
+
+// Redux action
+const reduxAction: ActionCreator<Action> = (text: string) => {
+  return {
+    type: SET_TEXT,
+    text,
+  };
+};
+
+// Redux-Thunk action
+const thunkAction: ActionCreator<ThunkAction<Action, IState, void>> = (
+  text: string
+) => {
+  return (dispatch: Dispatch<IState>): Action => {
+    return dispatch({
+      type: SET_TEXT,
+      text,
+    });
+  };
+};
+
+// Async Redux-Thunk action
+const asyncThinkAction: ActionCreator<
+  ThunkAction<Promise<Action>, IState, void>
+> = () => {
+  return async (dispatch: Dispatch<IState>): Promise<Action> => {
+    try {
+      const text = await Api.call();
+      return dispatch({
+        type: SET_TEXT,
+        text,
+      });
+    } catch (e) {}
+  };
+};
 ```

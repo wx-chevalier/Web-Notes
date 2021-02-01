@@ -1,62 +1,5 @@
 # Redux 常用辅助库
 
-# ducks
-
-我发现在创建 redux 应用时，按照功能性划分，每次会都添加 `{actionTypes, actions, reducer}` 这样的组合。我之前会把它们分成不同的文件，甚至分到不同的文件夹，但是 95%的情况下，只有一对 reducer/actions 会用到对应的 actions。对我来说，把这些相关的代码放在一个独立的文件中更方便，这样做还可以很容易的打包到软件库/包中。
-
-```js
-// widgets.js
-
-// Actions
-const LOAD = "my-app/widgets/LOAD";
-const CREATE = "my-app/widgets/CREATE";
-const UPDATE = "my-app/widgets/UPDATE";
-const REMOVE = "my-app/widgets/REMOVE";
-
-// Reducer
-export default function reducer(state = {}, action = {}) {
-  switch (action.type) {
-    // do reducer stuff
-    default:
-      return state;
-  }
-}
-
-// Action Creators
-export function loadWidgets() {
-  return { type: LOAD };
-}
-
-export function createWidget(widget) {
-  return { type: CREATE, widget };
-}
-
-export function updateWidget(widget) {
-  return { type: UPDATE, widget };
-}
-
-export function removeWidget(widget) {
-  return { type: REMOVE, widget };
-}
-
-// side effects, only as applicable
-// e.g. thunks, epics, etc
-export function getWidget() {
-  return dispatch =>
-    get("/widget").then(widget => dispatch(updateWidget(widget)));
-}
-```
-
-使用方式如下：
-
-```js
-import { combineReducers } from "redux";
-import * as reducers from "./ducks/index";
-
-const rootReducer = combineReducers(reducers);
-export default rootReducer;
-```
-
 # redux-actions
 
 redux-actions 是一个辅助快速构建标准的 Flux Action 的工具集，也提供了快速构建 Reducer 的接口。可以使用 npm 进行安装使用：
@@ -74,13 +17,13 @@ import { createAction, handleAction, handleActions } from "redux-actions";
 将一个 Action Creator 封装成一个标准的 Flux Action 构造器，如果没有传入任何的 Payload Creator，那么会使用默认的函数，基本的使用例子如下：
 
 ```js
-let increment = createAction("INCREMENT", amount => amount);
+let increment = createAction("INCREMENT", (amount) => amount);
 // same as
 increment = createAction("INCREMENT");
 
 expect(increment(42)).to.deep.equal({
   type: "INCREMENT",
-  payload: 42
+  payload: 42,
 });
 ```
 
@@ -93,7 +36,7 @@ const error = new TypeError("not a number");
 expect(increment(error)).to.deep.equal({
   type: "INCREMENT",
   payload: error,
-  error: true
+  error: true,
 });
 ```
 
@@ -118,12 +61,12 @@ handleActions 即等效于利用`handleAction`函数创建多个 Reducers 然后
 const reducer = handleActions(
   {
     INCREMENT: (state, action) => ({
-      counter: state.counter + action.payload
+      counter: state.counter + action.payload,
     }),
 
     DECREMENT: (state, action) => ({
-      counter: state.counter - action.payload
-    })
+      counter: state.counter - action.payload,
+    }),
   },
   { counter: 0 }
 );
@@ -134,12 +77,11 @@ const reducer = handleActions(
 ```js
 import { createSelector } from "reselect";
 
-const shopItemsSelector = state => state.shop.items;
-const taxPercentSelector = state => state.shop.taxPercent;
+const shopItemsSelector = (state) => state.shop.items;
+const taxPercentSelector = (state) => state.shop.taxPercent;
 
-const subtotalSelector = createSelector(
-  shopItemsSelector,
-  items => items.reduce((acc, item) => acc + item.value, 0)
+const subtotalSelector = createSelector(shopItemsSelector, (items) =>
+  items.reduce((acc, item) => acc + item.value, 0)
 );
 
 const taxSelector = createSelector(
@@ -157,8 +99,11 @@ export const totalSelector = createSelector(
 let exampleState = {
   shop: {
     taxPercent: 8,
-    items: [{ name: "apple", value: 1.2 }, { name: "orange", value: 0.95 }]
-  }
+    items: [
+      { name: "apple", value: 1.2 },
+      { name: "orange", value: 0.95 },
+    ],
+  },
 };
 
 console.log(subtotalSelector(exampleState)); // 2.15
