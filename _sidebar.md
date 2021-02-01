@@ -232,8 +232,9 @@
             - [4.7.3.3.1.1 插件](/应用架构/状态管理/Redux/工程框架/Kea/插件.md)
           - [4.7.3.3.2 Redux Toolkit](/应用架构/状态管理/Redux/工程框架/Redux%20Toolkit/README.md)
             - [4.7.3.3.2.1 API 简化](/应用架构/状态管理/Redux/工程框架/Redux%20Toolkit/API%20简化.md)
-            - [4.7.3.3.2.2 异步模式](/应用架构/状态管理/Redux/工程框架/Redux%20Toolkit/异步模式.md)
-            - [4.7.3.3.2.3 数据标准化](/应用架构/状态管理/Redux/工程框架/Redux%20Toolkit/数据标准化.md)
+            - [4.7.3.3.2.2 TypeScript](/应用架构/状态管理/Redux/工程框架/Redux%20Toolkit/TypeScript.md)
+            - [4.7.3.3.2.3 异步模式](/应用架构/状态管理/Redux/工程框架/Redux%20Toolkit/异步模式.md)
+            - [4.7.3.3.2.4 数据标准化](/应用架构/状态管理/Redux/工程框架/Redux%20Toolkit/数据标准化.md)
           - [4.7.3.3.3 redux actions](/应用架构/状态管理/Redux/工程框架/redux-actions.md)
           - [4.7.3.3.4 代码组织](/应用架构/状态管理/Redux/工程框架/代码组织.md)
       - 4.7.4 设计理念
