@@ -28,3 +28,7 @@
 - 四舍五入代表边界半径：.25rem；
 
 看起来很复杂吧？但是，像这样，即使您使用相同的框架，您与其他人创建的 UI 也会有所不同。与使用 UI 套件的情况不同，创建的 UI 趋于相同，因为在 UI 套件中可以使用预先设计的组件，尽管可以覆盖样式，但是结果可能不会有太大差别。无法将 TailwindCSS 与 UI 工具包框架（例如 Bootstrap，Bulma 或 Spectre）相提并论，因为它们基本上具有不同的概念。如果在 UI 工具包框架中需要创建一些自定义类来自定义所使用的预先设计的组件，而在 TailwindCSS 中则可以减少自定义类的使用。因为，要制造组件，您需要通过编译实用程序类从头开始。
+
+# Links
+
+- [2021-Why I Don't Like Tailwind CSS](https://www.aleksandrhovhannisyan.com/blog/why-i-dont-like-tailwind-css/): On paper, utility CSS actually sounds like it may be useful. In practice, though, Tailwind CSS (and utility CSS in general) suffers from the same issues that it attempts to solve and is, in my honest opinion, not worth your time.
