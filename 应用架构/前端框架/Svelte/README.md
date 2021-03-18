@@ -25,7 +25,7 @@ import {
   init,
   insert,
   noop,
-  safe_not_equal
+  safe_not_equal,
 } from "svelte/internal";
 
 function create_fragment(ctx) {
@@ -49,7 +49,7 @@ function create_fragment(ctx) {
       if (detaching) {
         detach(h1);
       }
-    }
+    },
   };
 }
 
@@ -62,3 +62,7 @@ class App extends SvelteComponent {
 
 export default App;
 ```
+
+# Links
+
+- [2020-新兴前端框架 Svelte 从入门到原理](https://mp.weixin.qq.com/s/6MPG04HGo_S3SipPZ-Wmpg): 在这篇文章中，我们将会介绍 Svelte 框架的特性、优缺点和底层原理。#Todo
