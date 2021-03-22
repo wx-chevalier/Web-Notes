@@ -12,4 +12,4 @@ WebAssembly（wasm）就是一个可移植、体积小、加载快并且兼容 W
 
 wasm 模块总是与 JavaScript “胶水”代码一起使用，在必要的时候可以执行一些有用的操作。WebAssembly 可以看做是对 JavaScript 的加强，弥补 JavaScript 在执行效率上的缺陷。
 
-# TBD
+# Links

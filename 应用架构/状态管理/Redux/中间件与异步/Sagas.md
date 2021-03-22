@@ -83,7 +83,7 @@ export default function* rootSaga() {
 }
 ```
 
-# TBD
+# Links
 
 - https://blog.logrocket.com/understanding-redux-saga-from-action-creators-to-sagas-2587298b5e71/
 

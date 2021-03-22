@@ -76,6 +76,6 @@ $(window).on("popstate", function (event) {
 
 这样，就完成了。这样看起来是否会觉得还挺容易的呢？在支持 HTML5 history API 的浏览器中，以上部分就已经做到了带页码记录的 Ajax 翻页。
 
-# TBD
+# Links
 
 - [阮一峰 浏览器对象之 History](http://javascript.ruanyifeng.com/bom/history.html)

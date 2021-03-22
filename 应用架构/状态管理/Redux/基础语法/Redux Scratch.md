@@ -270,7 +270,7 @@ export const ReduxScratch = () => {
 };
 ```
 
-# TBD
+# Links
 
 - https://blog.bookcell.org/2019/08/04/learn-redux-by-build-a-redux/
 - http://huziketang.mangojuice.top/books/react/lesson30

@@ -102,6 +102,6 @@ Flutter 和 RN 的最大区别在于将“JavascriptCore/V8+JS”替换成“C++
 
 ![](https://i.postimg.cc/hGyQzJTL/image.png)
 
-# TBD
+# Links
 
 - https://mp.weixin.qq.com/s/Q3Dfrcf5FTmWUrsIkPWncA

@@ -18,6 +18,6 @@ TTI: Time To Interactive - the time at which a page becomes interactive (events 
 
 前者注重“检测”，后者注重“监控”。
 
-# TBD
+# Links
 
 - https://zhuanlan.zhihu.com/p/82981365 10 分钟彻底搞懂前端页面性能监控

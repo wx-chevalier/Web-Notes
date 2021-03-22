@@ -249,6 +249,6 @@ function User({ name, addFriend }) {
 
 # Web Components
 
-# TBD
+# Links
 
 - https://mp.weixin.qq.com/s/rTAcEE-6f9EfRMkce8FNbA

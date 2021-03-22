@@ -53,7 +53,7 @@ no-implied-eval              |    69.945 |     2.3%
 space-infix-ops              |    57.128 |     1.9%
 ```
 
-# TBD
+# Links
 
 - https://mp.weixin.qq.com/s/X2gShxrCw0ukZigjE_45kA
 - https://mp.weixin.qq.com/s/jb8yozm-p-b6MBAb46SP7A ESLint 在中大型团队的应用实践
