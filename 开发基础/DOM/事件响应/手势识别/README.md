@@ -4,4 +4,6 @@
 
 # Gesture Recognize
 
-# [ZingTouch](https://zingchart.github.io/zingtouch/)
+# Links
+
+- https://cubox.pro/c/SICopC HTML5中手势原理分析与数学知识的实践
