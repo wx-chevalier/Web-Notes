@@ -1,14 +1,4 @@
-# Web 应用性能评测与监控
-
-在性能优化之前，我们首先需要对性能评测的指标与常见的监控、审计方法有所了解。
-
-这里我们统一地对于性能评测的工具与量化指标进行讨论，而后续文章中提到的很多优化点也可以作为评测的指标之一。
-
-从技术方面来讲，前端性能监控主要分为两种方式，一种叫做合成监控（Synthetic Monitoring，SYN），另一种是真实用户监控（Real User Monitoring，RUM）。合成监控就是在一个模拟场景里，去提交一个需要做性能审计的页面，通过一系列的工具、规则去运行你的页面，提取一些性能指标，得出一个审计报告。合成监控中最近比较流行的是 Google 的 Lighthouse，下面我们就以 Lighthouse 为例。
-
-![](https://ww1.sinaimg.cn/large/007rAy9hgy1g0gp49wiu2j30u00kw0ud.jpg)
-
-合成监控相对实现简单，并且流程可控，在不影响真实用户访问性能的情况下能够采集到更丰富的数据。不过合成监控很难还原全部用户场景，并且需要额外解决登录等复杂场景，其采集到的数据量也相对较少。所谓真实用户监控，就是用户在我们的页面上访问，访问之后就会产生各种各样的性能指标，我们在用户访问结束的时候，把这些性能指标上传到我们的日志服务器上，进行数据的提取清洗加工，最后在我们的监控平台上进行展示的一个过程。
+# Web Vitals
 
 # 监控指标
 
@@ -78,3 +68,8 @@ W3C 给我们提供了更全面、更强大的一个性能分析矩阵，比单�
 # Links
 
 - https://medium.freecodecamp.org/creating-a-web-performance-culture-inside-your-team-f00c0d79765f
+
+
+# Links
+
+- https://sctrack.sendcloud.net/track/click/eyJuZXRlYXNlIjogImZhbHNlIiwgIm1haWxsaXN0X2lkIjogMCwgInRhc2tfaWQiOiAiIiwgImVtYWlsX2lkIjogIjE2MTc5NzI4NjM1NjJfMTg3Xzg5MV8zMDYzLnNjLTEwXzlfMTIxXzE5Ny1pbmJvdW5kMCQzODQ5MjQ1NTJAcXEuY29tIiwgInNpZ24iOiAiMjQ4YmQwODM5ZTA0MGVjZDRiMmEwN2Q4OGZmZjY1ODAiLCAidXNlcl9oZWFkZXJzIjoge30sICJsYWJlbCI6ICI2MTkyMDMwIiwgInRyYWNrX2RvbWFpbiI6ICJzY3RyYWNrLnNlbmRjbG91ZC5uZXQiLCAicmVhbF90eXBlIjogIiIsICJsaW5rIjogImh0dHBzJTNBLy92aXAubWFub25nLmlvL2JvdW5jZSUzRm5pZCUzRDQ4JTI2YWlkJTNEMjAxNiUyNnVybCUzRGh0dHBzJTI1M0ElMjUyRiUyNTJGdG91dGlhby5pbyUyNTJGayUyNTJGdzdheHl6eSUyNm4lM0RNVE15Ljcwa3lyQmNnSXU4c0lkeWdYMThFWFFkUkVhSSIsICJvdXRfaXAiOiAiMTE3LjUwLjM3LjI1IiwgImNvbnRlbnRfdHlwZSI6ICIwIiwgInVzZXJfaWQiOiAxODcsICJvdmVyc2VhcyI6ICJmYWxzZSIsICJjYXRlZ29yeV9pZCI6IDYwMzQ5fQ==.html
