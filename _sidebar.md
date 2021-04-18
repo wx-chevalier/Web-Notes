@@ -200,7 +200,9 @@
     - [6.5 微前端](/应用架构/微前端/README.md)
       - [6.5.1 Web Components](/应用架构/微前端/Web%20Components.md)
       - [6.5.2 iframe](/应用架构/微前端/iframe.md)
-      - [6.5.3 应用软隔离](/应用架构/微前端/应用软隔离.md)
+      - 6.5.3 实践案例
+        - [6.5.3.1 EMP](/应用架构/微前端/实践案例/EMP.md)
+      - [6.5.4 应用软隔离](/应用架构/微前端/应用软隔离.md)
     - [6.6 状态管理](/应用架构/状态管理/README.md)
       - [6.6.1 MVVM](/应用架构/状态管理/MVVM/README.md)
         - [6.6.1.1 VirtualDOM](/应用架构/状态管理/MVVM/VirtualDOM.md)
