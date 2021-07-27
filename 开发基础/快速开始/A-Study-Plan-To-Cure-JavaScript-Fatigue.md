@@ -1,6 +1,6 @@
 > 本文翻译自[A-Study-Plan-To-Cure-JavaScript-Fatigue](https://medium.com/@sachagreif/a-study-plan-to-cure-javascript-fatigue-8ad3a54f2eb1#.gfap70pkh)。笔者看到里面的几张配图着实漂亮，顺手翻译了一波。本文从属于笔者的[Web Frontend Introduction And Best Practices: 前端入门与最佳实践](https://github.com/wx-chevalier/Web-Develop-Introduction-And-Best-Practices/tree/master/Frontend)。
 
-最近我也读了 Jose Aguinaga 的博文[2016 年里做前端是怎样一种体验](https://segmentfault.com/a/1190000007083024)。这篇博客引发了广泛的关注与讨论，无论是在 Hacker News 还是 Reddit 还是 Medium 上，都有很多人参与到了它的讨论中。我也是很早之前就感觉到了目前 JavaScript 生态圈中的群雄逐鹿，并且我还特地对目前[JavaScript 库流行现状](http://stateofjs.com/)进行了调查，希望能够在异彩纷呈的各式各样的库中寻找到真正的为大众所接受的。不过今天我希望能够更进一步，不仅仅再抱怨现状，而是从我个人的角度来给出一个逐步深入学习 JavaScript 生态圈的方案。(如果你尚对 HTML/CSS/JavaScript 并不了解，那么可以阅读[前端攻略：从路人甲到英雄无敌](https://github.com/wx-chevalier/Web-Develop-Introduction-And-Best-Practices/blob/master/Frontend/Introduction/Frontend-From-Zero-To-Hero.md))。而在文本中我们会涉及以下几个方面 :
+最近我也读了 Jose Aguinaga 的博文[2016 年里做前端是怎样一种体验](https://segmentfault.com/a/1190000007083024)。这篇博客引发了广泛的关注与讨论，无论是在 Hacker News 还是 Reddit 还是 Medium 上，都有很多人参与到了它的讨论中。我也是很早之前就感觉到了目前 JavaScript 生态圈中的群雄逐鹿，并且我还特地对目前[JavaScript 库流行现状](http://stateofjs.com/)进行了调查，希望能够在异彩纷呈的各式各样的库中寻找到真正的为大众所接受的。不过今天我希望能够更进一步，不仅仅再抱怨现状，而是从我个人的角度来给出一个逐步深入学习 JavaScript 生态圈的方案。(如果你尚对 HTML/CSS/JavaScript 并不了解，那么可以阅读[前端攻略：从路人甲到英雄无敌](https://github.com/wx-chevalier/Web-Develop-Introduction-And-Best-Practices/blob/master/Frontend/Introduction/Frontend-From-Zero-To-Hero.md))。而在文本中我们会涉及以下几个方面
 
 - 一个现代的 JavaScript Web 应用会包含哪些部分
 - 为什么不推荐使用 jQuery？
@@ -25,17 +25,17 @@
 
 为了便于理解现代 JavaScript 为啥看起来如何复杂，我们首先要明白其工作原理。我们首先来看下 2008 年左右流行的所谓传统 Web 应用的架构 : 1. 服务端从数据库中获取数据。2. 服务端读取这些数据然后渲染到 HTML 中。3.HTML 文件被发送到浏览器，浏览器将 HTML 转化为 DOM 树并且展示出来。
 
-现在很多的应用会在客户端使用 JavaScript 来保证应用的可交互性，不过本质上浏览器还是从收到 HTML 文件开始。下面我们再比较下 2016 年流行的所谓现代 Web 应用，典型的就是所谓的单页应用 : 注意到区别了吗？与传统的 Web 应用相比，现在的服务端更多的承担起是提供数据的功能，而渲染 HTML 文件这一步交由客户端进行处理。这一个根本性的变化也会导致很多或好或坏的结果，好的一方面呢 :
+现在很多的应用会在客户端使用 JavaScript 来保证应用的可交互性，不过本质上浏览器还是从收到 HTML 文件开始。下面我们再比较下 2016 年流行的所谓现代 Web 应用，典型的就是所谓的单页应用 : 注意到区别了吗？与传统的 Web 应用相比，现在的服务端更多的承担起是提供数据的功能，而渲染 HTML 文件这一步交由客户端进行处理。这一个根本性的变化也会导致很多或好或坏的结果，好的一方面呢
 
 - 对于某一块内容，仅仅发送数据会比发送整个 HTML 文件快很多
 - 以单页应用为例，客户端可以刷新局部数据而不需要刷新整个浏览器窗口
 
-坏的方面 :
+坏的方面
 
 - 由于现在数据的加载与渲染放在了客户端，初始加载与渲染会耗费更长的时间
 - 现在需要在客户端提供一个存储与管理数据的地方，也就是我们目前所熟悉的状态管理工具
 
-恶心的地方 :
+恶心的地方
 
 - 随着客户端应用逻辑与交互的日渐复杂，你需要掌握像服务端技术栈一样复杂的前端技术栈
 
@@ -68,14 +68,14 @@
   >
 - [在重构脚手架中掌握 React/Redux/Webpack2 基本套路](https://segmentfault.com/a/1190000007166607)
 
-到了这里我假设你已经完成了 React 的基础课程，如果你跟我差不多的话，那么我估计你现在的状态可能是 :
+到了这里我假设你已经完成了 React 的基础课程，如果你跟我差不多的话，那么我估计你现在的状态可能是
 
 - 估摸着你已经忘了一大半学过的知识点
 - 你很想能够尽快付诸实践
 
 众所周知，实践是学习某个框架的不二法诀，并且开始一个简单的个人项目也是学习新技术的不错的试验点。一个个人项目可以是简单的单页应用，也可能是像 Github 客户端这样复杂的 Web 应用。这里我推荐你可以尝试着去做一个简单的个人主页。不过还是要补充一句，如果你打算用 React 做一个简单的静态内容页就有点大材小用了，这里推荐一个不错的工具[Gatsby](https://github.com/gatsbyjs/gatsby)，这是一个 React 静态网站生成器。
 
-这里我把 Gatsby 推荐为你可以在初步实践 React 阶段一个不错的参考项目，主要是因为 :
+这里我把 Gatsby 推荐为你可以在初步实践 React 阶段一个不错的参考项目，主要是因为
 
 - 其提供了配置好的 Webpack，可以省去你很多学习配置的烦恼
 - 能够基于你目录结构动态设置路由
@@ -84,7 +84,7 @@
 
 # Week 3:Mastering ES6
 
-随着我学习 React 的深入，我很快就感觉到了现在能够看得懂简单的代码示例，不过还有很多语法尚不能完全理解。举例来说，我还不熟悉[ES6](http://es6-features.org/#Constants)中的一些常见特性 :
+随着我学习 React 的深入，我很快就感觉到了现在能够看得懂简单的代码示例，不过还有很多语法尚不能完全理解。举例来说，我还不熟悉[ES6](http://es6-features.org/#Constants)中的一些常见特性
 
 - Arrow functions
 - Object destructing
@@ -117,7 +117,7 @@
 
 # Beyond & Next Steps
 
-章节所限，在我的调查里也提到[Vue](http://vuejs.org/)与[Elm](http://elm-lang.org/)都是很优秀的框架，推荐有兴趣的朋友可以了解下。另外，在学完了这些基础知识，你还可以了解以下几个方面 :
+章节所限，在我的调查里也提到[Vue](http://vuejs.org/)与[Elm](http://elm-lang.org/)都是很优秀的框架，推荐有兴趣的朋友可以了解下。另外，在学完了这些基础知识，你还可以了解以下几个方面
 
 - JavaScript on the server (Node, [Express](https://expressjs.com/)…)
 - JavaScript testing ([Jest](https://facebook.github.io/jest/), [Enzyme](https://github.com/airbnb/enzyme)…)

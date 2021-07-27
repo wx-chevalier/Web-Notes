@@ -277,7 +277,7 @@ animation--duration: 2s;
 
 语法: animation-timing-function: value;
 
-Value 值 :
+Value 值
 
 linear：动画从头到尾的速度是相同的。
 
