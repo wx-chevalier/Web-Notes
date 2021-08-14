@@ -291,8 +291,6 @@ div {
 
 #### [family.scss](http://lukyvj.github.io/family.scss/):使 nth-child 更易用
 
-![](http://7xkt0f.com1.z0.glb.clouddn.com/49E92992-98AC-42FF-93EE-EFA222B735BE.png)
-
 # 编程式方法
 
 ## 流程控制
