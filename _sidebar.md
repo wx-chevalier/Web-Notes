@@ -1,41 +1,41 @@
   - [1 INTRODUCTION](/INTRODUCTION.md)
-  - 2 前端展望
+  - 2 前端展望 [1]
     - [2.1 2021 前端展望](/前端展望/2021%20前端展望.md)
-  - [3 开发基础](/开发基础/README.md)
-    - [3.1 CSS](/开发基础/CSS/README.md)
-      - 3.1.1 CSS 处理器
+  - [3 开发基础 [9]](/开发基础/README.md)
+    - [3.1 CSS [4]](/开发基础/CSS/README.md)
+      - 3.1.1 CSS 处理器 [3]
         - [3.1.1.1 Less](/开发基础/CSS/CSS%20处理器/Less.md)
         - [3.1.1.2 PostCSS](/开发基础/CSS/CSS%20处理器/PostCSS.md)
         - [3.1.1.3 SCSS](/开发基础/CSS/CSS%20处理器/SCSS.md)
-      - 3.1.2 元素样式
+      - 3.1.2 元素样式 [4]
         - [3.1.2.1 变量与自定义属性](/开发基础/CSS/元素样式/变量与自定义属性.md)
         - [3.1.2.2 字体](/开发基础/CSS/元素样式/字体.md)
         - [3.1.2.3 边属性与图形绘制](/开发基础/CSS/元素样式/边属性与图形绘制.md)
         - [3.1.2.4 选择器](/开发基础/CSS/元素样式/选择器.md)
-      - 3.1.3 布局
+      - 3.1.3 布局 [3]
         - [3.1.3.1 CSS Grid](/开发基础/CSS/布局/CSS%20Grid.md)
         - [3.1.3.2 Flexbox](/开发基础/CSS/布局/Flexbox.md)
         - [3.1.3.3 JavaScript 动态布局](/开发基础/CSS/布局/JavaScript%20动态布局.md)
-      - 3.1.4 盒模型与文档流
+      - 3.1.4 盒模型与文档流 [2]
         - [3.1.4.1 文档流与元素定位](/开发基础/CSS/盒模型与文档流/文档流与元素定位.md)
         - [3.1.4.2 盒模型](/开发基础/CSS/盒模型与文档流/盒模型.md)
-    - [3.2 DOM](/开发基础/DOM/README.md)
-      - 3.2.1 事件响应
+    - [3.2 DOM [3]](/开发基础/DOM/README.md)
+      - 3.2.1 事件响应 [6]
         - [3.2.1.1 事件绑定与传递](/开发基础/DOM/事件响应/事件绑定与传递.md)
         - [3.2.1.2 交互事件](/开发基础/DOM/事件响应/交互事件.md)
-        - [3.2.1.3 手势识别](/开发基础/DOM/事件响应/手势识别/README.md)
+        - [3.2.1.3 手势识别 [1]](/开发基础/DOM/事件响应/手势识别/README.md)
           - [3.2.1.3.1 ZingTouch](/开发基础/DOM/事件响应/手势识别/ZingTouch.md)
         - [3.2.1.4 拖拽事件](/开发基础/DOM/事件响应/拖拽事件.md)
         - [3.2.1.5 文档与元素事件](/开发基础/DOM/事件响应/文档与元素事件.md)
         - [3.2.1.6 设备事件](/开发基础/DOM/事件响应/设备事件.md)
-      - 3.2.2 对象
+      - 3.2.2 对象 [2]
         - [3.2.2.1 元素对象](/开发基础/DOM/对象/元素对象.md)
         - [3.2.2.2 浏览器对象](/开发基础/DOM/对象/浏览器对象.md)
-      - 3.2.3 选择与操作
+      - 3.2.3 选择与操作 [2]
         - [3.2.3.1 元素操作](/开发基础/DOM/选择与操作/元素操作.md)
         - [3.2.3.2 元素选择](/开发基础/DOM/选择与操作/元素选择.md)
-    - [3.3 HTML](/开发基础/HTML/README.md)
-      - [3.3.1 元素标签](/开发基础/HTML/元素标签/README.md)
+    - [3.3 HTML [3]](/开发基础/HTML/README.md)
+      - [3.3.1 元素标签 [7]](/开发基础/HTML/元素标签/README.md)
         - [3.3.1.1 a](/开发基础/HTML/元素标签/a.md)
         - [3.3.1.2 iframe](/开发基础/HTML/元素标签/iframe.md)
         - [3.3.1.3 input](/开发基础/HTML/元素标签/input.md)
@@ -45,40 +45,40 @@
         - [3.3.1.7 脚本标签](/开发基础/HTML/元素标签/脚本标签.md)
       - [3.3.2 规范与模板](/开发基础/HTML/规范与模板.md)
       - [3.3.3 语义化与头标签](/开发基础/HTML/语义化与头标签.md)
-    - 3.4 WebAPIs
-      - [3.4.1 History](/开发基础/WebAPIs/History/README.md)
+    - 3.4 WebAPIs [4]
+      - [3.4.1 History [1]](/开发基础/WebAPIs/History/README.md)
         - [3.4.1.1 History](/开发基础/WebAPIs/History/History.md)
-      - [3.4.2 Observer](/开发基础/WebAPIs/Observer/README.md)
+      - [3.4.2 Observer [5]](/开发基础/WebAPIs/Observer/README.md)
         - [3.4.2.1 ComputePressureObserver](/开发基础/WebAPIs/Observer/ComputePressureObserver.md)
         - [3.4.2.2 IntersectionObserver](/开发基础/WebAPIs/Observer/IntersectionObserver.md)
         - [3.4.2.3 MutationObserver](/开发基础/WebAPIs/Observer/MutationObserver.md)
         - [3.4.2.4 PerformanceObserver](/开发基础/WebAPIs/Observer/PerformanceObserver.md)
         - [3.4.2.5 ResizeObserver](/开发基础/WebAPIs/Observer/ResizeObserver.md)
       - [3.4.3 URLPattern](/开发基础/WebAPIs/URLPattern.md)
-      - [3.4.4 WebWorker](/开发基础/WebAPIs/WebWorker/README.md)
+      - [3.4.4 WebWorker [3]](/开发基础/WebAPIs/WebWorker/README.md)
         - [3.4.4.1 SharedWorker](/开发基础/WebAPIs/WebWorker/SharedWorker.md)
         - [3.4.4.2 Worker 使用](/开发基础/WebAPIs/WebWorker/Worker%20使用.md)
         - [3.4.4.3 第三方库](/开发基础/WebAPIs/WebWorker/第三方库.md)
-    - [3.5 变换与动画](/开发基础/变换与动画/README.md)
+    - [3.5 变换与动画 [2]](/开发基础/变换与动画/README.md)
       - [3.5.1 CSS 变换与动画](/开发基础/变换与动画/CSS%20变换与动画.md)
       - [3.5.2 JavaScript 动画](/开发基础/变换与动画/JavaScript%20动画.md)
-    - 3.6 快速开始
+    - 3.6 快速开始 [6]
       - [3.6.1 A Study Plan To Cure JavaScript Fatigue](/开发基础/快速开始/A-Study-Plan-To-Cure-JavaScript-Fatigue.md)
       - [3.6.2 HTML 与 CSS 简史](/开发基础/快速开始/HTML%20与%20CSS%20简史.md)
       - [3.6.3 从路人甲到英雄无敌的前端开发指南](/开发基础/快速开始/从路人甲到英雄无敌的前端开发指南.md)
-      - 3.6.4 开发环境
+      - 3.6.4 开发环境 [2]
         - [3.6.4.1 OnlineIDE](/开发基础/快速开始/开发环境/OnlineIDE/README.md)
           
-        - [3.6.4.2 VSCode](/开发基础/快速开始/开发环境/VSCode/README.md)
+        - [3.6.4.2 VSCode [1]](/开发基础/快速开始/开发环境/VSCode/README.md)
           - [3.6.4.2.1 断点调试](/开发基础/快速开始/开发环境/VSCode/断点调试.md)
       - [3.6.5 开发环境与工具链](/开发基础/快速开始/开发环境与工具链.md)
       - [3.6.6 脚手架](/开发基础/快速开始/脚手架/README.md)
         
-    - [3.7 控件开发](/开发基础/控件开发/README.md)
-      - [3.7.1 表单](/开发基础/控件开发/表单/README.md)
+    - [3.7 控件开发 [1]](/开发基础/控件开发/README.md)
+      - [3.7.1 表单 [2]](/开发基础/控件开发/表单/README.md)
         - [3.7.1.1 Formilk](/开发基础/控件开发/表单/Formilk.md)
         - [3.7.1.2 表单属性域](/开发基础/控件开发/表单/表单属性域.md)
-    - [3.8 数据存储](/开发基础/数据存储/README.md)
+    - [3.8 数据存储 [6]](/开发基础/数据存储/README.md)
       - [3.8.1 Cookie](/开发基础/数据存储/Cookie.md)
       - [3.8.2 IndexedDB](/开发基础/数据存储/IndexedDB.md)
       - [3.8.3 剪贴板](/开发基础/数据存储/剪贴板.md)
@@ -86,81 +86,81 @@
       - [3.8.5 文件](/开发基础/数据存储/文件.md)
       - [3.8.6 缓存](/开发基础/数据存储/缓存/README.md)
         
-    - [3.9 网络请求](/开发基础/网络请求/README.md)
-      - 3.9.1 数据加载
+    - [3.9 网络请求 [4]](/开发基础/网络请求/README.md)
+      - 3.9.1 数据加载 [1]
         - [3.9.1.1 SWR](/开发基础/网络请求/数据加载/SWR.md)
-      - 3.9.2 文件处理
+      - 3.9.2 文件处理 [5]
         - [3.9.2.1 Blob](/开发基础/网络请求/文件处理/Blob.md)
         - [3.9.2.2 FileSaver](/开发基础/网络请求/文件处理/FileSaver.md)
         - [3.9.2.3 文件上传](/开发基础/网络请求/文件处理/文件上传.md)
         - [3.9.2.4 文件下载](/开发基础/网络请求/文件处理/文件下载.md)
         - [3.9.2.5 文件读写](/开发基础/网络请求/文件处理/文件读写.md)
-      - 3.9.3 请求库
-        - [3.9.3.1 Axios](/开发基础/网络请求/请求库/Axios/README.md)
+      - 3.9.3 请求库 [3]
+        - [3.9.3.1 Axios [2]](/开发基础/网络请求/请求库/Axios/README.md)
           - [3.9.3.1.1 基础使用](/开发基础/网络请求/请求库/Axios/基础使用.md)
           - [3.9.3.1.2 拦截器](/开发基础/网络请求/请求库/Axios/拦截器.md)
         - [3.9.3.2 Fetch](/开发基础/网络请求/请求库/Fetch.md)
         - [3.9.3.3 XMLHttpRequest](/开发基础/网络请求/请求库/XMLHttpRequest.md)
-      - [3.9.4 跨域通信](/开发基础/网络请求/跨域通信/README.md)
+      - [3.9.4 跨域通信 [2]](/开发基础/网络请求/跨域通信/README.md)
         - [3.9.4.1 CORS](/开发基础/网络请求/跨域通信/CORS.md)
         - [3.9.4.2 跨域请求](/开发基础/网络请求/跨域通信/跨域请求.md)
-  - [4 前端框架](/前端框架/README.md)
+  - [4 前端框架 [6]](/前端框架/README.md)
     - [4.1 React](/前端框架/React/README.md)
       
     - [4.2 SolidJs](/前端框架/SolidJs/README.md)
       
-    - [4.3 Svelte](/前端框架/Svelte/README.md)
+    - [4.3 Svelte [6]](/前端框架/Svelte/README.md)
       - [4.3.1 事件处理](/前端框架/Svelte/事件处理.md)
       - [4.3.2 响应式绑定](/前端框架/Svelte/响应式绑定.md)
       - [4.3.3 状态管理](/前端框架/Svelte/状态管理.md)
       - [4.3.4 组件基础](/前端框架/Svelte/组件基础.md)
       - [4.3.5 组件样式](/前端框架/Svelte/组件样式.md)
       - [4.3.6 语法编译](/前端框架/Svelte/语法编译.md)
-    - [4.4 Vue](/前端框架/Vue/README.md)
+    - [4.4 Vue [7]](/前端框架/Vue/README.md)
       - [4.4.1 TypeScript](/前端框架/Vue/TypeScript/README.md)
         
-      - [4.4.2 工具链](/前端框架/Vue/工具链/README.md)
+      - [4.4.2 工具链 [2]](/前端框架/Vue/工具链/README.md)
         - [4.4.2.1 Webpack 配置](/前端框架/Vue/工具链/Webpack%20配置.md)
         - [4.4.2.2 vue cli](/前端框架/Vue/工具链/vue-cli.md)
-      - 4.4.3 性能优化
+      - 4.4.3 性能优化 [1]
         - [4.4.3.1 异步加载](/前端框架/Vue/性能优化/异步加载.md)
-      - [4.4.4 架构机制](/前端框架/Vue/架构机制/README.md)
-        - 4.4.4.1 Vue 3
+      - [4.4.4 架构机制 [3]](/前端框架/Vue/架构机制/README.md)
+        - 4.4.4.1 Vue 3 [1]
           - [4.4.4.1.1 数据监听](/前端框架/Vue/架构机制/Vue%203/数据监听.md)
         - [4.4.4.2 nextTick](/前端框架/Vue/架构机制/nextTick.md)
         - [4.4.4.3 响应式原理](/前端框架/Vue/架构机制/响应式原理.md)
-      - 4.4.5 状态管理
+      - 4.4.5 状态管理 [3]
         - [4.4.5.1 MobX](/前端框架/Vue/状态管理/MobX.md)
         - [4.4.5.2 Redux](/前端框架/Vue/状态管理/Redux.md)
-        - [4.4.5.3 Vuex](/前端框架/Vue/状态管理/Vuex/README.md)
+        - [4.4.5.3 Vuex [2]](/前端框架/Vue/状态管理/Vuex/README.md)
           - [4.4.5.3.1 基础组件](/前端框架/Vue/状态管理/Vuex/基础组件.md)
           - [4.4.5.3.2 异步处理](/前端框架/Vue/状态管理/Vuex/异步处理.md)
-      - [4.4.6 组件系统](/前端框架/Vue/组件系统/README.md)
-        - 4.4.6.1 Prop
+      - [4.4.6 组件系统 [4]](/前端框架/Vue/组件系统/README.md)
+        - 4.4.6.1 Prop [1]
           - [4.4.6.1.1 Prop](/前端框架/Vue/组件系统/Prop/Prop.md)
-        - 4.4.6.2 事件
+        - 4.4.6.2 事件 [1]
           - [4.4.6.2.1 数据通信](/前端框架/Vue/组件系统/事件/数据通信.md)
         - [4.4.6.3 函数式组件](/前端框架/Vue/组件系统/函数式组件.md)
         - [4.4.6.4 类组件](/前端框架/Vue/组件系统/类组件.md)
-      - 4.4.7 语法基础
+      - 4.4.7 语法基础 [2]
         - [4.4.7.1 实例](/前端框架/Vue/语法基础/实例.md)
         - [4.4.7.2 模板语法](/前端框架/Vue/语法基础/模板语法.md)
-    - [4.5 jQuery](/前端框架/jQuery/README.md)
+    - [4.5 jQuery [4]](/前端框架/jQuery/README.md)
       - [4.5.1 jQuery 实践技巧](/前端框架/jQuery/jQuery%20实践技巧.md)
       - [4.5.2 事件处理与网络交互](/前端框架/jQuery/事件处理与网络交互.md)
       - [4.5.3 元素操作](/前端框架/jQuery/元素操作.md)
       - [4.5.4 插件](/前端框架/jQuery/插件.md)
-    - 4.6 框架对比
+    - 4.6 框架对比 [2]
       - [4.6.1 框架对比](/前端框架/框架对比/框架对比.md)
       - [4.6.2 框架范式](/前端框架/框架对比/框架范式.md)
   - [5 工程化架构](/工程化架构/README.md)
     
-  - [6 跨端开发](/跨端开发/README.md)
-    - [6.1 Chrome Extension](/跨端开发/Chrome%20Extension/README.md)
+  - [6 跨端开发 [6]](/跨端开发/README.md)
+    - [6.1 Chrome Extension [3]](/跨端开发/Chrome%20Extension/README.md)
       - [6.1.1 应用配置与界面](/跨端开发/Chrome%20Extension/应用配置与界面.md)
       - [6.1.2 网络请求与存储](/跨端开发/Chrome%20Extension/网络请求与存储.md)
       - [6.1.3 脚本执行与交互](/跨端开发/Chrome%20Extension/脚本执行与交互.md)
-    - [6.2 Electron](/跨端开发/Electron/README.md)
+    - [6.2 Electron [5]](/跨端开发/Electron/README.md)
       - [6.2.1 事件处理](/跨端开发/Electron/事件处理.md)
       - [6.2.2 内存调优](/跨端开发/Electron/内存调优.md)
       - [6.2.3 应用发布](/跨端开发/Electron/应用发布.md)
@@ -168,31 +168,31 @@
       - [6.2.5 截图与视频](/跨端开发/Electron/截图与视频.md)
     - [6.3 Remax](/跨端开发/Remax/README.md)
       
-    - [6.4 Taro](/跨端开发/Taro/README.md)
+    - [6.4 Taro [5]](/跨端开发/Taro/README.md)
       - [6.4.1 TaroUI](/跨端开发/Taro/TaroUI/README.md)
         
-      - 6.4.2 多端开发
+      - 6.4.2 多端开发 [1]
         - [6.4.2.1 跨平台开发](/跨端开发/Taro/多端开发/跨平台开发.md)
-      - [6.4.3 工程实践](/跨端开发/Taro/工程实践/README.md)
+      - [6.4.3 工程实践 [2]](/跨端开发/Taro/工程实践/README.md)
         - [6.4.3.1 最佳实践](/跨端开发/Taro/工程实践/最佳实践.md)
         - [6.4.3.2 权限校验](/跨端开发/Taro/工程实践/权限校验.md)
-      - 6.4.4 开发基础
+      - 6.4.4 开发基础 [4]
         - [6.4.4.1 快速开始](/跨端开发/Taro/开发基础/快速开始.md)
         - [6.4.4.2 框架与配置](/跨端开发/Taro/开发基础/框架与配置.md)
         - [6.4.4.3 组件与页面](/跨端开发/Taro/开发基础/组件与页面.md)
         - [6.4.4.4 静态资源](/跨端开发/Taro/开发基础/静态资源.md)
-      - [6.4.5 语法特性](/跨端开发/Taro/语法特性/README.md)
+      - [6.4.5 语法特性 [1]](/跨端开发/Taro/语法特性/README.md)
         - [6.4.5.1 组件样式](/跨端开发/Taro/语法特性/组件样式.md)
     - [6.5 Weapp](/跨端开发/Weapp/README.md)
       
-    - [6.6 小程序](/跨端开发/小程序/README.md)
+    - [6.6 小程序 [3]](/跨端开发/小程序/README.md)
       - [6.6.1 W3C 小程序标准](/跨端开发/小程序/W3C%20小程序标准.md)
       - [6.6.2 框架语法对比](/跨端开发/小程序/框架语法对比.md)
       - [6.6.3 转译与运行时](/跨端开发/小程序/转译与运行时.md)
   - [7 性能与体验优化](/性能与体验优化/README.md)
     
-  - [8 WebAssembly](/WebAssembly/README.md)
-    - 8.1 Emscripten
+  - [8 WebAssembly [6]](/WebAssembly/README.md)
+    - 8.1 Emscripten [4]
       - [8.1.1 Emscripten](/WebAssembly/Emscripten/Emscripten.md)
       - [8.1.2 JavaScript 调用 WASM](/WebAssembly/Emscripten/JavaScript%20调用%20WASM.md)
       - [8.1.3 WASM 调用 JavaScript](/WebAssembly/Emscripten/WASM%20调用%20JavaScript.md)
@@ -201,9 +201,9 @@
       
     - [8.3 OpenCV](/WebAssembly/OpenCV/README.md)
       
-    - [8.4 Rust](/WebAssembly/Rust/README.md)
+    - [8.4 Rust [1]](/WebAssembly/Rust/README.md)
       - [8.4.1 快速开始](/WebAssembly/Rust/快速开始.md)
     - [8.5 并发编程](/WebAssembly/并发编程/README.md)
       
-    - [8.6 设计理念](/WebAssembly/设计理念/README.md)
+    - [8.6 设计理念 [1]](/WebAssembly/设计理念/README.md)
       - [8.6.1 发展简史](/WebAssembly/设计理念/发展简史.md)
