@@ -165,11 +165,13 @@
       - [6.1.2 网络请求与存储](/跨端开发/Chrome%20Extension/网络请求与存储.md)
       - [6.1.3 脚本执行与交互](/跨端开发/Chrome%20Extension/脚本执行与交互.md)
     - [6.2 Electron](/跨端开发/Electron/README.md)
-      - [6.2.1 事件处理](/跨端开发/Electron/事件处理.md)
-      - [6.2.2 内存调优](/跨端开发/Electron/内存调优.md)
-      - [6.2.3 应用发布](/跨端开发/Electron/应用发布.md)
-      - [6.2.4 开发基础](/跨端开发/Electron/开发基础.md)
-      - [6.2.5 截图与视频](/跨端开发/Electron/截图与视频.md)
+      - 6.2.1 IPC 调用
+        - [6.2.1.1 为何 remote 模块是有害的](/跨端开发/Electron/IPC%20调用/为何%20remote%20模块是有害的.md)
+      - [6.2.2 事件处理](/跨端开发/Electron/事件处理.md)
+      - [6.2.3 内存调优](/跨端开发/Electron/内存调优.md)
+      - [6.2.4 应用发布](/跨端开发/Electron/应用发布.md)
+      - [6.2.5 开发基础](/跨端开发/Electron/开发基础.md)
+      - [6.2.6 截图与视频](/跨端开发/Electron/截图与视频.md)
     - [6.3 Remax](/跨端开发/Remax/README.md)
       
     - [6.4 Taro](/跨端开发/Taro/README.md)
