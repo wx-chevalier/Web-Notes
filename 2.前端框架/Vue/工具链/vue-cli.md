@@ -60,7 +60,7 @@ $ npm run build
       }
     </style>
     <div id="nav">
-      <h3><a href="http://wx-chevalier.github.io/books">Books</a></h3>
+      <h3><a href="https://ng-tech.icu/books-gallery">Books</a></h3>
       <span style="margin:0 8px;display:inline-block">|</span>
       <h3><a href="https://github.com/FE-Kits">FE-Kits</a></h3>
       <span style="margin:0 8px;display:inline-block">|</span>
