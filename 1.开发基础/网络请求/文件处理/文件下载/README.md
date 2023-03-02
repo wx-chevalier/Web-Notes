@@ -76,7 +76,7 @@ axios.get("http://localhost:8888/api/downloadUrl").then((res) => {
 
 我们也可以从 MDN 上看到，虽然 download 限制了非同源的情况，但是可以使用 blob: URL (opens new window)和 data: URL (opens new window)，因此我们只要将文件内容进行下载转化成 blob 就可以了。整个过程如下：
 
-![文件下载](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/20221225154923.png)
+![文件下载](https://assets.ng-tech.icu/item/20221225154923.png)
 
 ```js
 <button id="oBtnDownload">点击下载</button>

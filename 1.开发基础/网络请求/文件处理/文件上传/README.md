@@ -28,7 +28,7 @@ fetch("/avatars", {
 
 对于浏览器端的文件上传，可以归结出一个套路，所有东西核心思路就是构造出 File 对象。然后观察请求 Content-Type，再看请求体是否有信息缺失。而以上这些二进制数据类型的转化可以看以下表。
 
-![浏览器端上传类型转化](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/20221225163656.png)
+![浏览器端上传类型转化](https://assets.ng-tech.icu/item/20221225163656.png)
 
 ### File
 
@@ -43,7 +43,7 @@ fetch("/avatars", {
 
 这个表单是无法实际进行传输的，其实 FormData 中 file 字段显示的是文件名，并没有将真正的内容进行传输。再看请求头：
 
-![请求头](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/20221225160756.png)
+![请求头](https://assets.ng-tech.icu/item/20221225160756.png)
 
 发现是请求头和预期不符，也印证了 application/x-www-form-urlencoded 无法进行文件上传。我们加上请求头，再次请求。
 
@@ -94,7 +94,7 @@ fetch("/avatars", {
 </script>
 ```
 
-![文件上传请求体](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/20221225161107.png)
+![文件上传请求体](https://assets.ng-tech.icu/item/20221225161107.png)
 
 ### Blob
 
@@ -237,7 +237,7 @@ app.use(koaBody({ multipart: true }));
 
 我们来看看最常用的 koa-body，它的使用方式非常简单，短短几行，就能让我们享受到文件上传的简单与快乐（其他源码库一样的思路去寻找问题的本源） 可以带着一个问题去阅读，为什么用了它就能解析出文件？看完 koa-body 我们得出的结论是，koa-body 的核心方法是 formidable，那么让我们继续深入。
 
-![formidable](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/20221225164131.png)
+![formidable](https://assets.ng-tech.icu/item/20221225164131.png)
 
 ```js
 const fs = require("fs");
