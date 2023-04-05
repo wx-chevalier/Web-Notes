@@ -1,6 +1,6 @@
 # Blob
 
-Blob（Binary Large Object）表示二进制类型的大对象。在数据库管理系统中，将二进制数据存储为一个单一个体的集合。Blob 通常是影像、声音或多媒体文件。在 JavaScript 中 Blob 类型的对象表示不可变的类似文件对象的原始数据。 为了更直观的感受 Blob 对象，我们先来使用 Blob 构造函数，创建一个 myBlob 对象，具体如下图所示：
+Blob（Binary Large Object）表示二进制类型的大对象。在数据库管理系统中，将二进制数据存储为一个单一个体的集合。Blob 通常是影像、声音或多媒体文件。在 JavaScript 中 Blob 类型的对象表示不可变的类似文件对象的原始数据。为了更直观的感受 Blob 对象，我们先来使用 Blob 构造函数，创建一个 myBlob 对象，具体如下图所示：
 
 ![Blob 对象示意](https://assets.ng-tech.icu/item/20221225161317.png)
 
@@ -194,7 +194,7 @@ mediatype 是个 MIME 类型的字符串，例如 "image/jpeg" 表示 JPEG 图�
 <img alt="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUg..." />
 ```
 
-但需要注意的是：如果图片较大，图片的色彩层次比较丰富，则不适合使用这种方式，因为该图片经过 base64 编码后的字符串非常大，会明显增大 HTML 页面的大小，从而影响加载速度。 除此之外，利用 FileReader API，我们也可以方便的实现图片本地预览功能，具体代码如下：
+但需要注意的是：如果图片较大，图片的色彩层次比较丰富，则不适合使用这种方式，因为该图片经过 base64 编码后的字符串非常大，会明显增大 HTML 页面的大小，从而影响加载速度。除此之外，利用 FileReader API，我们也可以方便的实现图片本地预览功能，具体代码如下：
 
 ```html
 <input type="file" accept="image/*" onchange="loadFile(event)" />
