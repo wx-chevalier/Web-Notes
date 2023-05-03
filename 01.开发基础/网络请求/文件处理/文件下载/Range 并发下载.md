@@ -1,6 +1,6 @@
 # Range 并发下载
 
-在《[Network-Series](https://github.com/wx-chevalier/Network-Series?q=)》中我们讨论了 Range 的定义，这里我们讨论下在前端的实践。多线程的话，会比较麻烦一些，需要按片去下载，下载好后，需要进行合并再进行下载。服务端需要在 Node 中进行兼容处理：
+在《[Network-Notes](https://github.com/wx-chevalier/Network-Notes?q=)》中我们讨论了 Range 的定义，这里我们讨论下在前端的实践。多线程的话，会比较麻烦一些，需要按片去下载，下载好后，需要进行合并再进行下载。服务端需要在 Node 中进行兼容处理：
 
 ```js
 router.get("/api/rangeFile", async (ctx) => {

@@ -7,12 +7,12 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/wx-chevalier/Web-Series">
+  <a href="https://github.com/wx-chevalier/Web-Notes">
     <img src="https://assets.ng-tech.icu/item/header.svg" alt="Logo" style="width: 100vw;height: 400px" />
   </a>
 
   <p align="center">
-    <a href="https://ng-tech.icu/books/Web-Series"><strong>在线阅读 >> </strong></a>
+    <a href="https://ng-tech.icu/books/Web-Notes"><strong>在线阅读 >> </strong></a>
     <br />
     <br />
     <a href="https://github.com/wx-chevalier">代码案例</a>
@@ -80,7 +80,7 @@ BFF 在解决接口协调与聚合问题的同时，也承载了原本后端的�
 
 - 如果您对于 JavaScript 基础语法尚不完全了解，那么建议您首先浏览[《现代 JavaScript 语法基础与工程实践》](https://ngte-pl.gitbook.io/i/javascript) 以了解基础的 JavaScript 语法及实践应用。
 
-- 如果你希望了解 Node.js 全栈开发，可以参阅 [Node-Series](https://github.com/wx-chevalier/Node-Series)。
+- 如果你希望了解 Node.js 全栈开发，可以参阅 [Node-Notes](https://github.com/wx-chevalier/Node-Notes)。
 
 - 在了解了理论知识之后，建议前往 [wx-fe](https://github.com/topics/wx-fe) 查阅笔者所有的前端相关的开源项目。
 
@@ -97,13 +97,13 @@ BFF 在解决接口协调与聚合问题的同时，也承载了原本后端的�
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/wx-chevalier/Web-Series.svg?style=flat-square
-[contributors-url]: https://github.com/wx-chevalier/Web-Series/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/wx-chevalier/Web-Series.svg?style=flat-square
-[forks-url]: https://github.com/wx-chevalier/Web-Series/network/members
-[stars-shield]: https://img.shields.io/github/stars/wx-chevalier/Web-Series.svg?style=flat-square
-[stars-url]: https://github.com/wx-chevalier/Web-Series/stargazers
-[issues-shield]: https://img.shields.io/github/issues/wx-chevalier/Web-Series.svg?style=flat-square
-[issues-url]: https://github.com/wx-chevalier/Web-Series/issues
-[license-shield]: https://img.shields.io/github/license/wx-chevalier/Web-Series.svg?style=flat-square
-[license-url]: https://github.com/wx-chevalier/Web-Series/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/wx-chevalier/Web-Notes.svg?style=flat-square
+[contributors-url]: https://github.com/wx-chevalier/Web-Notes/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/wx-chevalier/Web-Notes.svg?style=flat-square
+[forks-url]: https://github.com/wx-chevalier/Web-Notes/network/members
+[stars-shield]: https://img.shields.io/github/stars/wx-chevalier/Web-Notes.svg?style=flat-square
+[stars-url]: https://github.com/wx-chevalier/Web-Notes/stargazers
+[issues-shield]: https://img.shields.io/github/issues/wx-chevalier/Web-Notes.svg?style=flat-square
+[issues-url]: https://github.com/wx-chevalier/Web-Notes/issues
+[license-shield]: https://img.shields.io/github/license/wx-chevalier/Web-Notes.svg?style=flat-square
+[license-url]: https://github.com/wx-chevalier/Web-Notes/blob/master/LICENSE.txt
