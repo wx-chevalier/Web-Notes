@@ -100,7 +100,7 @@ Flutter 和 RN 的最大区别在于将“JavascriptCore/V8+JS”替换成“C++
 
 小程序本质上和 Weex、React Native 的设计思路基本一样，最大区别在于前者还是用浏览器 WebView 做渲染引擎，而后者是单独实现了渲染引擎（所以大量的 CSS 布局模型不支持）。
 
-![](https://i.postimg.cc/hGyQzJTL/image.png)
+![](https://assets.ng-tech.icu/item/20230512210222.png)
 
 # Links
 
