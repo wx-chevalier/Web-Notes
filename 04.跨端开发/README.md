@@ -29,7 +29,7 @@ HTML5 于 2007 年在 W3C 立项，与 iPhone 发布同年。乔布斯曾期待 
 
 依赖于像 APICloud 这样的第三方工具，开发者是可以较好地屏蔽底层开发细节；而在 React Native 与 Flutter 开发中，我们仍需要去改造或实现许多的原生代码。
 
-![](https://i.postimg.cc/V6SC1t89/image.png)
+![](https://assets.ng-tech.icu/item/20230513200717.png)
 
 ![image](https://user-images.githubusercontent.com/5803001/50948270-d5923400-14dc-11e9-9e38-436be3a5ee55.png)
 
@@ -92,11 +92,11 @@ MVVM 中的关键是它通过 ViewModel 这一层将界面和逻辑层彻底隔�
 
 React Native、Weex 与快应用的 MVVM，开发者编写的代码在虚拟机（V8、JavaScriptCore）里面运行，虚拟机容器里面包含扩展的系统基础接口。运行时，将描述界面的数据（主要是 CSS+DSL 所描述内容）通过通信层传递给 Android、iOS 端的渲染引擎，用户触摸界面时，通过通信层传递给虚拟机里面的业务处理代码，业务处理代码可能调用网络、储存与媒体等接口，最后再次反馈到界面。
 
-![](https://i.postimg.cc/Z5md1zJd/image.png)
+![](https://assets.ng-tech.icu/item/20230513200651.png)
 
 Flutter 和 RN 的最大区别在于将“JavascriptCore/V8+JS”替换成“C++ 实现的 engine+Dart 实现的 Framework+静态类型 Dart+编译成机器码”。
 
-![](https://i.postimg.cc/q7MCvchB/image.png)
+![](https://assets.ng-tech.icu/item/20230513200059.png)
 
 小程序本质上和 Weex、React Native 的设计思路基本一样，最大区别在于前者还是用浏览器 WebView 做渲染引擎，而后者是单独实现了渲染引擎（所以大量的 CSS 布局模型不支持）。
 
