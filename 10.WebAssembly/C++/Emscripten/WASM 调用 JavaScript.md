@@ -123,14 +123,12 @@ console.log(UTF8ToString(output)); // output: {"data":"Hi!"}
 #include <stdio.h>
 #include <string.h>
 
-
 #ifdef __EMSCRIPTEN__
 #include <emscripten/fetch.h>
 void downloadSucceeded(emscripten_fetch_t *fetch) {
   printf("%llu %s.\n", fetch->numBytes, fetch->url);
   emscripten_fetch_close(fetch);
 }
-
 
 void downloadFailed(emscripten_fetch_t *fetch) {
   emscripten_fetch_close(fetch);

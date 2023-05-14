@@ -230,3 +230,7 @@ int main() {
 ```
 
 接着打开 Chrome 及其开发者工具，我们就可以看到对应的 main.c 文件并进行单步调试了。但值得注意的是，目前 emcmake 对于 soucemap 的生成支持并不是很好，并且浏览器的单步调试支持也仅仅支持了代码层面的映射关系，对于比较复杂的应用来说目前的单步调试能力还比较不可用，因此建议开发时还是以日志调试为主要手段。
+
+# Links
+
+- https://web.dev/webassembly-threads/ Using WebAssembly threads from C, C++ and Rust
