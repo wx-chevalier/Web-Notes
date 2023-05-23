@@ -206,18 +206,23 @@
       - [5.7.3 转译与运行时](/04.跨端开发/小程序/转译与运行时.md)
   - [6 05.性能与体验优化](/05.性能与体验优化/README.md)
     
-  - [7 10.WebAssembly [4]](/10.WebAssembly/README.md)
-    - 7.1 C++ [2]
-      - [7.1.1 Emscripten [3]](/10.WebAssembly/C++/Emscripten/README.md)
-        - [7.1.1.1 JavaScript 调用 WASM](/10.WebAssembly/C++/Emscripten/JavaScript%20调用%20WASM.md)
-        - [7.1.1.2 WASM 调用 JavaScript](/10.WebAssembly/C++/Emscripten/WASM%20调用%20JavaScript.md)
-        - [7.1.1.3 WebAssembly 简单案例](/10.WebAssembly/C++/Emscripten/WebAssembly%20简单案例.md)
-      - [7.1.2 OpenCV](/10.WebAssembly/C++/OpenCV/README.md)
+  - 7 09.Web 组件范式 [1]
+    - 7.1 编辑器 [1]
+      - 7.1.1 CRDT [1]
+        - 7.1.1.1 99.参考资料 [1]
+          - [7.1.1.1.1 List CRDT Benchmarks](/09.Web%20组件范式/编辑器/CRDT/99.参考资料/2023-List%20CRDT%20Benchmarks.md)
+  - [8 10.WebAssembly [4]](/10.WebAssembly/README.md)
+    - 8.1 C++ [2]
+      - [8.1.1 Emscripten [3]](/10.WebAssembly/C++/Emscripten/README.md)
+        - [8.1.1.1 JavaScript 调用 WASM](/10.WebAssembly/C++/Emscripten/JavaScript%20调用%20WASM.md)
+        - [8.1.1.2 WASM 调用 JavaScript](/10.WebAssembly/C++/Emscripten/WASM%20调用%20JavaScript.md)
+        - [8.1.1.3 WebAssembly 简单案例](/10.WebAssembly/C++/Emscripten/WebAssembly%20简单案例.md)
+      - [8.1.2 OpenCV](/10.WebAssembly/C++/OpenCV/README.md)
         
-    - [7.2 Go](/10.WebAssembly/Go/README.md)
+    - [8.2 Go](/10.WebAssembly/Go/README.md)
       
-    - [7.3 Rust [1]](/10.WebAssembly/Rust/README.md)
-      - [7.3.1 快速开始](/10.WebAssembly/Rust/快速开始.md)
-    - [7.4 设计理念 [1]](/10.WebAssembly/设计理念/README.md)
-      - [7.4.1 发展简史](/10.WebAssembly/设计理念/发展简史.md)
-  - [8 INTRODUCTION](/INTRODUCTION.md)
+    - [8.3 Rust [1]](/10.WebAssembly/Rust/README.md)
+      - [8.3.1 快速开始](/10.WebAssembly/Rust/快速开始.md)
+    - [8.4 设计理念 [1]](/10.WebAssembly/设计理念/README.md)
+      - [8.4.1 发展简史](/10.WebAssembly/设计理念/发展简史.md)
+  - [9 INTRODUCTION](/INTRODUCTION.md)
