@@ -173,7 +173,7 @@
       - [5.2.3 脚本执行与交互](/04.跨端开发/Chrome%20Extension/脚本执行与交互.md)
     - [5.3 Electron [6]](/04.跨端开发/Electron/README.md)
       - 5.3.1 99.参考资料 [1]
-        - [5.3.1.1 无限咪咪 Electron 小计](/04.跨端开发/Electron/99.参考资料/2022-无限咪咪-Electron%20小计.md)
+        - [5.3.1.1 无限咪咪 Electron 小记](/04.跨端开发/Electron/99.参考资料/2022-无限咪咪-Electron%20小记.md)
       - [5.3.2 内存调优](/04.跨端开发/Electron/内存调优.md)
       - 5.3.3 功能扩展 [2]
         - [5.3.3.1 Electron 中使用 Python](/04.跨端开发/Electron/功能扩展/Electron%20中使用%20Python.md)
