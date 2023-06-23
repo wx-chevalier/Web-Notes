@@ -6,7 +6,7 @@
 
 一个网格通常具有许多的**「列（column）与行（row）」**，以及行与行、列与列之间的间隙，这个间隙一般被称为**「沟槽（gutter）」**。
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/56403f63a0758c0c090b8e0b31bde540.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/56403f63a0758c0c090b8e0b31bde540.png)
 
 # **一、定义一个网格**
 
@@ -31,11 +31,11 @@
 
 这里我们创建了两列，宽度分别为 `100px`和`200px`。当然，这里可以使用任何长度单位以及百分比。
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/d133f4c36ea5d75d694f8a56fdfc28f6.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/d133f4c36ea5d75d694f8a56fdfc28f6.png)
 
 `grid-template` 是 `grid-template-rows` 和 `grid-template-columns` 的简写，例如：`grid-template: 50px 50px / 100px;`会创建两个 50px 高的行以及一个 100px 宽的列。
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/8bf6a6d01a1b37e6034e8855f8e01489.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/8bf6a6d01a1b37e6034e8855f8e01489.png)
 
 ### **1.1.1 使用 `fr` 单位**
 
@@ -59,7 +59,7 @@
 
 另外，`fr`可以与一般的长度单位混合使用，比如`grid-template-columns: 100px 1fr 2fr`的结果就是第一列宽度是 100px，剩下的两列会根据去掉 100px 后的可用空间按比例 1: 2 来分配。
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/6ded0bc828ead6d9ace182029132343b.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/6ded0bc828ead6d9ace182029132343b.png)
 
 ### **1.1.2 重复设置列 / 行**
 
@@ -72,11 +72,11 @@
 }
 ```
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/a109f57220e12c6f0d5825fc8236a80e.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/a109f57220e12c6f0d5825fc8236a80e.png)
 
 传入`repeat`函数的第一个参数表明了后续列宽配置要重复多少次，而第二个参数表示需要重复的配置，这个配置还可以具有多个长度设定，举个例子：`repeat(2, 100px 200px)`会得到这样的效果：
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/40cf784fbde1375aef933a2edd7cfe5f.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/40cf784fbde1375aef933a2edd7cfe5f.png)
 
 ### **1.1.3 自动填充**
 
@@ -89,7 +89,7 @@
 }
 ```
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/4dc3ee82eb405346a9e9f989126f8b54.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/4dc3ee82eb405346a9e9f989126f8b54.png)
 
 可以看到在 500px 宽度的容器上创建了三个 150px 的列，剩余的 50px 不足以再创建一列，所以第四个元素就被放置到了第二行。
 
@@ -118,13 +118,13 @@
 }
 ```
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/0d6a7841870630ce8399c38875ece8ef.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/0d6a7841870630ce8399c38875ece8ef.png)
 
 `*gap`属性曾经有一个`grid-`前缀，不过后来的标准进行了修改，目的是让他们能够在不同的布局方法中都能起作用。尽管现在这个前缀不会影响语义，但为了代码的健壮性，可以把两个属性都写上。
 
 另外，虽然 `gap` 属性在 grid 布局的兼容性挺好的，但在 `flex` 布局的兼容性目前看起来还不行：
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/f6fa2e5f4c9eba28d88a81de80764080.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/f6fa2e5f4c9eba28d88a81de80764080.png)
 
 # **二、放置元素**
 
@@ -164,7 +164,7 @@
 }
 ```
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/3b6c7c8f4cdf7fabee768a48fdcc29e3.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/3b6c7c8f4cdf7fabee768a48fdcc29e3.png)
 
 我们还可以使用负数来指定分隔线，`-n`就代表倒数第`n` 条网格线。有时候我们不好确定列数，但又想定位到最后一列，这就可以考虑使用负数网格线了，例如上面的 header 可以这么写：
 
@@ -201,7 +201,7 @@
 }
 ```
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/f94c8ca38a6d9997c844fae37ac88ebc.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/f94c8ca38a6d9997c844fae37ac88ebc.png)
 
 ## **2.2 使用 `grid-tempate-areas` 放置元素**
 
@@ -244,7 +244,7 @@
 }
 ```
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/698453a7e4a8f6f9944948fd9f79739e.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/698453a7e4a8f6f9944948fd9f79739e.png)
 
 如果想把 sidebar 延伸到底部，只需要把 `grid-template-areas` 改成这样：
 
@@ -260,7 +260,7 @@
 
 效果如下：
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/bfbded18c479aa0aa72df27e34ab02b4.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/bfbded18c479aa0aa72df27e34ab02b4.png)
 
 通过命名的方式来放置元素是一种非常直观的方式，你在 CSS 中看到的就是实际会出现的排版效果了。
 
@@ -270,7 +270,7 @@
 
 假设现在我们定义一个 1 行 x 2 列的宽高都为 100px 的网格容器，并在其中放置了 a 和 b 两个网格项：
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/865bbe06e73f0f9e64e1a1e4a0ffcea1.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/865bbe06e73f0f9e64e1a1e4a0ffcea1.png)
 
 如果我们把网格项 a 和 b 放置到已定义的网格之外的话：
 
@@ -284,7 +284,7 @@
 }
 ```
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/431314203eaedbe4eda7ede8ac48b77d.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/431314203eaedbe4eda7ede8ac48b77d.png)
 
 可以看到比之前定义的网格多了一些，而这些多出来的的网格就是隐式网格。另外，不仅网格多了，网格线也多了，列网格线 4 以及行网格线 3 都是自动生成的隐式网格线。
 
@@ -299,7 +299,7 @@
 }
 ```
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/91240bddb1526165c27c27192239df47.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/91240bddb1526165c27c27192239df47.png)
 
 现在隐式网格的大小也都是 100px \* 100px 了。
 
@@ -309,15 +309,15 @@
 
 例如现在有 3 x 3 的网格容器，a 、b 都占两列，默认情况下由于 b 在第一行不够空间，最终会放到第二行，然后 c 在 b 后面。
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/fb7a29492dc9c28e915461a68b5bce6d.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/fb7a29492dc9c28e915461a68b5bce6d.png)
 
 如果修改成`grid-auto-flow: column`，会逐列放置元素，此时 c 会被放在第三行：
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/75563ae687c4d784e78d2e019cae4f8f.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/75563ae687c4d784e78d2e019cae4f8f.png)
 
 如果修改成`grid-auto-flow: dense`，则会在 `row` 的基础上填充前面网格留下来的空白：
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/4b34f66fed3319a91cf71700dae50dfa.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/4b34f66fed3319a91cf71700dae50dfa.png)
 
 > 还有`column dense`之类的值，具体可以去看 MDN: grid-auto-flow
 
@@ -334,7 +334,7 @@
 }
 ```
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/572ff5b3c376a6f611d780da6ba89464.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/572ff5b3c376a6f611d780da6ba89464.png)
 
 ## **4.1 `justify-items`**
 
@@ -342,15 +342,15 @@
 
 - `start`
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/a8901ca48f104c71d8d1e577294e7072.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/a8901ca48f104c71d8d1e577294e7072.png)
 
 - `end`
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/3af1e4e90c19766ae6ec9f78536116b3.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/3af1e4e90c19766ae6ec9f78536116b3.png)
 
 - `center`
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/296c74cb2f87ce070a802edc571345ba.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/296c74cb2f87ce070a802edc571345ba.png)
 
 ## **4.2 `align-items`**
 
@@ -358,15 +358,15 @@
 
 - `start`
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/b7cf75de7d4e87965f5e900c406848a8.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/b7cf75de7d4e87965f5e900c406848a8.png)
 
 - `end`
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/4a3dcef573e61e8516f2a145d3819f5b.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/4a3dcef573e61e8516f2a145d3819f5b.png)
 
 - `center`
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/4000d718790fd9bbc2fdee3da0a9d299.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/4000d718790fd9bbc2fdee3da0a9d299.png)
 
 ## **4.3 `justify-content`**
 
@@ -374,27 +374,27 @@
 
 - `start`
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/35ff4a71eae4b9dabd344c0199b84af1.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/35ff4a71eae4b9dabd344c0199b84af1.png)
 
 - `end`
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/58aa6250797a098221eb10a626dec8d5.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/58aa6250797a098221eb10a626dec8d5.png)
 
 - `center`
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/773ca3a549be6da21213e4d10e68d3f0.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/773ca3a549be6da21213e4d10e68d3f0.png)
 
 - `space-between`
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/712cc03b6a5eb35b68034e8abf95e451.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/712cc03b6a5eb35b68034e8abf95e451.png)
 
 - `space-around`
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/ceff7b617d5c982c2e2b57665c361e74.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/ceff7b617d5c982c2e2b57665c361e74.png)
 
 - `space-evenly`
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/8d82a5c57641c312b8c359d5248c80fd.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/8d82a5c57641c312b8c359d5248c80fd.png)
 
 ## **4.4 `align-content`**
 
@@ -425,7 +425,7 @@
 
 在宽度 150px 的容器里，我定义了两列：`100px` 固定宽度和 `1fr` 铺满剩余空间。其中第二列里的内容是一串连续字符，由于没有特意设置 `work-bread` 属性，所以显然第二列的内容会超出预期的宽度：
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/9cbcc6bd6f0e16814c5ba4136261604a.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/9cbcc6bd6f0e16814c5ba4136261604a.png)
 
 这种问题设置下 `word-break: break-word` 就好，但这是最简单的情景，如果遇上了 pre，情况就会有点迷惑。假设 html 变成了这样里面是 pre：
 
@@ -440,7 +440,7 @@
 </div>
 ```
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2427692/425ded76b17a61810aff5beb3e17c964.png?imageView2/2/w/1200.png)
+![img](https://assets.ng-tech.icu/item/425ded76b17a61810aff5beb3e17c964.png)
 
 可以看到代码块溢出了。通常我们都是想 pre 代码块过长时可以左右滚动，那给 pre 的父元素加个 `overflow: auto` 是不是能解决问题呢？其实不能...而如果给第二列加一个固定宽度，的确可以解决问题，但这就不是预期的 `1fr` 了。
 
