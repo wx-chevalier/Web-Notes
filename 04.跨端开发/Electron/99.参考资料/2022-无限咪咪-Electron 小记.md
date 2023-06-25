@@ -704,7 +704,7 @@ app.on("ready", () => {
   mainWindow.loadURL(`file://${__dirname}/src/index.html`);
 
   // 我这里偷懒了，视频中通过 process.platform 来判断当前操作系统是否是 windows 系统
-  // windows 系统使用 windows-icon@2x.png， 否则使用 iconTemplate.png
+  // windows 系统使用 windows-icon@2x.png，否则使用 iconTemplate.png
   const iconPath = path.join(__dirname, "./src/assets/windows-icon@2x.png");
   // 新建 Tray 实例
   tray = new Tray(iconPath);
