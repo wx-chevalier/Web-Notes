@@ -1,23 +1,26 @@
 # Range 并发下载
 
-在《[Network-Notes](https://github.com/wx-chevalier/Network-Notes?q=)》中我们讨论了 Range 的定义，这里我们讨论下在前端的实践。多线程的话，会比较麻烦一些，需要按片去下载，下载好后，需要进行合并再进行下载。服务端需要在 Node 中进行兼容处理：
+在[《Network-Notes》](https://github.com/wx-chevalier/Network-Notes?q=)中我们讨论了 Range 的定义，这里我们讨论下在前端的实践。多线程的话，会比较麻烦一些，需要按片去下载，下载好后，需要进行合并再进行下载。服务端需要在 Node 中进行兼容处理：
 
 ```js
 router.get("/api/rangeFile", async (ctx) => {
   const { filename } = ctx.query;
   const { size } = fs.statSync(path.join(__dirname, "./static/", filename));
   const range = ctx.headers["range"];
+
   if (!range) {
     ctx.set("Accept-Ranges", "bytes");
     ctx.body = fs.readFileSync(path.join(__dirname, "./static/", filename));
     return;
   }
+
   const { start, end } = getRange(range);
   if (start >= size || end >= size) {
     ctx.response.status = 416;
     ctx.body = "";
     return;
   }
+
   ctx.response.status = 206;
   ctx.set("Accept-Ranges", "bytes");
   ctx.set("Content-Range", `bytes ${start}-${end ? end : size - 1}/${size}`);
@@ -75,7 +78,8 @@ function downloadRange(url, start, end, i) {
     req.send();
   });
 }
-// 合并buffer
+
+// 合并 buffer
 function concatenate(resultConstructor, arrays) {
   let totalLength = 0;
   for (let arr of arrays) {
@@ -89,6 +93,7 @@ function concatenate(resultConstructor, arrays) {
   }
   return result;
 }
+
 download2.onclick = () => {
   axios({
     url,
