@@ -234,18 +234,19 @@
       - 7.3.1 CRDT [1]
         - 7.3.1.1 99~参考资料 [1]
           - [7.3.1.1.1 List CRDT Benchmarks](/09~Web%20组件范式/编辑器/CRDT/99~参考资料/2023-List%20CRDT%20Benchmarks.md)
-  - [8 10~WebAssembly [4]](/10~WebAssembly/README.md)
-    - 8.1 C++ [2]
-      - [8.1.1 Emscripten [3]](/10~WebAssembly/C++/Emscripten/README.md)
-        - [8.1.1.1 JavaScript 调用 WASM](/10~WebAssembly/C++/Emscripten/JavaScript%20调用%20WASM.md)
-        - [8.1.1.2 WASM 调用 JavaScript](/10~WebAssembly/C++/Emscripten/WASM%20调用%20JavaScript.md)
-        - [8.1.1.3 WebAssembly 简单案例](/10~WebAssembly/C++/Emscripten/WebAssembly%20简单案例.md)
-      - [8.1.2 OpenCV](/10~WebAssembly/C++/OpenCV/README.md)
+  - [8 10~WebAssembly [2]](/10~WebAssembly/README.md)
+    - 8.1 代码实现 [3]
+      - 8.1.1 C++ [2]
+        - [8.1.1.1 Emscripten [3]](/10~WebAssembly/代码实现/C++/Emscripten/README.md)
+          - [8.1.1.1.1 JavaScript 调用 WASM](/10~WebAssembly/代码实现/C++/Emscripten/JavaScript%20调用%20WASM.md)
+          - [8.1.1.1.2 WASM 调用 JavaScript](/10~WebAssembly/代码实现/C++/Emscripten/WASM%20调用%20JavaScript.md)
+          - [8.1.1.1.3 WebAssembly 简单案例](/10~WebAssembly/代码实现/C++/Emscripten/WebAssembly%20简单案例.md)
+        - [8.1.1.2 OpenCV](/10~WebAssembly/代码实现/C++/OpenCV/README.md)
+          
+      - [8.1.2 Go](/10~WebAssembly/代码实现/Go/README.md)
         
-    - [8.2 Go](/10~WebAssembly/Go/README.md)
-      
-    - [8.3 Rust [1]](/10~WebAssembly/Rust/README.md)
-      - [8.3.1 快速开始](/10~WebAssembly/Rust/快速开始.md)
-    - [8.4 设计理念 [1]](/10~WebAssembly/设计理念/README.md)
-      - [8.4.1 发展简史](/10~WebAssembly/设计理念/发展简史.md)
+      - [8.1.3 Rust [1]](/10~WebAssembly/代码实现/Rust/README.md)
+        - [8.1.3.1 快速开始](/10~WebAssembly/代码实现/Rust/快速开始.md)
+    - [8.2 设计理念 [1]](/10~WebAssembly/设计理念/README.md)
+      - [8.2.1 发展简史](/10~WebAssembly/设计理念/发展简史.md)
   - [9 INTRODUCTION](/INTRODUCTION.md)
