@@ -234,21 +234,22 @@
       - 7.3.1 CRDT [1]
         - 7.3.1.1 99~参考资料 [1]
           - [7.3.1.1.1 List CRDT Benchmarks](/09~Web%20组件范式/编辑器/CRDT/99~参考资料/2023-List%20CRDT%20Benchmarks.md)
-  - [8 10~WebAssembly [5]](/10~WebAssembly/README.md)
-    - 8.1 AssemblyScript [1]
-      - [8.1.1 99~参考资料](/10~WebAssembly/AssemblyScript/99~参考资料/README.md)
+  - [8 10~WebAssembly [2]](/10~WebAssembly/README.md)
+    - 8.1 WASM 应用开发 [4]
+      - 8.1.1 AssemblyScript [1]
+        - [8.1.1.1 99~参考资料](/10~WebAssembly/WASM%20应用开发/AssemblyScript/99~参考资料/README.md)
+          
+      - 8.1.2 C++ [2]
+        - [8.1.2.1 Emscripten [3]](/10~WebAssembly/WASM%20应用开发/C++/Emscripten/README.md)
+          - [8.1.2.1.1 JavaScript 调用 WASM](/10~WebAssembly/WASM%20应用开发/C++/Emscripten/JavaScript%20调用%20WASM.md)
+          - [8.1.2.1.2 WASM 调用 JavaScript](/10~WebAssembly/WASM%20应用开发/C++/Emscripten/WASM%20调用%20JavaScript.md)
+          - [8.1.2.1.3 WebAssembly 简单案例](/10~WebAssembly/WASM%20应用开发/C++/Emscripten/WebAssembly%20简单案例.md)
+        - [8.1.2.2 OpenCV](/10~WebAssembly/WASM%20应用开发/C++/OpenCV/README.md)
+          
+      - [8.1.3 Go](/10~WebAssembly/WASM%20应用开发/Go/README.md)
         
-    - 8.2 C++ [2]
-      - [8.2.1 Emscripten [3]](/10~WebAssembly/C++/Emscripten/README.md)
-        - [8.2.1.1 JavaScript 调用 WASM](/10~WebAssembly/C++/Emscripten/JavaScript%20调用%20WASM.md)
-        - [8.2.1.2 WASM 调用 JavaScript](/10~WebAssembly/C++/Emscripten/WASM%20调用%20JavaScript.md)
-        - [8.2.1.3 WebAssembly 简单案例](/10~WebAssembly/C++/Emscripten/WebAssembly%20简单案例.md)
-      - [8.2.2 OpenCV](/10~WebAssembly/C++/OpenCV/README.md)
-        
-    - [8.3 Go](/10~WebAssembly/Go/README.md)
-      
-    - [8.4 Rust [1]](/10~WebAssembly/Rust/README.md)
-      - [8.4.1 快速开始](/10~WebAssembly/Rust/快速开始.md)
-    - [8.5 WASM 规范 [1]](/10~WebAssembly/WASM%20规范/README.md)
-      - [8.5.1 发展简史](/10~WebAssembly/WASM%20规范/发展简史.md)
+      - [8.1.4 Rust [1]](/10~WebAssembly/WASM%20应用开发/Rust/README.md)
+        - [8.1.4.1 快速开始](/10~WebAssembly/WASM%20应用开发/Rust/快速开始.md)
+    - [8.2 WASM 规范 [1]](/10~WebAssembly/WASM%20规范/README.md)
+      - [8.2.1 发展简史](/10~WebAssembly/WASM%20规范/发展简史.md)
   - [9 INTRODUCTION](/INTRODUCTION.md)
