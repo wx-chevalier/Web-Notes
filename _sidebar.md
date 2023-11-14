@@ -230,10 +230,8 @@
     - 7.2 组件系统 [1]
       - 7.2.1 99~参考资料 [1]
         - [7.2.1.1 Modern CSS For Dynamic Component Based Architecture](/09~Web%20组件范式/组件系统/99~参考资料/2023-Modern%20CSS%20For%20Dynamic%20Component-Based%20Architecture.md)
-    - 7.3 编辑器 [1]
-      - 7.3.1 CRDT [1]
-        - 7.3.1.1 99~参考资料 [1]
-          - [7.3.1.1.1 List CRDT Benchmarks](/09~Web%20组件范式/编辑器/CRDT/99~参考资料/2023-List%20CRDT%20Benchmarks.md)
+    - [7.3 编辑器](/09~Web%20组件范式/编辑器/README.md)
+      
   - [8 10~WebAssembly [2]](/10~WebAssembly/README.md)
     - 8.1 WASM 应用开发 [4]
       - 8.1.1 AssemblyScript [1]
