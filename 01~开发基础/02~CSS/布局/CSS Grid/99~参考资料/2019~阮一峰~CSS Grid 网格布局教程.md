@@ -94,7 +94,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 > 注意，设为网格布局以后，容器子元素（项目）的`float`、`display: inline-block`、`display: table-cell`、`vertical-align`和`column-*`等设置都将失效。
 
-### 3.2 grid-template-columns 属性， grid-template-rows 属性
+### 3.2 grid-template-columns 属性，grid-template-rows 属性
 
 容器指定了网格布局以后，接着就要划分行和列。`grid-template-columns`属性定义每一列的列宽，`grid-template-rows`属性定义每一行的行高。
 
@@ -244,7 +244,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 > grid-template-columns: repeat(12, 1fr);
 > ```
 
-### 3.3 grid-row-gap 属性， grid-column-gap 属性， grid-gap 属性
+### 3.3 grid-row-gap 属性，grid-column-gap 属性，grid-gap 属性
 
 `grid-row-gap`属性设置行与行的间隔（行间距），`grid-column-gap`属性设置列与列的间隔（列间距）。
 
@@ -380,7 +380,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 上图会先填满第一列，再填满第 2 列，所以 3 号项目在第一列，4 号项目在第二列。8 号项目和 9 号项目被挤到了第四列。
 
-### 3.6 justify-items 属性， align-items 属性， place-items 属性
+### 3.6 justify-items 属性，align-items 属性，place-items 属性
 
 `justify-items`属性设置单元格内容的水平位置（左中右），`align-items`属性设置单元格内容的垂直位置（上中下）。
 
@@ -432,7 +432,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 如果省略第二个值，则浏览器认为与第一个值相等。
 
-### 3.7 justify-content 属性， align-content 属性， place-content 属性
+### 3.7 justify-content 属性，align-content 属性，place-content 属性
 
 `justify-content`属性是整个内容区域在容器里面的水平位置（左中右），`align-content`属性是整个内容区域的垂直位置（上中下）。
 
@@ -489,7 +489,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 如果省略第二个值，浏览器就会假定第二个值等于第一个值。
 
-### 3.8 grid-auto-columns 属性， grid-auto-rows 属性
+### 3.8 grid-auto-columns 属性，grid-auto-rows 属性
 
 有时候，一些项目的指定位置，在现有网格的外部。比如网格只有 3 列，但是某一个项目指定在第 5 行。这时，浏览器会自动生成多余的网格，以便放置项目。
 
@@ -510,7 +510,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 ![img](https://www.wangbase.com/blogimg/asset/201903/bg2019032525.png)
 
-### 3.9 grid-template 属性， grid 属性
+### 3.9 grid-template 属性，grid 属性
 
 `grid-template`属性是`grid-template-columns`、`grid-template-rows`和`grid-template-areas`这三个属性的合并简写形式。
 
@@ -522,7 +522,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 下面这些属性定义在项目上面。
 
-### 4.1 grid-column-start 属性， grid-column-end 属性， grid-row-start 属性， grid-row-end 属性
+### 4.1 grid-column-start 属性，grid-column-end 属性，grid-row-start 属性，grid-row-end 属性
 
 项目的位置是可以指定的，具体方法就是指定项目的四个边框，分别定位在哪根网格线。
 
@@ -592,7 +592,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 使用这四个属性，如果产生了项目的重叠，则使用`z-index`属性指定项目的重叠顺序。
 
-### 4.2 grid-column 属性， grid-row 属性
+### 4.2 grid-column 属性，grid-row 属性
 
 `grid-column`属性是`grid-column-start`和`grid-column-end`的合并简写形式，`grid-row`属性是`grid-row-start`属性和`grid-row-end`的合并简写形式。
 
@@ -682,7 +682,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 > }
 > ```
 
-### 4.4 justify-self 属性， align-self 属性， place-self 属性
+### 4.4 justify-self 属性，align-self 属性，place-self 属性
 
 `justify-self`属性设置单元格内容的水平位置（左中右），跟`justify-items`属性的用法完全一致，但只作用于单个项目。
 
