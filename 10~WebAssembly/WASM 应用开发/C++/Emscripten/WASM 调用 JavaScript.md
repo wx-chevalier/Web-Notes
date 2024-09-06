@@ -35,14 +35,13 @@ int json_parse(const char *jsonstr) {
 
 首先我们引入 emscripten.h 头文件，接着我们使用 `EM_ASM` 调用外部的 `window.onRspHandler` 回调方法即可完成对应需求。`EM_ASM` 大括号内可以书写任意的 JavaScript 代码，并且可以对其进行传参操作。在本例中，我们将 result 传递给 `EM_ASM` 方法，其 `$0` 为传参的等价替换，若还有更多参数则可以写为 `$1`、`$2`等。接着，我们编译对应代码，然后访问 sample.html，并在控制台执行如下代码完成 JavaScript 到 WebAssembly 的调用：
 
-```
+```js
 window.onRspHandler = (result) => {
-    console.log(result); // output: {"data":"Hi!"}
+  console.log(result); // output: {"data":"Hi!"}
 };
 
-
-const jsonstr = JSON.stringify({data:"Hello World!"});
-const ptr = allocate(intArrayFromString(jsonstr), 'i8', ALLOC_NORMAL);
+const jsonstr = JSON.stringify({ data: "Hello World!" });
+const ptr = allocate(intArrayFromString(jsonstr), "i8", ALLOC_NORMAL);
 Module._json_parse(ptr);
 ```
 
@@ -151,7 +150,7 @@ int main() {
 
 在上面的代码中我们使用了 `emscripten_fetch` 相关函数来进行浏览器宿主环境 fetch 方法的调用。为了启用 Emscripten 中的 Fetch 能力，我们还需要修改编译链接参数，为其增加-s FETCH=1：
 
-```
+```cpp
 #....
 set_target_properties(sample PROPERTIES LINK_FLAGS "\
     -s NO_EXIT_RUNTIME=1 \
