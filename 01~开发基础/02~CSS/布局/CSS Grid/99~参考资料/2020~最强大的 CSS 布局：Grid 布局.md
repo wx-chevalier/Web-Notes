@@ -6,7 +6,7 @@
 
 > [演示地址](https://link.juejin.cn/?target=https%3A%2F%2Fcodepen.io%2Fgpingfeng%2Fpen%2FqBbveKB%3Feditors%3D1100)
 
-![img](https://assets.ng-tech.icu/item/17389591885783dd~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![img](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/17389591885783dd~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 ```html
 <div class="wrapper">
@@ -70,11 +70,11 @@
 
 flex 布局示例:
 
-![img](https://assets.ng-tech.icu/item/173945aadff842d1~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![img](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/173945aadff842d1~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 Grid 布局示例：
 
-![Grid 布局](https://assets.ng-tech.icu/item/173895918bcb5190~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![Grid 布局](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/173895918bcb5190~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 ## Grid 的一些基础概念
 
@@ -129,19 +129,19 @@ Grid 布局示例：
 </style>
 ```
 
-![img](https://assets.ng-tech.icu/item/173895918bfd94e9~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![img](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/173895918bfd94e9~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 容器和项目：我们通过在元素上声明 `display：grid` 或 `display：inline-grid` 来创建一个网格容器。一旦我们这样做，这个元素的所有直系子元素将成为网格项目。比如上面 `.wrapper` 所在的元素为一个网格容器，其直系子元素将成为网格项目。
 
 网格轨道：`grid-template-columns` 和 `grid-template-rows` 属性来定义网格中的行和列。容器内部的水平区域称为行，垂直区域称为列。上图中 `One`、`Two`、`Three` 组成了一行，`One`、`Four` 则是一列
 
-![行和列](https://assets.ng-tech.icu/item/173895918ee0ecb6~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![行和列](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/173895918ee0ecb6~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 网格单元：一个网格单元是在一个网格元素中最小的单位，从概念上来讲其实它和表格的一个单元格很像。上图中 `One`、`Two`、`Three`、`Four`...都是一个个的网格单元
 
 网格线：划分网格的线，称为"网格线"。应该注意的是，当我们定义网格时，我们定义的是网格轨道，而不是网格线。Grid 会为我们创建编号的网格线来让我们来定位每一个网格元素。m 列有 m + 1 根垂直的网格线，n 行有 n + 1 跟水平网格线。比如上图示例中就有 4 根垂直网格线。一般而言，是从左到右，从上到下，1，2，3 进行编号排序。当然也可以从右到左，从下到上，按照 -1，-2，-3...顺序进行编号排序
 
-![网格线](https://assets.ng-tech.icu/item/17389591934e1560~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![网格线](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/17389591934e1560~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 ## 容器属性介绍
 
@@ -161,7 +161,7 @@ Grid 布局示例：
 }
 ```
 
-![块级元素](https://assets.ng-tech.icu/item/17389591baa442ef~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![块级元素](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/17389591baa442ef~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 ```css
 .wrapper-1 {
@@ -169,7 +169,7 @@ Grid 布局示例：
 }
 ```
 
-![行内属性](https://assets.ng-tech.icu/item/17389591c03b6883~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![行内属性](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/17389591c03b6883~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 ### grid-template-columns 属性和 grid-template-rows 属性
 
@@ -190,7 +190,7 @@ Grid 布局示例：
 
 以上表示固定列宽为 200px 100px 200px，行高为 50px 50px
 
-![固定行高和列宽](https://assets.ng-tech.icu/item/17389591c0fc1214~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![固定行高和列宽](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/17389591c0fc1214~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 **repeat() 函数**：可以简化重复的值。该函数接受两个参数，第一个参数是重复的次数，第二个参数是所要重复的值。比如上面行高都是一样的，我们可以这么去实现，实际效果是一模一样的
 
@@ -215,7 +215,7 @@ Grid 布局示例：
 }
 ```
 
-![image](https://assets.ng-tech.icu/item/17389591c300e81a~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![image](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/17389591c300e81a~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 **fr 关键字**：`Grid` 布局还引入了一个另外的长度单位来帮助我们创建灵活的网格轨道。`fr` 单位代表网格容器中可用空间的一等份。`grid-template-columns: 200px 1fr 2fr` 表示第一个列宽设置为 200px，后面剩余的宽度分为两部分，宽度分别为剩余宽度的 1/3 和 2/3。代码以及效果如下图所示：
 
@@ -228,7 +228,7 @@ Grid 布局示例：
 }
 ```
 
-![image](https://assets.ng-tech.icu/item/17389591ccc256d1~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![image](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/17389591ccc256d1~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 **minmax() 函数**：我们有时候想给网格元素一个最小和最大的尺寸，`minmax()` 函数产生一个长度范围，表示长度就在这个范围之中都可以应用到网格项目中。它接受两个参数，分别为最小值和最大值。`grid-template-columns: 1fr 1fr minmax(300px, 2fr)` 的意思是，第三个列宽最少也是要 300px，但是最大不能大于第一第二列宽的两倍。代码以及效果如下：
 
@@ -241,7 +241,7 @@ Grid 布局示例：
 }
 ```
 
-![image](https://assets.ng-tech.icu/item/17389591dc05edac~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![image](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/17389591dc05edac~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 **auto 关键字**：由浏览器决定长度。通过 `auto` 关键字，我们可以轻易实现三列或者两列布局。`grid-template-columns: 100px auto 100px` 表示第一第三列为 100px，中间由浏览器决定长度，代码以及效果如下：
 
@@ -254,7 +254,7 @@ Grid 布局示例：
 }
 ```
 
-![image](https://assets.ng-tech.icu/item/17389591f2146e1d~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![image](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/17389591f2146e1d~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 ### grid-row-gap 属性、grid-column-gap 属性以及 grid-gap 属性
 
@@ -282,7 +282,7 @@ pgsql .wrapper-1 {
 
 以上两种写法效果是一样的。
 
-![img](https://assets.ng-tech.icu/item/17389591f78de6f2~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![img](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/17389591f78de6f2~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 ### grid-template-areas 属性
 
@@ -323,7 +323,7 @@ css .wrapper {
 
 以上代码表示将类 `.sidebar` `.content` `.header`所在的元素放在上面 `grid-template-areas` 中定义的 `sidebar` `content` `header` 区域中
 
-![img](https://assets.ng-tech.icu/item/173895920bbe824a~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![img](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/173895920bbe824a~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 ### grid-auto-flow 属性
 
@@ -341,11 +341,11 @@ css .wrapper {
 }
 ```
 
-![img](https://assets.ng-tech.icu/item/173895921548265c~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![img](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/173895921548265c~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 细心的同学可能发现了一个问题，就是第五个项目和第六个项目之间有个空白（如下图所示），这个是由于第六块的长度大于了空白处的长度，被挤到了下一行导致的。在实际应用中，我们可能想让下面长度合适的填满这个空白，这个时候可以设置 `grid-auto-flow: row dense`，表示尽可能填满表格。代码以及效果如下所示：
 
-![image](https://assets.ng-tech.icu/item/17389592211e1d6b~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![image](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/17389592211e1d6b~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 ```css
 .wrapper-2 {
@@ -357,7 +357,7 @@ css .wrapper {
 }
 ```
 
-![image](https://assets.ng-tech.icu/item/173895923612a19b~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![image](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/173895923612a19b~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 可以设置 `grid-auto-flow: column`，表示先列后行，代码以及效果如下图所示：
 
@@ -371,7 +371,7 @@ css .wrapper {
 }
 ```
 
-![image](https://assets.ng-tech.icu/item/173895923f11dd83~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![image](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/173895923f11dd83~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 ### justify-items 属性、align-items 属性以及 place-items 属性
 
@@ -414,19 +414,19 @@ css .wrapper {
 
 - start：对齐单元格的起始边缘
 
-![image](https://assets.ng-tech.icu/item/1738959244947d96~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![image](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/1738959244947d96~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 - end：对齐单元格的结束边缘
 
-![image](https://assets.ng-tech.icu/item/17389592560e3fc2~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![image](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/17389592560e3fc2~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 - center：单元格内部居中
 
-![image](https://assets.ng-tech.icu/item/173895925bd879fa~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![image](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/173895925bd879fa~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 - stretch：拉伸，占满单元格的整个宽度（默认值）
 
-![image](https://assets.ng-tech.icu/item/1738959270057d0c~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![image](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/1738959270057d0c~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 ### justify-content 属性、align-content 属性以及 place-content 属性
 
@@ -471,7 +471,7 @@ css .wrapper {
 }
 ```
 
-![image](https://assets.ng-tech.icu/item/173895926d20f5d6~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![image](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/173895926d20f5d6~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 - space-around - 每个项目两侧的间隔相等。所以，项目之间的间隔比项目与容器边框的间隔大一倍
 - space-between - 项目与项目的间隔相等，项目与容器边框之间没有间隔
@@ -493,7 +493,7 @@ css .wrapper {
 }
 ```
 
-![image](https://assets.ng-tech.icu/item/173895927ba770c4~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![image](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/173895927ba770c4~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 ### grid-auto-columns 属性和 grid-auto-rows 属性
 
@@ -518,7 +518,7 @@ css .wrapper {
 
 `grid-template-columns` 属性和 `grid-template-rows` 属性只是指定了两行两列，但实际有九个元素，就会产生隐式网格。通过 `grid-auto-rows` 可以指定隐式网格的行高为 50px
 
-![img](https://assets.ng-tech.icu/item/173895927d99af1c~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![img](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/173895927d99af1c~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 ## 项目属性介绍
 
@@ -584,7 +584,7 @@ css .wrapper {
 
 上面代码中，类 `.two` 所在的网格项目，垂直网格线是从 2 到 4，水平网格线是从 1 到 2。其中它跟 `.three` （垂直网格线是从 3 到 4，水平网格线是从 1 到 4） 是有冲突的。可以设置 `z-index` 去决定它们的层级关系
 
-![img](https://assets.ng-tech.icu/item/173895928bc7e88e~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![img](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/173895928bc7e88e~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 ### grid-area 属性
 
@@ -624,19 +624,19 @@ css .wrapper {
 
 - start：对齐单元格的起始边缘
 
-![image](https://assets.ng-tech.icu/item/1738959292160e78~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![image](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/1738959292160e78~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 - end：对齐单元格的结束边缘
 
-![image](https://assets.ng-tech.icu/item/17389592a0d5a3c0~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![image](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/17389592a0d5a3c0~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 - center：单元格内部居中
 
-  ![image](https://assets.ng-tech.icu/item/17389592b1378c8d~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+  ![image](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/17389592b1378c8d~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 - stretch：拉伸，占满单元格的整个宽度（默认值）
 
-  ![image](https://assets.ng-tech.icu/item/17389592b895f0ed~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+  ![image](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/17389592b895f0ed~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 ## Grid 实战——实现响应式布局
 
@@ -658,7 +658,7 @@ css .wrapper {
 }
 ```
 
-![image](https://assets.ng-tech.icu/item/17389592bf7e44dd~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![image](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/17389592bf7e44dd~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 ### repeat + auto-fit——固定列宽，改变列数量
 
@@ -678,7 +678,7 @@ css .wrapper {
 }
 ```
 
-![image](https://assets.ng-tech.icu/item/17389592c297495a~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![image](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/17389592c297495a~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 ### repeat+auto-fit+minmax 去掉右侧空白
 
@@ -696,7 +696,7 @@ css .wrapper {
 }
 ```
 
-![auto-auto-minmax.gif](https://assets.ng-tech.icu/item/17389592cc3c2bf9~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![auto-auto-minmax.gif](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/17389592cc3c2bf9~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 ### repeat+ auto-fit + minmax-span-dense 解决空缺问题
 
@@ -710,7 +710,7 @@ css .item-3 {
 
 > [演示地址](https://link.juejin.cn/?target=https%3A%2F%2Fcodepen.io%2Fgpingfeng%2Fpen%2FBajEoxy%3Feditors%3D1100)
 
-![image](https://assets.ng-tech.icu/item/17389592f9da3763~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![image](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/17389592f9da3763~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 不对，怎么右侧又有空白了？原来是有一些长度太长了，放不下，这个时候就到我们的 `dense` 关键字出场了。`grid-auto-flow: row dense` 表示尽可能填充，而不留空白，代码以及效果如下所示：
 
@@ -729,10 +729,10 @@ css .item-3 {
 }
 ```
 
-![image](https://assets.ng-tech.icu/item/17389593009f7fe7~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![image](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/17389593009f7fe7~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
 
 ## Grid 布局兼容性
 
 最后，聊聊 `Grid` 布局兼容性问题，在 [caniuse](https://link.juejin.cn/?target=https%3A%2F%2Fcaniuse.com%2F%23search%3Dgrid) 中，我们可以看到的结果如下，总体兼容性还不错，但在 IE 10 以下不支持。个人建议在公司的内部系统运用起来是没有问题的，但 TOC 的话，可能目前还是不太合适
 
-![image](https://assets.ng-tech.icu/item/17389592fa541366~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)
+![image](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/17389592fa541366~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.png)

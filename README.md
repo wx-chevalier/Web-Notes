@@ -8,7 +8,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/wx-chevalier/Web-Notes">
-    <img src="https://assets.ng-tech.icu/item/header.svg" alt="Logo" style="width: 100vw;height: 400px" />
+    <img src="https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/header.svg" alt="Logo" style="width: 100vw;height: 400px" />
   </a>
 
   <p align="center">
@@ -38,11 +38,11 @@ Web 开发，入门易，深度难，分为初窥门径、登堂入室、融会�
 
 有趣的是，当我们站在不同的时间点，这三个阶段的划分也是不一致的，以目前笔者的认知而言，划分为了：模板渲染、前后端分离与单页应用，工程化与微前端，大前端与 Serverless 这三个不同的阶段。
 
-![大的阶段划分](https://assets.ng-tech.icu/item/20230513201627.png)
+![大的阶段划分](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/20230513201627.png)
 
 当然，每个小阶段都会伴随着新框架、新工具的出现：
 
-![不同阶段出现的框架](https://assets.ng-tech.icu/superbed/2021/07/06/60e3ed9b5132923bf8ff713f.jpg)
+![不同阶段出现的框架](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/superbed/2021/07/06/60e3ed9b5132923bf8ff713f.jpg)
 
 ### 模板渲染、前后端分离与单页应用
 

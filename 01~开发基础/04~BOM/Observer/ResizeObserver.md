@@ -10,7 +10,7 @@ ResizeObserver 允许我们观察 DOM 元素的内容矩形大小（width、heig
 
 ResizeObserver 通知内容框的大小，如下图所示：
 
-![](https://assets.ng-tech.icu/item/20230513201431.png)
+![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/20230513201431.png)
 
 # 基础使用
 

@@ -1,4 +1,4 @@
-![](https://assets.ng-tech.icu/item/20230513201004.png)
+![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/20230513201004.png)
 
 # CORS: 跨域资源共享
 
@@ -6,7 +6,7 @@
 
 CORS 标准定义了一个规范的 HTTP Headers 来使得浏览器与服务端之间可以进行协商来确定某个资源是否可以由其他域的客户端请求获得。尽管很多的验证与鉴权是由服务端完成，但是本质上大部分的检查和限制还是应该由浏览器完成。一般来说 CORS 会分为 Simple Request，简单请求与 Preflight，需要预检的请求两大类。其基本的流程如下:
 
-![](https://assets.ng-tech.icu/item/20230513200749.png)
+![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/20230513200749.png)
 
 # 预检请求
 
