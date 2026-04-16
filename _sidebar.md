@@ -46,7 +46,7 @@
         - 2.3.7.1.1 99~参考资料 [4]
           - [2.3.7.1.1.1 2019\_阮一峰~CSS Grid 网格布局教程](/01~开发基础/02~CSS/布局/CSS%20Grid/99~参考资料/2019_阮一峰~CSS%20Grid%20网格布局教程.md)
           - [2.3.7.1.1.2 2020\_最强大的 CSS 布局：Grid 布局](/01~开发基础/02~CSS/布局/CSS%20Grid/99~参考资料/2020_最强大的%20CSS%20布局：Grid%20布局.md)
-          - [2.3.7.1.1.3 2021\_简明 CSS Grid 布局教程](/01~开发基础/02~CSS/布局/CSS%20Grid/99~参考资料/2021_简明%20CSS%20Grid%20布局教程.md)
+          - [2.3.7.1.1.3 2021~简明 CSS Grid 布局教程](/01~开发基础/02~CSS/布局/CSS%20Grid/99~参考资料/2021_简明%20CSS%20Grid%20布局教程.md)
           - [2.3.7.1.1.4 2023_An Interactive Guide to CSS Grid](/01~开发基础/02~CSS/布局/CSS%20Grid/99~参考资料/2023_An%20Interactive%20Guide%20to%20CSS%20Grid.md)
       - [2.3.7.2 Flexbox](/01~开发基础/02~CSS/布局/Flexbox.md)
       - [2.3.7.3 JavaScript 动态布局](/01~开发基础/02~CSS/布局/JavaScript%20动态布局.md)
