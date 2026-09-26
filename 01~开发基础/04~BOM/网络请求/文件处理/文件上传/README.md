@@ -115,12 +115,6 @@ axios.post("http://localhost:7787/files", form);
 
 - 使用 File 对象，再进行一次包装
 
-```js
-const json = { hello: "world" };
-const blob = new Blob([JSON.stringify(json, null, 2)], {
-  type: "application/json",
-});
-
 const file = new File([blob], "1.json");
 form.append("file", file);
 axios.post("http://localhost:7787/files", form);
