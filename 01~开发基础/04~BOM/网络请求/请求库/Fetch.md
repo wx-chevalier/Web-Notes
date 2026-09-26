@@ -299,12 +299,12 @@ fetch("flowers.jpg")
 
 ```js
 /**
- * @function 通过透明路由,利用get方法与封装好的QueryParams形式发起请求
- * @param BASE_URL 请求根URL地址,注意,需要添加http://以及末尾的/,譬如`http://api.com/`
- * @param path 请求路径,譬如"path1/path2"
- * @param queryParams 请求的查询参数
- * @param contentType 请求返回的数据格式
- * @param proxyUrl 请求的路由地址
+ - @function 通过透明路由,利用get方法与封装好的QueryParams形式发起请求
+ - @param BASE_URL 请求根URL地址,注意,需要添加http://以及末尾的/,譬如`http://api.com/`
+ - @param path 请求路径,譬如"path1/path2"
+ - @param queryParams 请求的查询参数
+ - @param contentType 请求返回的数据格式
+ - @param proxyUrl 请求的路由地址
  */
 getWithQueryParamsByProxy({BASE_URL=Model.BASE_URL, path="/", queryParams={}, contentType="json", proxyUrl="http://api.proxy.com"}) {
 

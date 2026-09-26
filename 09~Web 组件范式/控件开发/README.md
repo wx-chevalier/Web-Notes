@@ -20,7 +20,7 @@
 
   - Tabs - 标签页
 
-* Navigation - 导航
+- Navigation - 导航
 
   - Affix / Anchor - 固钉 / 锚点
 
@@ -86,7 +86,7 @@
 
   - City Select - 城市选择
 
-* Indicator - 展现器
+- Indicator - 展现器
 
   - Label - 标签: TypeWriter - 打字机
 

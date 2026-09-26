@@ -44,8 +44,8 @@ This repository was made to create an objective comparison of multiple framework
 |                              |  **_tvOS_**   |                        ❌                        |                          ❌                          |                      ❌                      |                      ❌                       |                             ❌                             |                             ❌                             |                      ❌                       |                     ✔️                      |
 |                              |   **_Web_**   |                        ❌                        |                          ❌                          |                      ❌                      |                      ❌                       |                       ✔️<sup>3</sup>                       |                             ❌                             |                      ✔️                       |                     ❌                      |
 
-**<sup>1</sup>**: Linux 32 Bit support dropped  
-**<sup>2</sup>**: https://github.com/tauri-apps/tauri#platforms  
+**<sup>1</sup>**: Linux 32 Bit support dropped
+**<sup>2</sup>**: https://github.com/tauri-apps/tauri#platforms
 **<sup>3</sup>**: Uses [modes](https://neutralino.js.org/docs/configuration/modes/) to generate web apps
 
 ## Benchmarks
@@ -102,7 +102,7 @@ See source in [benchmark/01-empty-app](https://github.com/Elanis/web-to-desktop-
 |  **_MacOS (x64)_**  |       ≈2021ms (Debug) => ≈889ms (Release)        |           ≈1594ms (Release)            |     ≈5757ms (Debug) => ≈767ms (Release)      |                       ?                       |            ≈2416ms (Debug) => ≈893ms (Release)             |    ≈11690ms (Debug) => ≈950ms (Release)    |                       ?                       |               N/A<sup>1</sup>               |                  N/A<sup>2</sup>                   |
 |  **_Linux (x64)_**  |        ≈705ms (Debug) => ≈356ms (Release)        |                   ?                    |               ≈36834ms (Debug)               |                       ?                       |            ≈1638ms (Debug) => ≈450ms (Release)             |    ≈4471ms (Debug) => ≈372ms (Release)     |                       ?                       |               N/A<sup>1</sup>               |                  N/A<sup>2</sup>                   |
 
-**<sup>1</sup>**: Benchmark WIP  
+**<sup>1</sup>**: Benchmark WIP
 **<sup>2</sup>**: Benchmark WIP
 
 # 02-empty-app-frameless
@@ -153,8 +153,8 @@ See source in [benchmark/02-empty-app-frameless](https://github.com/Elanis/web-t
 |  **_MacOS (x64)_**  |       ≈1987ms (Debug) => ≈1267ms (Release)       |           ≈1775ms (Release)            |     ≈6046ms (Debug) => ≈863ms (Release)      |                       ?                       |            ≈3550ms (Debug) => ≈1241ms (Release)            |    ≈9553ms (Debug) => ≈898ms (Release)     |                N/A<sup>1</sup>                |               N/A<sup>2</sup>               |                  N/A<sup>3</sup>                   |
 |  **_Linux (x64)_**  |        ≈806ms (Debug) => ≈415ms (Release)        |                   ?                    |               ≈42518ms (Debug)               |                       ?                       |            ≈2111ms (Debug) => ≈626ms (Release)             |    ≈5208ms (Debug) => ≈509ms (Release)     |                N/A<sup>1</sup>                |               N/A<sup>2</sup>               |                  N/A<sup>3</sup>                   |
 
-**<sup>1</sup>**: Frameless mode not supported yet  
-**<sup>2</sup>**: Frameless mode not working  
+**<sup>1</sup>**: Frameless mode not supported yet
+**<sup>2</sup>**: Frameless mode not working
 **<sup>3</sup>**: Frameless mode not working
 
 ## Future content

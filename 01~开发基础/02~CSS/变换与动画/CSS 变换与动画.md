@@ -395,7 +395,7 @@ both：向前和向后填充模式都被应用。
 
 ```js
 /* tick https://github.com/AlloyTeam/AlloyTouch/blob/master/transformjs/asset/tick.js
- * By dntzhang|当耐特
+ - By dntzhang|当耐特
  */
 (function () {
   if (!Date.now)
